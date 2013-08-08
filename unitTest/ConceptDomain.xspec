@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" 
+    stylesheet="../transforms/VocabToCTS2.xslt">
+    
+    <x:import href="basedoc.xspec"/>
+
+    <x:param name="comments" select="false()"/>
+    
+    <x:scenario label="Basic MIF concept domain test">
+        <x:context mode="cts2conceptDomain">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <conceptDomain name="AcknowledgementCondition">
+                    <annotations>
+                        <documentation>
+                            <definition>
+                                <text>
+                                    <p>Acknowledgement Condition codes describe the conditions under which accept or application level acknowledgements are required to be returned in response to the message send operation.</p>
+                                </text>
+                            </definition>
+                        </documentation>
+                    </annotations>
+                </conceptDomain>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:conceptDomain conceptDomainName="AcknowledgementCondition"
+                    about="http://hl7.org/ontology/vocab/uv/cd/AcknowledgementCondition" xmlns="http://www.omg.org/spec/CTS2/1.1/ConceptDomain">
+                    <core:resourceSynopsis>
+                        <core:value  xmlns="urn:hl7-org:v3/mif2">
+                            <text>
+                                <p>Acknowledgement Condition codes describe the conditions under which accept or application level acknowledgements are required to be returned in response to the message send operation.</p>
+                            </text>
+                        </core:value>
+                    </core:resourceSynopsis>
+                    <definingEntity uri="http://hl7.org/ontology/vocab/uv/cd#AcknowledgementCondition" />
+                </upd:conceptDomain>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Concept Domain with specializes and property">
+        <x:context mode="cts2conceptDomain">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <conceptDomain name="ActAccountType">
+                    <annotations>
+                        <documentation>
+                            <definition>
+                                <text>
+                                    <p>
+                                        <b>Description: </b>Types of representation groupings of financial transactions that are tracked and reported together with a single balance. </p>
+                                    <p>
+                                        <i>Examples: </i>
+                                    </p>
+                                    <p/>
+                                    <ul>
+                                        <li>
+                                            <p>Patient billing accounts</p>
+                                        </li>
+                                        <li>
+                                            <p>Cost center</p>
+                                        </li>
+                                        <li>
+                                            <p>Cash</p>
+                                        </li>
+                                    </ul>
+                                </text>
+                            </definition>
+                        </documentation>
+                    </annotations>
+                    <specializesDomain name="ActCode"/>
+                    <property name="ConceptualSpaceForClassCode" value="ActClass.ACCT"/>
+                </conceptDomain>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:conceptDomain xmlns="http://www.omg.org/spec/CTS2/1.1/ConceptDomain"
+                    conceptDomainName="ActAccountType"
+                    about="http://hl7.org/ontology/vocab/uv/cd/ActAccountType">
+                    <core:resourceSynopsis>
+                        <core:value xmlns="urn:hl7-org:v3/mif2">
+                            <text>
+                                <p>
+                                    <b>Description: </b>Types of representation groupings of financial transactions that are tracked and reported together with a single balance. </p>
+                                <p>
+                                    <i>Examples: </i>
+                                </p>
+                                <p/>
+                                <ul>
+                                    <li>
+                                        <p>Patient billing accounts</p>
+                                    </li>
+                                    <li>
+                                        <p>Cost center</p>
+                                    </li>
+                                    <li>
+                                        <p>Cash</p>
+                                    </li>
+                                </ul>
+                            </text>
+                        </core:value>
+                    </core:resourceSynopsis>
+                    <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <predicate uri="http://hl7.org/ontology/vocab/uv/pr/ConceptualSpaceForClassCode">
+                            <namespace>pr</namespace>
+                            <name>ConceptualSpaceForClassCode</name>
+                        </predicate>
+                        <value>
+                            <entity uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/ACCT">
+                                <namespace>ActClass</namespace>
+                                <name>ACCT</name>
+                            </entity>
+                        </value>
+                    </property>
+                    <definingEntity uri="http://hl7.org/ontology/vocab/uv/cd#ActAccountType"/>
+                </upd:conceptDomain>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Concept Domain with appInfo">
+        <x:context mode="cts2conceptDomain">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <conceptDomain name="TimingEvent">
+                    <annotations>
+                        <documentation>
+                            <definition>
+                                <text>**** MISSING DEFINITIONS ****</text>
+                            </definition>
+                        </documentation>
+                        <appInfo>
+                            <openIssue>
+                                <text>This concept domain does not have a valid definition.</text>
+                            </openIssue>
+                        </appInfo>
+                    </annotations>
+                </conceptDomain>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:conceptDomain xmlns="http://www.omg.org/spec/CTS2/1.1/ConceptDomain"
+                    conceptDomainName="TimingEvent"
+                    about="http://hl7.org/ontology/vocab/uv/cd/TimingEvent">
+                    <core:resourceSynopsis>
+                        <core:value xmlns="urn:hl7-org:v3/mif2">
+                            <text>**** MISSING DEFINITIONS ****</text>
+                        </core:value>
+                    </core:resourceSynopsis>
+                    <core:note type="EditorialNote">
+                        <core:value xmlns="urn:hl7-org:v3/mif2">
+                            <openIssue>
+                                <text>This concept domain does not have a valid definition.</text>
+                            </openIssue>
+                        </core:value>
+                    </core:note>
+                    <definingEntity uri="http://hl7.org/ontology/vocab/uv/cd#TimingEvent"/>
+                </upd:conceptDomain>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+ 
+</x:description>

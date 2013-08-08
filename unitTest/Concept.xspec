@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+    stylesheet="../transforms/VocabToCTS2Concept.xslt">
+    
+    <x:import href="basedoc.xspec"/>
+    
+    <x:param name="comments" select="false()"/>
+    
+    <x:scenario label="Basic MIF concept test">
+        <x:context mode="cts2concept">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <codeSystem name="AdministrativeGender" title="AdministrativeGender" codeSystemId="2.16.840.1.113883.5.1">
+                    <header>
+                        <legalese>
+                            <notation>Is in UMLS.</notation>
+                        </legalese>
+                        <responsibleGroup organizationName="Health Level 7"/>
+                        <contributor>
+                            <role>Sponsor</role>
+                            <name name="Health Level Seven"/>
+                        </contributor>
+                    </header>
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>The gender of a person used for adminstrative purposes (as opposed to clinical gender)</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <releasedVersion releaseDate="2012-11-21" publisherVersionId="76" hl7MaintainedIndicator="true" completeCodesIndicator="true" hl7ApprovedIndicator="true">
+                        <supportedLanguage>en</supportedLanguage>
+                        <supportedConceptRelationship relationshipKind="Specializes" name="Specializes" inverseName="Generalizes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptRelationship relationshipKind="Generalizes" name="Generalizes" inverseName="Specializes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>Inverse of Specializes.  Only included as a derived relationship.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptProperty propertyName="internalId" type="Token" isMandatoryIndicator="false">
+                            <description>The internal identifier for the concept in the HL7 Access database repository.</description>
+                        </supportedConceptProperty>
+                        <concept>
+                            <annotations>
+                                <documentation>
+                                    <definition>
+                                        <text>
+                                            <p>Female</p>
+                                        </text>
+                                    </definition>
+                                </documentation>
+                            </annotations>
+                            <conceptProperty name="internalId" value="10174"/>
+                            <printName language="en" preferredForLanguage="true" text="Female"/>
+                            <code code="F" status="active"/>
+                        </concept>
+                        <concept>
+                            <annotations>
+                                <documentation>
+                                    <definition>
+                                        <text>
+                                            <p>Male</p>
+                                        </text>
+                                    </definition>
+                                </documentation>
+                            </annotations>
+                            <conceptProperty name="internalId" value="10173"/>
+                            <printName language="en" preferredForLanguage="true" text="Male"/>
+                            <code code="M" status="active"/>
+                        </concept>
+                        <concept>
+                            <annotations>
+                                <documentation>
+                                    <definition>
+                                        <text>
+                                            <p>The gender of a person could not be uniquely defined as male or female, such as hermaphrodite.</p>
+                                        </text>
+                                    </definition>
+                                </documentation>
+                            </annotations>
+                            <conceptProperty name="internalId" value="17718"/>
+                            <printName language="en" preferredForLanguage="true" text="Undifferentiated"/>
+                            <code code="UN" status="active"/>
+                        </concept>
+                    </releasedVersion>
+                </codeSystem>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AdminstrativeGender">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#F">
+                        <entityID>
+                            <core:namespace>AdministrativeGender</core:namespace>
+                            <core:name>F</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>10174</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>Female</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <entity:definition>
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">Female</p>
+                            </core:value>
+                        </entity:definition>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
+                    xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#M">
+                        <entityID>
+                            <core:namespace>AdministrativeGender</core:namespace>
+                            <core:name>M</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>10173</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>Male</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <entity:definition>
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">Male</p>
+                            </core:value>
+                        </entity:definition>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#UN">
+                        <entityID>
+                            <core:namespace>AdministrativeGender</core:namespace>
+                            <core:name>UN</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>17718</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>Undifferentiated</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <entity:definition>
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">The gender of a person could not be uniquely defined as male or female, such as hermaphrodite.</p>
+                            </core:value>
+                        </entity:definition>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Entity with fancy annotations">
+        <x:context mode="cts2concept">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <codeSystem name="ActClass" title="ActClass" codeSystemId="2.16.840.1.113883.5.6">
+                    <header>
+                        <legalese>
+                            <notation>Is in UMLS.</notation>
+                        </legalese>
+                        <responsibleGroup organizationName="Health Level 7"/>
+                        <contributor>
+                            <role>Sponsor</role>
+                            <name name="Health Level Seven"/>
+                        </contributor>
+                    </header>
+                    <releasedVersion releaseDate="2012-11-21" publisherVersionId="145" hl7MaintainedIndicator="true" completeCodesIndicator="true" hl7ApprovedIndicator="true">
+                        <supportedLanguage>en</supportedLanguage>
+                        <supportedConceptRelationship relationshipKind="Specializes" name="Specializes" inverseName="Generalizes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptRelationship relationshipKind="Generalizes" name="Generalizes" inverseName="Specializes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>Inverse of Specializes.  Only included as a derived relationship.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptProperty propertyName="internalId" type="Token" isMandatoryIndicator="false">
+                            <description>The internal identifier for the concept in the HL7 Access database repository.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="status" type="Token" isMandatoryIndicator="false" defaultValue="active">
+                            <description>Designation of a concept's state.  Normally is not populated unless the state is retired..</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Class" type="Token" isMandatoryIndicator="false">
+                            <description>Haven't a clue.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Participation:act:Act" type="String" isMandatoryIndicator="false" defaultValue="&amp;">
+                            <description>The formal name for relationship from Participation to Act</description>
+                        </supportedConceptProperty>
+                        <concept>
+                            <annotations>
+                                <documentation>
+                                    <definition>
+                                        <text>
+                                            <p>A record of something that is being done, has been done, can be done, or is intended or requested to be done.</p>
+                                            <p>
+                                                <i>Examples:</i>The kinds of acts that are common in health care are (1) a clinical observation, (2) an assessment of health condition (such as problems and diagnoses), (3) healthcare goals, (4) treatment services (such as medication, surgery, physical and psychological therapy), (5) assisting, monitoring or attending, (6) training and education services to patients and their next of kin, (7) and notary services (such as advanced directives or living will), (8)  editing and maintaining documents, and many others.</p>
+                                            <p>
+                                                <i>Discussion and Rationale:</i> Acts are the pivot of the RIM; all domain information and processes are represented primarily in Acts. Any profession or business, including healthcare, is primarily constituted of intentional and occasionally non-intentional actions, performed and recorded by responsible actors. An Act-instance is a record of such an action.</p>
+                                            <p>Acts connect to Entities in their Roles through Participations and connect to other Acts through ActRelationships. Participations are the authors, performers and other responsible parties as well as subjects and beneficiaries (which includes tools and material used in the performance of the act, which are also subjects). The moodCode distinguishes between Acts that are meant as factual records, vs. records of intended or ordered services, and the other modalities in which act can appear.</p>
+                                            <p>One of the Participations that all acts have (at least implicitly) is a primary author, who is responsible of the Act and who "owns" the act. Responsibility for the act means responsibility for what is being stated in the Act and as what it is stated. Ownership of the act is assumed in the sense of who may operationally modify the same act. Ownership and responsibility of the Act is not the same as ownership or responsibility of what the Act-object refers to in the real world. The same real world activity can be described by two people, each being the author of their Act, describing the same real world activity. Yet one can be a witness while the other can be a principal performer. The performer has responsibilities for the physical actions; the witness only has responsibility for making a true statement to the best of his or her ability. The two Act-instances may even disagree, but because each is properly attributed to its author, such disagreements can exist side by side and left to arbitration by a recipient of these Act-instances.</p>
+                                            <p>In this sense, an Act-instance represents a "statement" according to Rector and Nowlan (1991) [Foundations for an electronic medical record. Methods Inf Med. 30.]  Rector and Nowlan have emphasized the importance of understanding the medical record not as a collection of facts, but "a faithful record of what clinicians have heard, seen, thought, and done." Rector and Nowlan go on saying that "the other requirements for a medical record, e.g., that it be attributable and permanent, follow naturally from this view." Indeed the Act class is this attributable statement, and the rules of updating acts (discussed in the state-transition model, see Act.statusCode) versus generating new Act-instances are designed according to this principle of permanent attributable statements.</p>
+                                            <p>Rector and Nolan focus on the electronic medical record as a collection of statements, while attributed statements, these are still mostly factual statements. However, the Act class goes beyond this limitation to attributed factual statements, representing what is known as "speech-acts" in linguistics and philosophy.  The notion of speech-act includes that there is pragmatic meaning in language utterances, aside from just factual statements; and that these utterances interact with the real world to change the state of affairs, even directly cause physical activities to happen. For example, an order is a speech act that (provided it is issued adequately) will cause the ordered action to be physically performed. The speech act theory has culminated in the seminal work by Austin (1962) [How to do things with words. Oxford University Press].</p>
+                                            <p>An activity in the real world may progress from defined, through planned and ordered to executed, which is represented as the mood of the Act. Even though one might think of a single activity as progressing from planned to executed, this progression is reflected by multiple Act-instances, each having one and only one mood that will not change along the Act-instance life cycle.  This is because the attribution and content of speech acts along this progression of an activity may be different, and it is often critical that a permanent and faithful record be maintained of this progression. The specification of orders or promises or plans must not be overwritten by the specification of what was actually done, so as to allow comparing actions with their earlier specifications. Act-instances that describe this progression of the same real world activity are linked through the ActRelationships (of the relationship category "sequel").</p>
+                                            <p>Act as statements or speech-acts are the only representation of real world facts or processes in the HL7 RIM. The truth about the real world is constructed through a combination (and arbitration) of such attributed statements only, and there is no class in the RIM whose objects represent "objective state of affairs" or "real processes" independent from attributed statements. As such, there is no distinction between an activity and its documentation. Every Act includes both to varying degrees. For example, a factual statement made about recent (but past) activities, authored (and signed) by the performer of such activities, is commonly known as a procedure report or original documentation (e.g., surgical procedure report, clinic note etc.). Conversely, a status update on an activity that is presently in progress, authored by the performer (or a close observer) is considered to capture that activity (and is later superceded by a full procedure report). However, both status update and procedure report are acts of the same kind, only distinguished by mood and state (see statusCode) and completeness of the information.</p>
+                                        </text>
+                                    </definition>
+                                </documentation>
+                            </annotations>
+                            <conceptProperty name="internalId" value="13856"/>
+                            <conceptProperty name="Name:Class" value="Act"/>
+                            <printName language="en" preferredForLanguage="true" text="act"/>
+                            <code code="ACT" status="active"/>
+                        </concept>
+                    </releasedVersion>
+                </codeSystem>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="ActClass_ACT">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
+                    xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#ACT">
+                        <entityID>
+                            <core:namespace>ActClass</core:namespace>
+                            <core:name>ACT</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>13856</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>act</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <definition xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions">
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">A record of something that is being done, has been done, can be done, or is intended or requested to be done.</p>
+                            </core:value>
+                        </definition>
+                        <example xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions">
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">
+                                    <i>Examples:</i>The kinds of acts that are common in health care are (1) a clinical observation, (2) an assessment of health condition (such as problems and diagnoses), (3) healthcare goals, (4) treatment services (such as medication, surgery, physical and psychological therapy), (5) assisting, monitoring or attending, (6) training and education services to patients and their next of kin, (7) and notary services (such as advanced directives or living will), (8)  editing and maintaining documents, and many others.</p>
+                            </core:value>
+                        </example>
+                        <note xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"
+                            type="ScopeNote">
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">
+                                    <i>Discussion and Rationale:</i> Acts are the pivot of the RIM; all domain information and processes are represented primarily in Acts. Any profession or business, including healthcare, is primarily constituted of intentional and occasionally non-intentional actions, performed and recorded by responsible actors. An Act-instance is a record of such an action.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">Acts connect to Entities in their Roles through Participations and connect to other Acts through ActRelationships. Participations are the authors, performers and other responsible parties as well as subjects and beneficiaries (which includes tools and material used in the performance of the act, which are also subjects). The moodCode distinguishes between Acts that are meant as factual records, vs. records of intended or ordered services, and the other modalities in which act can appear.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">One of the Participations that all acts have (at least implicitly) is a primary author, who is responsible of the Act and who "owns" the act. Responsibility for the act means responsibility for what is being stated in the Act and as what it is stated. Ownership of the act is assumed in the sense of who may operationally modify the same act. Ownership and responsibility of the Act is not the same as ownership or responsibility of what the Act-object refers to in the real world. The same real world activity can be described by two people, each being the author of their Act, describing the same real world activity. Yet one can be a witness while the other can be a principal performer. The performer has responsibilities for the physical actions; the witness only has responsibility for making a true statement to the best of his or her ability. The two Act-instances may even disagree, but because each is properly attributed to its author, such disagreements can exist side by side and left to arbitration by a recipient of these Act-instances.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">In this sense, an Act-instance represents a "statement" according to Rector and Nowlan (1991) [Foundations for an electronic medical record. Methods Inf Med. 30.]  Rector and Nowlan have emphasized the importance of understanding the medical record not as a collection of facts, but "a faithful record of what clinicians have heard, seen, thought, and done." Rector and Nowlan go on saying that "the other requirements for a medical record, e.g., that it be attributable and permanent, follow naturally from this view." Indeed the Act class is this attributable statement, and the rules of updating acts (discussed in the state-transition model, see Act.statusCode) versus generating new Act-instances are designed according to this principle of permanent attributable statements.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">Rector and Nolan focus on the electronic medical record as a collection of statements, while attributed statements, these are still mostly factual statements. However, the Act class goes beyond this limitation to attributed factual statements, representing what is known as "speech-acts" in linguistics and philosophy.  The notion of speech-act includes that there is pragmatic meaning in language utterances, aside from just factual statements; and that these utterances interact with the real world to change the state of affairs, even directly cause physical activities to happen. For example, an order is a speech act that (provided it is issued adequately) will cause the ordered action to be physically performed. The speech act theory has culminated in the seminal work by Austin (1962) [How to do things with words. Oxford University Press].</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">An activity in the real world may progress from defined, through planned and ordered to executed, which is represented as the mood of the Act. Even though one might think of a single activity as progressing from planned to executed, this progression is reflected by multiple Act-instances, each having one and only one mood that will not change along the Act-instance life cycle.  This is because the attribution and content of speech acts along this progression of an activity may be different, and it is often critical that a permanent and faithful record be maintained of this progression. The specification of orders or promises or plans must not be overwritten by the specification of what was actually done, so as to allow comparing actions with their earlier specifications. Act-instances that describe this progression of the same real world activity are linked through the ActRelationships (of the relationship category "sequel").</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">Act as statements or speech-acts are the only representation of real world facts or processes in the HL7 RIM. The truth about the real world is constructed through a combination (and arbitration) of such attributed statements only, and there is no class in the RIM whose objects represent "objective state of affairs" or "real processes" independent from attributed statements. As such, there is no distinction between an activity and its documentation. Every Act includes both to varying degrees. For example, a factual statement made about recent (but past) activities, authored (and signed) by the performer of such activities, is commonly known as a procedure report or original documentation (e.g., surgical procedure report, clinic note etc.). Conversely, a status update on an activity that is presently in progress, authored by the performer (or a close observer) is considered to capture that activity (and is later superceded by a full procedure report). However, both status update and procedure report are acts of the same kind, only distinguished by mood and state (see statusCode) and completeness of the information.</p>
+                            </core:value>
+                        </note>
+                        <entity:property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                            <predicate uri="http://hl7.org/ontology/vocab/uv/pr/Name%3AClass">
+                                <namespace>pr</namespace>
+                                <name>Name:Class</name>
+                            </predicate>
+                            <value>
+                                <literal>
+                                    <value>Act</value>
+                                </literal>
+                            </value>
+                        </entity:property>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Retired Entity">
+        <x:context mode="cts2concept">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <codeSystem name="ActClass" title="ActClass" codeSystemId="2.16.840.1.113883.5.6">
+                    <header>
+                        <legalese>
+                            <notation>Is in UMLS.</notation>
+                        </legalese>
+                        <responsibleGroup organizationName="Health Level 7"/>
+                        <contributor>
+                            <role>Sponsor</role>
+                            <name name="Health Level Seven"/>
+                        </contributor>
+                    </header>
+                    <releasedVersion releaseDate="2012-11-21" publisherVersionId="145" hl7MaintainedIndicator="true" completeCodesIndicator="true" hl7ApprovedIndicator="true">
+                        <supportedLanguage>en</supportedLanguage>
+                        <supportedConceptRelationship relationshipKind="Specializes" name="Specializes" inverseName="Generalizes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptRelationship relationshipKind="Generalizes" name="Generalizes" inverseName="Specializes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>Inverse of Specializes.  Only included as a derived relationship.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptProperty propertyName="internalId" type="Token" isMandatoryIndicator="false">
+                            <description>The internal identifier for the concept in the HL7 Access database repository.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="status" type="Token" isMandatoryIndicator="false" defaultValue="active">
+                            <description>Designation of a concept's state.  Normally is not populated unless the state is retired..</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Class" type="Token" isMandatoryIndicator="false">
+                            <description>Haven't a clue.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Participation:act:Act" type="String" isMandatoryIndicator="false" defaultValue="&amp;">
+                            <description>The formal name for relationship from Participation to Act</description>
+                        </supportedConceptProperty>
+                        <concept>
+                            <conceptProperty name="internalId" value="14785"/>
+                            <conceptProperty name="status" value="retired"/>
+                            <code code="DOCCNTNT" status="retired"/>
+                        </concept>
+                    </releasedVersion>
+                </codeSystem>
+            </vocabularyModel>
+        </x:context>
+        
+        <x:expect label="ActClass_DOCCNTNT">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
+                    xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#DOCCNTNT"
+                        entryState="INACTIVE">
+                        <entityID>
+                            <core:namespace>ActClass</core:namespace>
+                            <core:name>DOCCNTNT</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>14785</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="HIDDEN">
+                            <core:value>DOCCNTNT</core:value>
+                        </designation>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Name:Class property">
+        <x:context mode="cts2concept">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <codeSystem name="ActClass" title="ActClass" codeSystemId="2.16.840.1.113883.5.6">
+                    <header>
+                        <legalese>
+                            <notation>Is in UMLS.</notation>
+                        </legalese>
+                        <responsibleGroup organizationName="Health Level 7"/>
+                        <contributor>
+                            <role>Sponsor</role>
+                            <name name="Health Level Seven"/>
+                        </contributor>
+                    </header>
+                    <releasedVersion releaseDate="2012-11-21" publisherVersionId="145" hl7MaintainedIndicator="true" completeCodesIndicator="true" hl7ApprovedIndicator="true">
+                        <supportedLanguage>en</supportedLanguage>
+                        <supportedConceptRelationship relationshipKind="Specializes" name="Specializes" inverseName="Generalizes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptRelationship relationshipKind="Generalizes" name="Generalizes" inverseName="Specializes" isNavigable="true" reflexivity="irreflexive" symmetry="antisymmetric" transitivity="transitive">
+                            <description>Inverse of Specializes.  Only included as a derived relationship.</description>
+                        </supportedConceptRelationship>
+                        <supportedConceptProperty propertyName="internalId" type="Token" isMandatoryIndicator="false">
+                            <description>The internal identifier for the concept in the HL7 Access database repository.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="status" type="Token" isMandatoryIndicator="false" defaultValue="active">
+                            <description>Designation of a concept's state.  Normally is not populated unless the state is retired..</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Class" type="Token" isMandatoryIndicator="false">
+                            <description>Haven't a clue.</description>
+                        </supportedConceptProperty>
+                        <supportedConceptProperty propertyName="Name:Participation:act:Act" type="String" isMandatoryIndicator="false" defaultValue="&amp;">
+                            <description>The formal name for relationship from Participation to Act</description>
+                        </supportedConceptProperty>
+                        <concept>
+                            <annotations>
+                                <documentation>
+                                    <definition>
+                                        <text>
+                                            <p>A context representing a grouped commitment of information to the EHR. It is considered the unit of modification of the record, the unit of transmission in record extracts, and the unit of attestation by authorizing clinicians.</p>
+                                            <p>A composition represents part of a patient record originating from a single interaction between an authenticator and the record.</p>
+                                            <p>Unless otherwise stated all statements within a composition have the same authenticator, apply to the same patient and were recorded in a single session of use of a single application.</p>
+                                            <p>A composition contains organizers and entries.</p>
+                                        </text>
+                                    </definition>
+                                </documentation>
+                            </annotations>
+                            <conceptRelationship relationshipName="Specializes">
+                                <targetConcept code="_ActClassRecordOrganizer"/>
+                            </conceptRelationship>
+                            <conceptProperty name="internalId" value="20083"/>
+                            <conceptProperty name="Name:Class" value="Composition"/>
+                            <printName language="en" preferredForLanguage="true" text="composition"/>
+                            <printName language="en" preferredForLanguage="false" text="Attestable unit"/>
+                            <code code="COMPOSITION" status="active"/>
+                        </concept>
+                    </releasedVersion>
+                </codeSystem>
+            </vocabularyModel>
+        </x:context>
+        
+        <x:expect label="ActClass_DOCCNTNT">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
+                xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
+                    xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
+                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#COMPOSITION">
+                        <entityID>
+                            <core:namespace>ActClass</core:namespace>
+                            <core:name>COMPOSITION</core:name>
+                        </entityID>
+                        <alternateEntityID>
+                            <core:namespace>internalId</core:namespace>
+                            <core:name>20083</core:name>
+                        </alternateEntityID>
+                        <describingCodeSystemVersion>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                        </describingCodeSystemVersion>
+                        <designation designationRole="PREFERRED">
+                            <core:value>composition</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <designation designationRole="ALTERNATIVE">
+                            <core:value>Attestable unit</core:value>
+                            <core:language uri="http://www.omg.org/spec/LNG#en">en</core:language>
+                        </designation>
+                        <definition xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions">
+                            <core:value>
+                                <p xmlns="urn:hl7-org:v3/mif2">A context representing a grouped commitment of information to the EHR. It is considered the unit of modification of the record, the unit of transmission in record extracts, and the unit of attestation by authorizing clinicians.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">A composition represents part of a patient record originating from a single interaction between an authenticator and the record.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">Unless otherwise stated all statements within a composition have the same authenticator, apply to the same patient and were recorded in a single session of use of a single application.</p>
+                                <p xmlns="urn:hl7-org:v3/mif2">A composition contains organizers and entries.</p>
+                            </core:value>
+                        </definition>
+                        <entity:property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                            <predicate uri="http://hl7.org/ontology/vocab/uv/pr/Name%3AClass">
+                                <namespace>pr</namespace>
+                                <name>Name:Class</name>
+                            </predicate>
+                            <value>
+                                <literal>
+                                    <value>Composition</value>
+                                </literal>
+                            </value>
+                        </entity:property>
+                        <parent uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#_ActClassRecordOrganizer">
+                            <core:namespace>ActClass</core:namespace>
+                            <core:name>_ActClassRecordOrganizer</core:name>
+                            <core:designation>record organizer</core:designation>
+                        </parent>
+                        <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
+                            <core:namespace>skos</core:namespace>
+                            <core:name>Concept</core:name>
+                        </entityType>
+                    </namedEntity>
+                </upd:entityDescription>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+</x:description>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../transforms/VocabToCTS2ValueSet.xslt">
+   
+    <x:import href="basedoc.xspec"/>
+    
+    <x:param name="comments" select="false()"/>
+    
+    <x:scenario label="Basic MIF value set test">
+        <x:context mode="cts2valueset">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.1" name="AdministrativeGender">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>The gender of a person used for adminstrative purposes (as opposed to clinical gender)</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1"/>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+
+                <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
+                    valueSetName="AdministrativeGender"
+                    about="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender">
+                    <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <value>
+                            <description xmlns="urn:hl7-org:v3/mif2">
+                                <text>
+                                    <p>The gender of a person used for adminstrative purposes (as opposed to clinical gender)</p>
+                                </text>
+                            </description>
+                        </value>
+                    </resourceSynopsis>
+                    <core:alternateID>urn:oid:2.16.840.1.113883.1.11.1</core:alternateID>
+                    <definitions>definitions</definitions>
+                    <currentDefinition>
+                        <core:valueSetDefinition uri="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender/2012-11-21"
+                            href="definition/2012-11-21">AdministrativeGender-2012-11-21</core:valueSetDefinition>
+                    </currentDefinition>
+                </upd:valueSet>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="MIF Value Set Test isImmutable">
+        <!-- NOTE: this should also generate an unexpected parameter message for 'use' below -->
+        <x:context mode="cts2valueset">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.10196" name="ActMood" isImmutable="true" use="foo">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>A code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc.</p>
+                                    <p>
+                                        <i>Constraints:</i> An Act-instance must have one and only one moodCode value.</p>
+                                    <p>The moodCode of a single Act-instance never changes. Mood is not state.</p>
+                                    <p>To describe the progression of a business activity from defined to planned to executed, etc. one must instantiate different Act-instances in the different moods and link them using ActRelationship of general type "sequel". (See ActRelationship.type.)</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1001</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1001"/>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                
+                <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
+                    valueSetName="ActMood"
+                    about="http://hl7.org/ontology/vocab/uv/vs/ActMood">
+                    <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <value>
+                            <description xmlns="urn:hl7-org:v3/mif2">
+                                <text>
+                                    <p>A code distinguishing whether an Act is conceived of as a factual statement or in some other manner as a command, possibility, goal, etc.</p>
+                                    <p>
+                                        <i>Constraints:</i> An Act-instance must have one and only one moodCode value.</p>
+                                    <p>The moodCode of a single Act-instance never changes. Mood is not state.</p>
+                                    <p>To describe the progression of a business activity from defined to planned to executed, etc. one must instantiate different Act-instances in the different moods and link them using ActRelationship of general type "sequel". (See ActRelationship.type.)</p>
+                                </text>
+                            </description>
+                        </value>
+                    </resourceSynopsis>
+                    <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <predicate uri="http://hl7.org/ontology/vocab/uv/pr/isImmutable">
+                            <namespace>pr</namespace>
+                            <name>isImmutable</name>
+                        </predicate>
+                        <value>
+                            <literal>
+                                <value>true</value>
+                            </literal>
+                        </value>
+                    </property>
+                    <core:alternateID>urn:oid:2.16.840.1.113883.1.11.10196</core:alternateID>
+                    <definitions>definitions</definitions>
+                    <currentDefinition>
+                        <core:valueSetDefinition uri="http://hl7.org/ontology/vocab/uv/vs/ActMood/2012-11-21"
+                            href="definition/2012-11-21">ActMood-2012-11-21</core:valueSetDefinition>
+                    </currentDefinition>
+                </upd:valueSet>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="MIF Value Set Test deprecated">
+        <x:context mode="cts2valueset">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.11530" name="ActClassPublicHealthCase" isImmutable="true">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>A public health case is an Observation representing a condition or event that has a specific significance for public health. Typically it involves an instance or instances of a reportable infectious disease or other condition. The public health case can include a health-related event concerning a single individual or it may refer to multiple health-related events that are occurrences of the same disease or condition of interest to public health. An outbreak involving multiple individuals may be considered as a type of public health case. A public health case definition (Act.moodCode = "definition") includes the description of the clinical, laboratory, and epidemiologic indicators associated with a disease or condition of interest to public health. There are case definitions for conditions that are reportable, as well as for those that are not. There are also case definitions for outbreaks. A public health case definition is a construct used by public health for the purpose of counting cases, and should not be used as clinical indications for treatment. Examples include AIDS, toxic-shock syndrome, and salmonellosis and their associated indicators that are used to define a case.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                        <appInfo>
+                            <deprecationInfo deprecationEffectiveVersion="1176-20121109">
+                                <text>This element was deprecated as of the release indicated.</text>
+                            </deprecationInfo>
+                        </appInfo>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.6</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.6">
+                            <codeBasedContent code="CASE">
+                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="TransitiveClosure"/>
+                            </codeBasedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AcknowledgementCondition">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:mif="urn:hl7-org:v3/mif2"
+                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:pkg="http://expath.org/ns/pkg"
+                xmlns:impl="urn:x-xspec:compile:xslt:impl"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+                xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                
+                <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
+                    valueSetName="ActClassPublicHealthCase"
+                    about="http://hl7.org/ontology/vocab/uv/vs/ActClassPublicHealthCase"
+                    entryState="INACTIVE">
+                    <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <value>
+                            <description xmlns="urn:hl7-org:v3/mif2">
+                                <text>
+                                    <p>A public health case is an Observation representing a condition or event that has a specific significance for public health. Typically it involves an instance or instances of a reportable infectious disease or other condition. The public health case can include a health-related event concerning a single individual or it may refer to multiple health-related events that are occurrences of the same disease or condition of interest to public health. An outbreak involving multiple individuals may be considered as a type of public health case. A public health case definition (Act.moodCode = "definition") includes the description of the clinical, laboratory, and epidemiologic indicators associated with a disease or condition of interest to public health. There are case definitions for conditions that are reportable, as well as for those that are not. There are also case definitions for outbreaks. A public health case definition is a construct used by public health for the purpose of counting cases, and should not be used as clinical indications for treatment. Examples include AIDS, toxic-shock syndrome, and salmonellosis and their associated indicators that are used to define a case.</p>
+                                </text>
+                            </description>
+                        </value>
+                    </resourceSynopsis>
+                    <note xmlns="http://www.omg.org/spec/CTS2/1.1/Core" type="HistoryNote">
+                        <value>
+                            <deprecationInfo xmlns="urn:hl7-org:v3/mif2" deprecationEffectiveVersion="1176-20121109">
+                                <text>This element was deprecated as of the release indicated.</text>
+                            </deprecationInfo>
+                        </value>
+                    </note>
+                    <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <predicate uri="http://hl7.org/ontology/vocab/uv/pr/isImmutable">
+                            <namespace>pr</namespace>
+                            <name>isImmutable</name>
+                        </predicate>
+                        <value>
+                            <literal>
+                                <value>true</value>
+                            </literal>
+                        </value>
+                    </property>
+                    <core:alternateID>urn:oid:2.16.840.1.113883.1.11.11530</core:alternateID>
+                    <definitions>definitions</definitions>
+                </upd:valueSet>
+            </member>
+        </x:expect>
+    </x:scenario>
+    
+    
+</x:description>

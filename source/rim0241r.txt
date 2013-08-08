@@ -1,0 +1,56 @@
+(Notes on available files are at the end of this readme)
+
+Version NOTES
+
+This RIM is the first harmonized change of RIM Release 5 with one class (PublicHealthCase) and its three attributes deprecated from further use.The were approved at the November 2012 Harmonization Meetings. This release of the RIM is bound to HL7 Abstract Data Types Release 2.
+
+Questions should be addressed to the co-chairs of the Methodology and Modeling Committee and/or sent to the M&amp;M e-mail list at mnm@lists.hl7.org
+
+---------------------------------------------
+NOTES ON FILE EXTENSIONS
+Each of the files in this archive are named with a pattern like
+'rim0nnn?.ext' "nnn" is the RIM version, and the extension is 
+wither "zip" (archive) or "txt" (this file). (Specifics of file 
+content may within these archives MAY be found on the HL7 Wiki at:
+http://http://wiki.hl7.org/index.php?title= RIM_Maintenance_and_Tooling_Documentation 
+for many, BUT NOT for all file content.
+
+The ? in the file name indicates the contents as follows:
+
+-a  archive
+A "mif:package" file whose content is made up the complete 
+CURRENT RIM, and change-elements for ALL preior RIM versions.
+Any given prior RIM can be extracted from this archive
+
+-c  composite
+A composite ZIP file of ALL of the other ZIP files in this list.
+
+-d  definitive
+The CURRENT RIM and CURRENT vocbulary represented in "coremif" definition (DEFN) files as a mif:staticModel and 
+mif:vocabularyModel, respectively.
+
+-f  difference
+A pair of XML files that show where the CURRENT RIM differs from the prior version.
+
+-g  graphic
+A set of files in Visio and GIF format that contain the graphic expressions for the CURRENT model.
+
+-i  XMI
+An expression of the CURRENT RIM in the OMG UML 2.2 XMI standard. Includes the RIM xmi and a collection of "profiles" upon which 
+the RIM is dependent.
+
+-n  Notes
+Complete notes from the RIM harmonization meeting that reviewed 
+the changes that are incorporated in the CURRENT version
+
+-r  readme
+Notes about this version of the model and the files that are 
+posted here.
+
+-t  Rational Software Architect tool
+The complete model as an EMX file suitable for loading into Rational Software Architect.
+
+-x  xml
+A set of small XML files that will be used short-term to inform 
+the V3 Generator of the RIM and datatypes versions to use for generation. Will be dropped sometime in 2012 when a new Generator becomes available.
+

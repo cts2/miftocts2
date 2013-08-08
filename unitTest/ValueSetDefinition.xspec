@@ -1,0 +1,1042 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" 
+    stylesheet="../transforms/VocabToCTS2ValueSetDefinition.xslt">
+
+    <x:import href="basedoc.xspec"/>
+    
+    <x:param name="comments" select="false()"/>
+    
+    <x:scenario label="MIF Value Set Definition complete code system">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.1" name="AdministrativeGender">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>The gender of a person used for adminstrative purposes (as opposed to clinical gender)</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1"/>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="AdministrativeGender">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender/2012-11-21"
+                    formalName="AdministrativeGender-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender">AdministrativeGender</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeCodeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</codeSystem>
+                        </completeCodeSystem>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="MIF Value Set Definition includeRelatedCodes">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.10186" name="MobilityImpaired">
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.93</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.93">
+                            <codeBasedContent code="5">
+                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="TransitiveClosure"/>
+                            </codeBasedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="MobilityImpaired">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/MobilityImpaired/2012-11-21"
+                    formalName="MobilityImpaired-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/MobilityImpaired">MobilityImpaired</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/5">
+                                <core:namespace>PersonDisabilityType</core:namespace>
+                                <core:name>5</core:name>
+                            </referencedEntity>
+                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType">PersonDisabilityType</codeSystem>
+                            <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+                                <core:namespace>skos</core:namespace>
+                                <core:name>broaderTransitive</core:name>
+                            </predicate>
+                        </associatedEntities>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/5">
+                                <core:namespace>PersonDisabilityType</core:namespace>
+                                <core:name>5</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+    <x:scenario label="MIF Value Set Definition includeRelatedCodes no head code">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.10206" name="ObservationInterpretationNormality">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>Normality, Abnormality, Alert. Concepts in this category are mutually exclusive, i.e., at most one is allowed.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.83</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.83">
+                            <codeBasedContent includeHeadCode="false" code="_ObservationInterpretationNormality">
+                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="TransitiveClosure"/>
+                            </codeBasedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="ObservationInterpretationNormality2">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality/2012-11-21"
+                    formalName="ObservationInterpretationNormality-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/_ObservationInterpretationNormality">
+                                <core:namespace>ObservationInterpretation</core:namespace>
+                                <core:name>_ObservationInterpretationNormality</core:name>
+                            </referencedEntity>
+                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
+                            <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+                                <core:namespace>skos</core:namespace>
+                                <core:name>broaderTransitive</core:name>
+                            </predicate>
+                        </associatedEntities>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition transitve closure leaves">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.10206" name="ObservationInterpretationNormality">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>Normality, Abnormality, Alert. Concepts in this category are mutually exclusive, i.e., at most one is allowed.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.83</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.83">
+                            <codeBasedContent includeHeadCode="false" code="_ObservationInterpretationNormality">
+                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="TransitiveClosureLeaves"/>
+                            </codeBasedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="ObservationInterpretationNormality">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality/2012-11-21"
+                    formalName="ObservationInterpretationNormality-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="LEAF_ONLY">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/_ObservationInterpretationNormality">
+                                <core:namespace>ObservationInterpretation</core:namespace>
+                                <core:name>_ObservationInterpretationNormality</core:name>
+                            </referencedEntity>
+                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
+                            <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+                                <core:namespace>skos</core:namespace>
+                                <core:name>broaderTransitive</core:name>
+                            </predicate>
+                        </associatedEntities>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition direct children">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19603" name="FontStyle">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>(abstract) Defines font rendering characteristics</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1095</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1095">
+                            <codeBasedContent code="_FontStyle">
+                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="DirectRelationsOnly"/>
+                            </codeBasedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="FontStyle">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/FontStyle/2012-11-21" formalName="FontStyle-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/FontStyle">FontStyle</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <associatedEntities direction="TARGET_TO_SOURCE" transitivity="DIRECTLY_ASSOCIATED">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_FontStyle">
+                                <core:namespace>styleType</core:namespace>
+                                <core:name>_FontStyle</core:name>
+                            </referencedEntity>
+                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/styleType">styleType</codeSystem>
+                            <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+                                <core:namespace>skos</core:namespace>
+                                <core:name>broaderTransitive</core:name>
+                            </predicate>
+                        </associatedEntities>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_FontStyle">
+                                <core:namespace>styleType</core:namespace>
+                                <core:name>_FontStyle</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition entity list">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19458" name="x_DocumentActMood">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>Used to enumerate the moods that an act can take within the body of a clinical document.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1001</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1001">
+                            <codeBasedContent code="APT"/>
+                            <codeBasedContent code="ARQ"/>
+                            <codeBasedContent code="DEF"/>
+                            <codeBasedContent code="EVN"/>
+                            <codeBasedContent code="INT"/>
+                            <codeBasedContent code="PRMS"/>
+                            <codeBasedContent code="PRP"/>
+                            <codeBasedContent code="RQO"/>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="x_DocumentActMood">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_DocumentActMood/2012-11-21"
+                    formalName="x_DocumentActMood-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_DocumentActMood">x_DocumentActMood</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/APT">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>APT</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/ARQ">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>ARQ</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/DEF">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>DEF</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/EVN">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>EVN</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/INT">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>INT</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/PRMS">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>PRMS</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/PRP">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>PRP</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/RQO">
+                                <core:namespace>ActMood</core:namespace>
+                                <core:name>RQO</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition combo code valueset ref">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19463" name="x_EntityClassPersonOrOrgReceiving">
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.41</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <associatedConceptProperty name="Name:Class" value="Recipient"/>
+                        <content codeSystem="2.16.840.1.113883.5.41">
+                            <combinedContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.41">
+                                    <codeBasedContent code="PSN"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.41">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.10889" name="EntityClassOrganization"/>
+                                </unionWithContent>
+                            </combinedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="x_EntityClassPersonOrOrgReceiving">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_EntityClassPersonOrOrgReceiving/2012-11-21"
+                    formalName="x_EntityClassPersonOrOrgReceiving-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_EntityClassPersonOrOrgReceiving">x_EntityClassPersonOrOrgReceiving</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/EntityClass/PSN">
+                                <core:namespace>EntityClass</core:namespace>
+                                <core:name>PSN</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EntityClassOrganization">EntityClassOrganization</valueSet>
+                        </completeValueSet>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition big combo">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19465" name="NUCCProviderCodes">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>In the absence of an all-encompassing Provider Classification System, both X12N and the National Provider System Workgroup from the Centers for Medicare and
+                                        Medicaid Services (CMS) commenced work on identifying and coding an external provider table that would be able to codify provider type and provider area of
+                                        specialization for all medical related providers. CMS' intent was to provide a single coding structure to support work on the National Provider System, while
+                                        X12N needed a single common table for trading partner use. The two projects worked independently to some extent until April 1996 when the lists were coordinated
+                                        and a single taxonomy was proposed. A sub-group of the X12N TG2 WG 15 was charged with resolving differences in the two proposed taxonomies. Their work resulted
+                                        in a single taxonomy that both CMS and members of X12N found meaningful, easy to use, and functional for electronic transactions.</p>
+                                    <p>The sub-group initially started with the CMS draft taxonomy. This list incorporated all types of providers associated with medical care in various ways. Many of
+                                        the providers listed, such as technologists or technicians, support or repair equipment/machinery. A number of the providers offer medical services, in concert
+                                        with others, and do not or cannot bill independently for their portion. The amount of research to validate and classify all providers using the proposed
+                                        hierarchical structure was enormous. The X12N sub-group focused on medical providers who are licensed practitioners, those who bill for health-related services
+                                        rendered, and those who appeared on the Medicare CMS Provider Specialty listing. This included providers who were licensed to practice medicine via state
+                                        licensure agencies. In addition, a very broad definition of "areas of specialization" was used, which included nationally recognized specialties, provider
+                                        self-designated specialties, areas of practice focus, and any request by any agency or trading partner submitted before the first taxonomy release. This level
+                                        of detail captured specialty information in categories detailed enough to support those trading credentialing information, yet broad enough to support those
+                                        wishing to trade directory level specialization information.</p>
+                                    <p>In 2001, ANSI ASC X12N asked the NUCC to become the official maintainer of the Health Care Provider Taxonomy List. The NUCC has a formal operating protocol and
+                                        its membership includes representation from key provider and payer organizations, as well as state and federal agencies, standard development organizations and
+                                        the National Uniform Billing Committee (NUBC). Criteria for membership includes a national scope and representation of a unique constituency affected by health
+                                        care electronic commerce, with an emphasis on maintaining a provider/payer balance.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.6.101</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.6.101">
+                            <combinedContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19466" name="NursingServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19468" name="RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19475" name="NursingServiceRelatedProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19477" name="PharmacyServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19479" name="TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19488" name="BehavioralHealthandSocialServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19493" name="PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19497" name="AmbulatoryHealthCareFacilitiesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19499" name="DietaryandNutritionalServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19502" name="HospitalUnitsProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19503" name="RespiteCareFacilityProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19504" name="SuppliersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19506" name="HospitalsProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19511" name="LaboratoriesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19512" name="ResidentialTreatmentFacilitiesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19513" name="AllopathicandOsteopathicPhysiciansProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19534" name="DentalProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19536" name="ManagedCareOrganizationsProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19537" name="PodiatricMedicineandSurgeryProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19539" name="EmergencyMedicalServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19540" name="NursingandCustodialCareFacilitiesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19541" name="OtherServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19545" name="TransportationServicesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19547" name="AgenciesProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19548" name="SpeechLanguageandHearingProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19551" name="EyeandVisionServiceProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19554" name="ChiropracticProvidersProviderCodes"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.6.101">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19556" name="GroupProviderCodes"/>
+                                </unionWithContent>
+                            </combinedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="NUCCProviderCodes">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/NUCCProviderCodes/2012-11-21"
+                    formalName="NUCCProviderCodes-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/NUCCProviderCodes">NUCCProviderCodes</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingServiceProvidersProviderCodes">NursingServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes"
+                                >RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingServiceRelatedProvidersProviderCodes">NursingServiceRelatedProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PharmacyServiceProvidersProviderCodes">PharmacyServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes"
+                                >TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/BehavioralHealthandSocialServiceProvidersProviderCodes">BehavioralHealthandSocialServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes"
+                                >PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AmbulatoryHealthCareFacilitiesProviderCodes">AmbulatoryHealthCareFacilitiesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/DietaryandNutritionalServiceProvidersProviderCodes">DietaryandNutritionalServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalUnitsProviderCodes">HospitalUnitsProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/RespiteCareFacilityProviderCodes">RespiteCareFacilityProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SuppliersProviderCodes">SuppliersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalsProviderCodes">HospitalsProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/LaboratoriesProviderCodes">LaboratoriesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ResidentialTreatmentFacilitiesProviderCodes">ResidentialTreatmentFacilitiesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AllopathicandOsteopathicPhysiciansProviderCodes">AllopathicandOsteopathicPhysiciansProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/DentalProvidersProviderCodes">DentalProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ManagedCareOrganizationsProviderCodes">ManagedCareOrganizationsProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PodiatricMedicineandSurgeryProvidersProviderCodes">PodiatricMedicineandSurgeryProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EmergencyMedicalServiceProvidersProviderCodes">EmergencyMedicalServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingandCustodialCareFacilitiesProviderCodes">NursingandCustodialCareFacilitiesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/OtherServiceProvidersProviderCodes">OtherServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TransportationServicesProviderCodes">TransportationServicesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AgenciesProviderCodes">AgenciesProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SpeechLanguageandHearingProvidersProviderCodes">SpeechLanguageandHearingProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EyeandVisionServiceProvidersProviderCodes">EyeandVisionServiceProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ChiropracticProvidersProviderCodes">ChiropracticProvidersProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/GroupProviderCodes">GroupProviderCodes</valueSet>
+                        </completeValueSet>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition excludeContent">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19602" name="StyleType_modified">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>(abstract) Used within an instance to give the author some control over various aspects of rendering</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1095</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1095">
+                            <combinedContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.1095">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19604" name="TableRuleStyle"/>
+                                </unionWithContent>
+                                <excludeContent codeSystem="2.16.840.1.113883.5.1095">
+                                    <codeBasedContent code="_TableRuleStyle"/>
+                                </excludeContent>
+                            </combinedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="StyleType_modified">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified/2012-11-21"
+                    formalName="StyleType_modified-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified">StyleType_modified</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TableRuleStyle">TableRuleStyle</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="SUBTRACT" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_TableRuleStyle">
+                                <core:namespace>styleType</core:namespace>
+                                <core:name>_TableRuleStyle</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry> </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition intersectContent">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.19602" name="StyleType_modified">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>(abstract) Used within an instance to give the author some control over various aspects of rendering</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1095</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.1095">
+                            <combinedContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.1095">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.19604" name="TableRuleStyle"/>
+                                </unionWithContent>
+                                <intersectionWithContent codeSystem="2.16.840.1.113883.5.1095">
+                                    <codeBasedContent code="_TableRuleStyle"/>
+                                </intersectionWithContent>
+                            </combinedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="StyleType_modified">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified/2012-11-21"
+                    formalName="StyleType_modified-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified">StyleType_modified</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TableRuleStyle">TableRuleStyle</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="INTERSECT" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_TableRuleStyle">
+                                <core:namespace>styleType</core:namespace>
+                                <core:name>_TableRuleStyle</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry> </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition associatedConceptProperty">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.11610" name="x_ActRelationshipDocument">
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>Used to enumerate the relationships between two clinical documents for document management.</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.1002</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <associatedConceptProperty name="Name:Act:outboundRelationship:ActRelationship" value="relatedDocument"/>
+                        <associatedConceptProperty name="Sort:Act:outboundRelationship:ActRelationship" value="BI_______"/>
+                        <associatedConceptProperty name="Name:Act:inboundRelationship:ActRelationship" value="relatedTo"/>
+                        <associatedConceptProperty name="Sort:Act:inboundRelationship:ActRelationship" value="BI_______"/>
+                        <content codeSystem="2.16.840.1.113883.5.1002">
+                            <codeBasedContent code="APND"/>
+                            <codeBasedContent code="RPLC"/>
+                            <codeBasedContent code="XFRM"/>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="StyleType_modified">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_ActRelationshipDocument/2012-11-21"
+                    formalName="x_ActRelationshipDocument-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_ActRelationshipDocument">x_ActRelationshipDocument</definedValueSet>
+                    <note>Need associatedConceptProperty</note>
+                    <entry operator="UNION" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/APND">
+                                <core:namespace>ActRelationshipType</core:namespace>
+                                <core:name>APND</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/RPLC">
+                                <core:namespace>ActRelationshipType</core:namespace>
+                                <core:name>RPLC</core:name>
+                            </referencedEntity>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/XFRM">
+                                <core:namespace>ActRelationshipType</core:namespace>
+                                <core:name>XFRM</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+        </x:expect>
+    </x:scenario>
+
+    <x:scenario label="MMIF Value Set Definition nested content">
+        <x:context mode="cts2valuesetdefinition">
+            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
+                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
+                <header>
+                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
+                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
+                </header>
+                <valueSet id="2.16.840.1.113883.1.11.13715" name="OrganizationalHealthcareProviderHIPAA">
+                    <version versionDate="2012-11-21">
+                        <supportedCodeSystem>2.16.840.1.113883.5.53</supportedCodeSystem>
+                        <supportedCodeSystem>2.16.840.1.113883.5.111</supportedCodeSystem>
+                        <supportedLanguage>en</supportedLanguage>
+                        <content codeSystem="2.16.840.1.113883.5.111">
+                            <combinedContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.10596" name="HospitalUnitPracticeSetting"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.10602" name="HospitalPracticeSetting"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                    <combinedContent>
+                                        <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                            <valueSetRef id="2.16.840.1.113883.1.11.10605" name="NursingOrCustodialCarePracticeSetting"/>
+                                        </unionWithContent>
+                                        <excludeContent codeSystem="2.16.840.1.113883.5.111">
+                                            <codeBasedContent code="NCCF"/>
+                                        </excludeContent>
+                                    </combinedContent>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                    <combinedContent>
+                                        <unionWithContent codeSystem="2.16.840.1.113883.5.111">
+                                            <valueSetRef id="2.16.840.1.113883.1.11.10607" name="ResidentialTreatmentPracticeSetting"/>
+                                        </unionWithContent>
+                                        <excludeContent codeSystem="2.16.840.1.113883.5.111">
+                                            <codeBasedContent code="RTF"/>
+                                        </excludeContent>
+                                    </combinedContent>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13716" name="AbstractHealthcareProviderAgencyHIPAA"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13725" name="AmbulatoryHealthCareFacilityHIPAA"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13808" name="LaboratoryHIPAA"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13812" name="ManagedCareOrganizationHIPAA"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13833" name="SupplierHIPAA"/>
+                                </unionWithContent>
+                                <unionWithContent codeSystem="2.16.840.1.113883.5.53">
+                                    <valueSetRef id="2.16.840.1.113883.1.11.13849" name="TransportationServiceHIPAA"/>
+                                </unionWithContent>
+                                <excludeContent codeSystem="2.16.840.1.113883.5.111">
+                                    <codeBasedContent code="HU"/>
+                                </excludeContent>
+                            </combinedContent>
+                        </content>
+                    </version>
+                </valueSet>
+            </vocabularyModel>
+        </x:context>
+        <x:expect label="NestingExample">
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/OrganizationalHealthcareProviderHIPAA/2012-11-21"
+                    formalName="OrganizationalHealthcareProviderHIPAA-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/OrganizationalHealthcareProviderHIPAA">OrganizationalHealthcareProviderHIPAA</definedValueSet>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalUnitPracticeSetting">HospitalUnitPracticeSetting</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalPracticeSetting">HospitalPracticeSetting</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AbstractHealthcareProviderAgencyHIPAA">AbstractHealthcareProviderAgencyHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AmbulatoryHealthCareFacilityHIPAA">AmbulatoryHealthCareFacilityHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/LaboratoryHIPAA">LaboratoryHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ManagedCareOrganizationHIPAA">ManagedCareOrganizationHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SupplierHIPAA">SupplierHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TransportationServiceHIPAA">TransportationServiceHIPAA</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="SUBTRACT" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/HU">
+                                <core:namespace>RoleCode</core:namespace>
+                                <core:name>HU</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"> <upd:valueSetDefinition
+                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1/2012-11-21"
+                    formalName="_OrganizationalHealthcareProviderHIPAA_1_1-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</definedValueSet> <entry
+                        operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingOrCustodialCarePracticeSetting">NursingOrCustodialCarePracticeSetting</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="SUBTRACT" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/NCCF">
+                                <core:namespace>RoleCode</core:namespace>
+                                <core:name>NCCF</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition>
+            </member>
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
+                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"> <upd:valueSetDefinition
+                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2/2012-11-21"
+                    formalName="_OrganizationalHealthcareProviderHIPAA_1_2-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</definedValueSet> <entry
+                        operator="UNION" entryOrder="0">
+                        <completeValueSet>
+                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ResidentialTreatmentPracticeSetting">ResidentialTreatmentPracticeSetting</valueSet>
+                        </completeValueSet>
+                    </entry>
+                    <entry operator="SUBTRACT" entryOrder="0">
+                        <entityList>
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/RTF">
+                                <core:namespace>RoleCode</core:namespace>
+                                <core:name>RTF</core:name>
+                            </referencedEntity>
+                        </entityList>
+                    </entry>
+                </upd:valueSetDefinition> </member>
+        </x:expect>
+    </x:scenario>
+</x:description>

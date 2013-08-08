@@ -1,0 +1,23 @@
+This directory contains a series of tranformations that generate CTS2 output from HL7 MIF 2.1.6 input.
+
+To work, this directory must be a sibling of the hl7owl directory, which contains transforms from MIF to OWL.
+To create it:
+> cd ..
+> mkdir hl7owl
+> cd hl7owl
+> svn co http://gforge.hl7.org/svn/hl7owl/trunk .
+
+There are 8 parameters in the transforms/VocabToCTS2.xslt:
+    doCTS2CodeSystem
+    doCTS2CodeSystemVersion
+    doCTS2ConceptDomain
+    doCTS2ConceptDomainBinding
+    doCTS2Concept
+    doCTS2Association
+    doCTS2ValueSet
+    doCTS2ValueSetDefinition
+    
+that control what output is generated.
+
+There is a test directory (tests) that has a number of xspec tests.  Note that
+there is a file called 'basedoc.xspec' that contains the name of the target transformation.

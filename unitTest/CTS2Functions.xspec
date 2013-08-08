@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+    xmlns:cts2f = "http://informatics.mayo.edu/cts2/xslt/functions" 
+    stylesheet="../transforms/CTS2Functions.xslt">
+    
+    <x:scenario label="Test value set definition id">
+        <x:call function="cts2f:definitionId">
+            <x:param name="date">2012-11-21</x:param>
+        </x:call>
+        <x:expect label="dateOnly">2012-11-21</x:expect>
+    </x:scenario>
+    <x:scenario label="Test value set definition id with default">
+        <x:call function="cts2f:definitionId">
+            <x:param name="date">2012-11-21</x:param>
+            <x:param name="time">00:00:00</x:param>
+      </x:call>
+        <x:expect label="dateWithDefaultTime">2012-11-21</x:expect>
+    </x:scenario>
+    <x:scenario label="Test value set definition id with default">
+        <x:call function="cts2f:definitionId">
+            <x:param name="date">2012-11-21</x:param>
+            <x:param name="time">13:32:49</x:param>
+        </x:call>
+        <x:expect label="dateWithTime">2012-11-21T13:32:49</x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Test Existing OID to Code System">
+        <x:call function="cts2f:cts2CodeSystem" >
+            <x:param name="oid" select="'2.16.840.1.113883.6.96'"/>
+        </x:call>
+        <x:expect label="SNOMED International URI"  xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+            <CodeSystemReference uri="http://snomed.info/sct/900000000000207008">SNOMED_CT</CodeSystemReference>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Test Unknown OID to Code System">
+        <x:call function="cts2f:cts2CodeSystem" >
+            <x:param name="oid" select="'2.16.840.1.113883.19.96'"/>
+        </x:call>
+        <x:expect label="URI as plain OID"  xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+            <CodeSystemReference uri="urn:oid:2.16.840.1.113883.19.96">UNKNOWN</CodeSystemReference>
+        </x:expect>
+    </x:scenario>
+    
+    <x:scenario label="Test code system and code to URI">
+        <x:call function="cts2f:uri" >
+            <x:param name="csoid" select="'2.16.840.1.113883.6.96'"/>
+            <x:param name="code" select="'74400008'"/>
+        </x:call>
+        <x:expect label="Valid SNOMED URI" select="'http://snomed.info/id/74400008'"/>
+    </x:scenario>
+    
+    <x:scenario label="Test code system and code to URI">
+        <x:call function="cts2f:uri" >
+            <x:param name="csoid" select="'2.16.840.1.113883.19.96'"/>
+            <x:param name="code" select="'74400008'"/>
+        </x:call>
+        <x:expect label="Unknown URI" select="'urn:oid:2.16.840.1.113883.19.96:74400008'"/>
+    </x:scenario>
+</x:description>
