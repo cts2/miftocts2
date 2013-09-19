@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
+    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+    xmlns:cts2f = "http://informatics.mayo.edu/cts2/xslt/functions" 
+    stylesheet="../transforms/VocabToCTS2.xslt">
+    <x:import href="basedoc.xspec"/>
+    <!-- The following scenario verifies that document($basedoc)/ has been inserted into the VocabToOWL and Shared files -->
+    <x:scenario label="Test that vocaburi is set correctly" >
+        <x:call function="concat">
+            <x:param select="$vocabIri"/>
+            <x:param select="''"/>
+        </x:call>
+        <x:expect label="vocabIri Test" select="'http://hl7.org/ontology/vocab/uv'"/>
+    </x:scenario>
+</x:description>

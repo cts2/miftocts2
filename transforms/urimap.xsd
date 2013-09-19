@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" 
+    xmlns:urimap="http://informatics.mayo.edu/cts2/urimap"
+    xmlns="http://informatics.mayo.edu/cts2/urimap"
+    targetNamespace="http://informatics.mayo.edu/cts2/urimap">
+    <xs:import namespace="http://www.omg.org/spec/CTS2/1.1/Core" schemaLocation="http://informatics.mayo.edu/cts2/spec/CTS2/1.1/core/Core.xsd"/>
+    
+    <xs:complexType name="mapEntry">
+        <xs:annotation>
+            <xs:documentation>A map between a unique key and a corresponding name and meaning.</xs:documentation>
+        </xs:annotation>
+        <xs:complexContent>
+            <xs:extension base="core:NameAndMeaningReference">
+                <xs:attribute name="id" type="core:String"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    
+    <xs:complexType name="prefixEntry">
+        <xs:annotation>
+            <xs:documentation>A map between a uri and a prefix</xs:documentation>
+        </xs:annotation>
+        <xs:simpleContent>
+            <xs:extension base="core:String">
+                <xs:attribute name="uri" type="core:ExternalURI" use="required" id="uri"/>
+                <xs:attribute name="prefix" type="core:ExternalURI" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+
+    <xs:element name="mapList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="entry" type="mapEntry" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="prefixList">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="entry" type="prefixEntry" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>

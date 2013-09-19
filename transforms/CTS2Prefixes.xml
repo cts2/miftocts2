@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<prefixList xmlns="http://informatics.mayo.edu/cts2/urimap"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://informatics.mayo.edu/cts2/urimap file:/Users/mrf7578/Documents/workspace/owlhl7/transforms/urimap.xsd">
+<prefixList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://informatics.mayo.edu/cts2/urimap urimap.xsd" xmlns="http://informatics.mayo.edu/cts2/urimap">
     <entry uri="http://snomed.info/sct/900000000000207008" prefix="http://snomed.info/id/">SNOMED_CT</entry>
 </prefixList>

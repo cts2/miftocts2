@@ -19,8 +19,7 @@
         <xsl:for-each select="mif:releasedVersion">
             <xsl:apply-templates mode="cts2concept">
                 <xsl:with-param name="codeSystem" select="$codeSystem"/>
-                <xsl:with-param name="releaseDate" select="@releaseDate"/>
-                <xsl:with-param name="publisherVersionId" select="@publisherVersionId"/>
+                <xsl:with-param name="releaseDate" select="cts2f:getversion(@releaseDate, @publisherVersionId)"/>
             </xsl:apply-templates>
         </xsl:for-each>
     </xsl:template>
@@ -34,15 +33,14 @@
     <xsl:template match="mif:concept" xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" mode="cts2concept">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
         <xsl:param name="releaseDate"/>
-        <xsl:param name="publisherVersionId"/>
 
         <xsl:variable name="uri">
             <xsl:choose>
                 <xsl:when test="mif:code[@status='active']">
-                    <xsl:value-of select="concat($codeSystem/@baseUri,'/Concept#',encode-for-uri(mif:code[@status='active'][1]/@code))"/>
-                </xsl:when>
+                    <xsl:value-of select="cts2f:uri($codeSystem/@oid, mif:code[@status='active'][1]/@code)"/>
+                 </xsl:when>
                 <xsl:otherwise>
-                    <xsl:value-of select="concat($codeSystem/@baseUri,'/Concept#',encode-for-uri(mif:code[1]/@code))"/>
+                    <xsl:value-of select="cts2f:uri($codeSystem/@oid, mif:code[1]/@code)"/>
                 </xsl:otherwise>
             </xsl:choose>
         </xsl:variable>
@@ -195,7 +193,7 @@
     
     <xsl:template match="mif:conceptRelationship" mode="cts2concept" xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
-        <parent uri="{$codeSystem/@baseUri}/Concept#{mif:targetConcept/@code}">
+        <parent uri="{cts2f:uri($codeSystem/@oid,mif:targetConcept/@code)}">
             <core:namespace><xsl:value-of select="$codeSystem/@name"/></core:namespace>
             <core:name><xsl:value-of select="mif:targetConcept/@code"/></core:name>
             <core:designation>

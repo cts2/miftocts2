@@ -12,6 +12,24 @@
     <xsl:import href="../../hl7owl/transforms/VocabToOWL.xslt"/>
     <xsl:param name="comments" as="xs:boolean" />
     
+    <!-- Return the version identifier given a release date and an optional publisher version id
+         Currently coded to prefer release date over publisher version
+         -->
+    <xsl:function name="cts2f:getversion">
+        <xsl:param name="releaseDate"/>
+        <xsl:param name="publisherVersionId"/>
+
+        <xsl:choose>
+            <xsl:when test="string-length($publisherVersionId)">
+                <xsl:value-of select="$publisherVersionId"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="$releaseDate"/>
+            </xsl:otherwise>
+        </xsl:choose>
+        
+    </xsl:function>
+    
     <!-- Return the closest approximation for a preferred name.
          Order is:
           1) preferred english printName
@@ -107,7 +125,7 @@
                 <xsl:copy-of select="$uriSubstitutions[@type=$type and @oid=$oid]"/>
             </xsl:when>
             <xsl:otherwise>
-                <hl7:uriSubstitution type="{$type}" oid="{$oid}" name="UNKNOWN" baseUri="http://unknown.org/UNKNOWN"/>
+                <hl7:uriSubstitution type="{$type}" oid="{$oid}" name="UNKNOWN" baseUri="urn:oid:{$oid}"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
@@ -132,10 +150,8 @@
         
     
     <!-- Convert a urimap:entry into a CodeSystemReference -->
-<!--    <xsl:function name="cts2f:entryToCSR" as="core:CodeSystemReference">
-        <xsl:param name="entry" as="urimap:mapEntry"/>-->
-    <xsl:function name="cts2f:entryToCSR" as="node()" xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-        <xsl:param name="entry" as="node()"/>
+    <xsl:function name="cts2f:entryToCSR" as="element(core:CodeSystemReference)" xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+        <xsl:param name="entry" as="element()"/>
         <CodeSystemReference xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
             <xsl:copy-of select="$entry/@*[name()!='id']"/>
             <xsl:value-of select="$entry"/>
@@ -143,14 +159,19 @@
     </xsl:function>
     
     <!-- Return the core:CodeSystemReference that corresponds to the supplied codesystem oid -->
-    <xsl:function name="cts2f:cts2CodeSystem" as="node()">
+    <xsl:function name="cts2f:cts2CodeSystem" as="element(core:CodeSystemReference)">
         <xsl:param name="oid" as="xs:string"/>
         <xsl:choose>
             <xsl:when test="document('CodeSystemMap.xml')/urimap:mapList/urimap:entry[@id=$oid]">
                 <xsl:copy-of select="cts2f:entryToCSR(document('CodeSystemMap.xml')/urimap:mapList/urimap:entry[@id=$oid])"/>
             </xsl:when>
+            <xsl:when test="cts2f:oidToCodeSystem($oid)">
+                <CodeSystemReference uri="{cts2f:oidToCodeSystem($oid)/@baseUri}" xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                    <xsl:value-of select="cts2f:oidToCodeSystem($oid)/@name"/>
+                </CodeSystemReference>
+            </xsl:when>
             <xsl:otherwise>
-                <core:CodeSystemReference uri="urn:oid:{$oid}"  xmlns="http://www.omg.org/spec/CTS2/1.1/Core">UNKNOWN</core:CodeSystemReference>
+                <CodeSystemReference uri="urn:oid:{$oid}"  xmlns="http://www.omg.org/spec/CTS2/1.1/Core">UNKNOWN</CodeSystemReference>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>
@@ -159,14 +180,17 @@
     <xsl:function name="cts2f:uri" as="xs:string">
         <xsl:param name="csoid" as="xs:string"/>
         <xsl:param name="code" as="xs:string"/>
-        <!-- TODO: This doesn't work correctly at the moment... -->
-        <xsl:variable name="csURI" select="cts2f:cts2CodeSystem($csoid)/@uri"/>
+
+        <xsl:variable name="codesystem" select="cts2f:cts2CodeSystem($csoid)"/>
         <xsl:choose>
-            <xsl:when test="document('CTS2Prefixes.xml')/urimap:prefixList/urimap:entry[@uri=$csURI]">
-                <xsl:value-of select="concat(document('CTS2Prefixes.xml')/urimap:prefixList/urimap:entry[@uri=$csURI]/@prefix,encode-for-uri($code))"/>
+            <xsl:when test="document('CTS2Prefixes.xml')/urimap:prefixList/urimap:entry[@uri=$codesystem/@uri]">
+                <xsl:value-of select="concat(document('CTS2Prefixes.xml')/urimap:prefixList/urimap:entry[@uri=$codesystem/@uri]/@prefix,encode-for-uri($code))"/>
+            </xsl:when>
+            <xsl:when test="$codesystem = 'UNKNOWN'">
+                <xsl:value-of select="concat(cts2f:oidToCodeSystem($csoid)/@baseUri,':',encode-for-uri($code))"/>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:value-of select="concat($csURI,':',encode-for-uri($code))"/>
+                <xsl:value-of select="concat(cts2f:oidToCodeSystem($csoid)/@baseUri,'/Concept#',encode-for-uri($code))"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:function>

@@ -237,8 +237,9 @@
             <xsl:when test="count(*[name() != 'annotations'])=0">
                 <entry operator="{$op}" entryOrder="0">
                     <completeCodeSystem>
-                        <codeSystem uri="{$codeSystem/@baseUri}">
-                            <xsl:value-of select="$codeSystem/@name"/>
+                        <codeSystem>
+                            <xsl:copy-of select="cts2f:cts2CodeSystem($codeSystem/@oid)/@*"/>
+                            <xsl:copy-of select="cts2f:cts2CodeSystem($codeSystem/@oid)/node()"/>
                         </codeSystem>
                     </completeCodeSystem>
                 </entry>
@@ -337,7 +338,7 @@
                                  </xsl:choose>
                              </xsl:attribute>
                         </xsl:if>
-                        <referencedEntity uri="{$codeSystem/@baseUri}/{encode-for-uri(@code)}">
+                        <referencedEntity uri="{cts2f:uri($codeSystem/@oid,@code)}">
                             <core:namespace>
                                 <xsl:value-of select="$codeSystem/@name"/>
                             </core:namespace>
@@ -345,9 +346,11 @@
                                 <xsl:value-of select="@code"/>
                             </core:name>
                         </referencedEntity>
-                        <codeSystem uri="{$codeSystem/@baseUri}">
-                            <xsl:value-of select="$codeSystem/@name"/>
+                        <codeSystem>
+                            <xsl:copy-of select="cts2f:cts2CodeSystem($codeSystem/@oid)/@*"/>
+                            <xsl:copy-of select="cts2f:cts2CodeSystem($codeSystem/@oid)/node()"/>
                         </codeSystem>
+
                         <!-- TODO: Talk to Lloyd about the localization of Generalizes - what the dickens goes on here -->
                         <!--<predicate uri="{concat($uvVocabIri,'/pr/Specializes')}">
                             <core:namespace>pr</core:namespace>
@@ -362,7 +365,7 @@
                 <xsl:if test="not(exists(@includeHeadCode)) or ../@includeHeadCode">
                     <entry operator="{$op}" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="{$codeSystem/@baseUri}/{encode-for-uri(@code)}">
+                            <referencedEntity uri="{cts2f:uri($codeSystem/@oid,@code)}">
                                 <core:namespace>
                                     <xsl:value-of select="$codeSystem/@name"/>
                                 </core:namespace>
@@ -379,7 +382,7 @@
                     <entry operator="{$op}" entryOrder="0">
                         <entityList>
                             <xsl:for-each select="../mif:codeBasedContent">
-                                <referencedEntity uri="{$codeSystem/@baseUri}/{encode-for-uri(@code)}">
+                                <referencedEntity uri="{cts2f:uri($codeSystem/@oid,@code)}">
                                     <core:namespace>
                                         <xsl:value-of select="$codeSystem/@name"/>
                                     </core:namespace>

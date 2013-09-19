@@ -50,16 +50,7 @@
         <xsl:if test="mif:publicTerminologyServer|mif:postCoordinationFormat">
             <xsl:message terminate="yes">Unexpected element in releasedVersion <xsl:value-of select="@name"/></xsl:message>
         </xsl:if>
-        <xsl:variable name="vers">
-            <xsl:choose>
-                <xsl:when test="@publisherVersionId">
-                    <xsl:value-of select="@publisherVersionId"/>
-                </xsl:when>
-                <xsl:otherwise>
-                    <xsl:value-of select="@releaseDate"/>
-                </xsl:otherwise>
-            </xsl:choose>
-        </xsl:variable>
+        <xsl:variable name="vers" select="cts2f:getversion(@releaseDate,@publisherVersionId)"/>
         
         <member >
             <upd:codeSystemVersion codeSystemVersionName="{$codeSystem/@name}-{$vers}" about="{$codeSystem/@baseUri}/version/{encode-for-uri($vers)}" xmlns="http://www.omg.org/spec/CTS2/1.1/CodeSystemVersion">   

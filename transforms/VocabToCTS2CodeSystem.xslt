@@ -83,6 +83,12 @@
                 </xsl:for-each>
                 <xsl:apply-templates select="mif:annotations/mif:appInfo/mif:deprecationInfo" mode="cts2codeSystem"/>
                 <xsl:apply-templates select="mif:header" mode="cts2codeSystem2"/>
+                <currentVersion>
+                    <xsl:variable name="vers" select="cts2f:getversion($codeSystem/@date, $codeSystem/@version)"/>
+                    <core:version uri="{$codeSystem/@baseUri}/version/{encode-for-uri($vers)}">
+                        <xsl:value-of select="concat($codeSystem/@name,'-',$vers)"/>
+                    </core:version>
+                </currentVersion>
             </upd:codeSystem>
         </member>
     </xsl:template>
@@ -118,8 +124,18 @@
                         <xsl:otherwise><xsl:value-of select="mif:name/@name"/></xsl:otherwise>
                     </xsl:choose>
                 </core:source>
-                <!-- TODO find HL7 role sets and map to dcterms -->
-                <core:role uri=""><xsl:value-of select="mif:role"/></core:role>
+                <!-- The current MIF supports 2 roles:
+                        Sponsor
+                        Publisher  - maps to dublin core publisher
+                  -->
+                <xsl:choose>
+                    <xsl:when test="mif:role='Publisher'">
+                        <core:role uri="http://purl.org/dc/terms/1.1/publisher">Publisher</core:role>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <core:role uri="{$uvVocabIriBase}/pr/{encode-for-uri(mif:role)}"><xsl:value-of select="mif:role"/></core:role>
+                    </xsl:otherwise>
+                </xsl:choose>
             </core:sourceAndRole>
         </xsl:for-each>
         <xsl:for-each select="mif:legalese/mif:licenseTerms">

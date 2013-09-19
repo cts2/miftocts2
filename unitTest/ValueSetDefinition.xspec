@@ -76,7 +76,7 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/MobilityImpaired">MobilityImpaired</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/5">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/Concept#5">
                                 <core:namespace>PersonDisabilityType</core:namespace>
                                 <core:name>5</core:name>
                             </referencedEntity>
@@ -89,7 +89,7 @@
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/5">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/Concept#5">
                                 <core:namespace>PersonDisabilityType</core:namespace>
                                 <core:name>5</core:name>
                             </referencedEntity>
@@ -137,7 +137,7 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/_ObservationInterpretationNormality">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
                                 <core:namespace>ObservationInterpretation</core:namespace>
                                 <core:name>_ObservationInterpretationNormality</core:name>
                             </referencedEntity>
@@ -191,7 +191,7 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="LEAF_ONLY">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/_ObservationInterpretationNormality">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
                                 <core:namespace>ObservationInterpretation</core:namespace>
                                 <core:name>_ObservationInterpretationNormality</core:name>
                             </referencedEntity>
@@ -244,7 +244,7 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/FontStyle">FontStyle</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="DIRECTLY_ASSOCIATED">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_FontStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_FontStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_FontStyle</core:name>
                             </referencedEntity>
@@ -257,7 +257,7 @@
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_FontStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_FontStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_FontStyle</core:name>
                             </referencedEntity>
@@ -311,35 +311,35 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_DocumentActMood">x_DocumentActMood</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/APT">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#APT">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>APT</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/ARQ">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#ARQ">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>ARQ</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/DEF">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#DEF">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>DEF</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/EVN">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#EVN">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>EVN</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/INT">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#INT">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>INT</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/PRMS">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRMS">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>PRMS</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/PRP">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRP">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>PRP</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/RQO">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#RQO">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>RQO</core:name>
                             </referencedEntity>
@@ -385,7 +385,7 @@
                     <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_EntityClassPersonOrOrgReceiving">x_EntityClassPersonOrOrgReceiving</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/EntityClass/PSN">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/EntityClass/Concept#PSN">
                                 <core:namespace>EntityClass</core:namespace>
                                 <core:name>PSN</core:name>
                             </referencedEntity>
@@ -734,7 +734,7 @@
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_TableRuleStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_TableRuleStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_TableRuleStyle</core:name>
                             </referencedEntity>
@@ -792,7 +792,7 @@
                     </entry>
                     <entry operator="INTERSECT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/_TableRuleStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_TableRuleStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_TableRuleStyle</core:name>
                             </referencedEntity>
@@ -845,15 +845,15 @@
                     <note>Need associatedConceptProperty</note>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/APND">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#APND">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>APND</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/RPLC">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#RPLC">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>RPLC</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/XFRM">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#XFRM">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>XFRM</core:name>
                             </referencedEntity>
@@ -990,7 +990,7 @@
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/HU">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#HU">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>HU</core:name>
                             </referencedEntity>
@@ -1010,7 +1010,7 @@
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/NCCF">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#NCCF">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>NCCF</core:name>
                             </referencedEntity>
@@ -1030,7 +1030,7 @@
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/RTF">
+                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#RTF">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>RTF</core:name>
                             </referencedEntity>

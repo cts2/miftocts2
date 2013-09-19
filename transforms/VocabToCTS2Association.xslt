@@ -47,7 +47,7 @@
                     </xsl:otherwise>
                 </xsl:choose>
             </xsl:variable>
-            <xsl:variable name="uri" select="concat($codeSystem/@baseUri,'/Concept#',encode-for-uri($code))"/>
+            <xsl:variable name="uri" select="cts2f:uri($codeSystem/@oid,$code)"/>
                    
             <xsl:for-each select="mif:conceptRelationship">
                 <member>
@@ -65,7 +65,7 @@
                             <core:name>broaderTransitive</core:name>
                         </predicate>
                         <target>
-                            <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{$codeSystem/@baseUri}/Concept#{encode-for-uri(mif:targetConcept/@code)}">
+                            <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{cts2f:uri($codeSystem/@oid, mif:targetConcept/@code)}">
                                 <core:namespace>
                                     <xsl:value-of select="$codeSystem/@name"/>
                                 </core:namespace>
@@ -74,9 +74,10 @@
                                 </core:name>
                             </entity>
                         </target>
+                        <xsl:variable name="vers" select="cts2f:getversion($releaseDate, $publisherVersionId)"/>
                         <assertedBy xmlns="http://www.omg.org/spec/CTS2/1.1/Association">
-                            <core:version uri="{$codeSystem/@baseUri}/{$releaseDate}">
-                                <xsl:value-of select="concat($codeSystem/@name,'-',$releaseDate)"/>
+                            <core:version uri="{$codeSystem/@baseUri}/{$vers}">
+                                <xsl:value-of select="concat($codeSystem/@name,'-',$vers)"/>
                             </core:version>
                             <core:codeSystem uri="{$codeSystem/@baseUri}">
                                 <xsl:value-of select="$codeSystem/@name"/>

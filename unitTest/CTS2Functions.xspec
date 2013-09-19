@@ -3,6 +3,7 @@
     xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
     xmlns:cts2f = "http://informatics.mayo.edu/cts2/xslt/functions" 
     stylesheet="../transforms/CTS2Functions.xslt">
+    <x:import href="basedoc.xspec"/>
     
     <x:scenario label="Test value set definition id">
         <x:call function="cts2f:definitionId">
@@ -57,5 +58,13 @@
             <x:param name="code" select="'74400008'"/>
         </x:call>
         <x:expect label="Unknown URI" select="'urn:oid:2.16.840.1.113883.19.96:74400008'"/>
+    </x:scenario>
+    
+    <x:scenario label="Test code system and code to URI">
+        <x:call function="cts2f:uri">
+            <x:param name="csoid" select="'2.16.840.1.113883.5.4'"/>
+            <x:param name="code" select="'CCGC'"/>
+        </x:call>
+        <x:expect label="HL7 ActCode URI" select="'http://hl7.org/ontology/vocab/uv/cs/ActCode/Concept#CCGC'"/>
     </x:scenario>
 </x:description>

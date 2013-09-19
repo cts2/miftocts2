@@ -40,17 +40,18 @@
         <!-- owl - generate OWL output, CTS2 - generate CTS2 -->
     </xsl:param>
 
-    <xsl:param name="doCTS2CodeSystem" as="xs:boolean" select="false()"/>
-    <xsl:param name="doCTS2CodeSystemVersion" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2CodeSystem" as="xs:boolean" select="true()"/>
+    <xsl:param name="doCTS2CodeSystemVersion" as="xs:boolean" select="true()"/>
     <xsl:param name="doCTS2ConceptDomain" as="xs:boolean" select="false()"/>
     <xsl:param name="doCTS2ConceptDomainBinding" as="xs:boolean" select="false()"/>
-    <xsl:param name="doCTS2Concept" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2Concept" as="xs:boolean" select="true()"/>
     <xsl:param name="doCTS2Association" as="xs:boolean" select="true()"/>
-    <xsl:param name="doCTS2ValueSet" as="xs:boolean" select="false()"/>
-    <xsl:param name="doCTS2ValueSetDefinition" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2ValueSet" as="xs:boolean" select="true()"/>
+    <xsl:param name="doCTS2ValueSetDefinition" as="xs:boolean" select="true()"/>
 
     <xsl:param name="debugging" as="xs:boolean" select="false()"/>
 
+    <xsl:param name="codesystems" as="xs:string*" select="()"/>
 
     <!--========================================================================
     -  MAIN - CTS2 code generation
@@ -80,22 +81,22 @@
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.omg.org/spec/CTS2/1.1/Updates http://informatics.mayo.edu/cts2/spec/CTS2/1.1/updates/Updates.xsd"
                 changeSetURI="urn:uuid:{document('http://informatics.mayo.edu/cts2/services/bioportal-rdf/uuid')}" creationDate="{current-dateTime()}">
                 <xsl:if test="$doCTS2CodeSystem">
-                    <xsl:apply-templates select="mif:codeSystem" mode="cts2codeSystem"/>
+                    <xsl:apply-templates select="mif:codeSystem[cts2f:qualifies(@name)]" mode="cts2codeSystem"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2CodeSystemVersion">
-                    <xsl:apply-templates select="mif:codeSystem" mode="cts2codeSystemVersion"/>
+                    <xsl:apply-templates select="mif:codeSystem[cts2f:qualifies(@name)]" mode="cts2codeSystemVersion"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2ConceptDomain">
-                    <xsl:apply-templates select="mif:conceptDomain" mode="cts2conceptDomain"/>
+                    <xsl:apply-templates select="mif:conceptDomain[cts2f:qualifies(@name)]" mode="cts2conceptDomain"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2ConceptDomainBinding">
                     <xsl:apply-templates select="mif:contextBinding" mode="cts2conceptDomainBinding"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2Concept">
-                    <xsl:apply-templates select="mif:codeSystem" mode="cts2concept"/>
+                    <xsl:apply-templates select="mif:codeSystem[cts2f:qualifies(@name)]" mode="cts2concept"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2Association">
-                    <xsl:apply-templates select="mif:codeSystem" mode="cts2association"/>
+                    <xsl:apply-templates select="mif:codeSystem[cts2f:qualifies(@name)]" mode="cts2association"/>
                 </xsl:if>
                 <xsl:if test="$doCTS2ValueSet">
                     <xsl:apply-templates select="mif:valueSet" mode="cts2valueset"/>
@@ -138,5 +139,10 @@
     </xsl:template>
 
     <xsl:template match="text()"/>
+    
+    <xsl:function name="cts2f:qualifies" as="xs:boolean">
+        <xsl:param name="name"/>
+        <xsl:value-of select="count($codesystems)=0 or $name=$codesystems"/>
+    </xsl:function>
 
 </xsl:stylesheet>

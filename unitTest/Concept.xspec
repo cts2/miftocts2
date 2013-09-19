@@ -108,7 +108,7 @@
                             <core:name>10174</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
@@ -143,7 +143,7 @@
                             <core:name>10173</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
@@ -177,7 +177,7 @@
                             <core:name>17718</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/2012-11-21">AdministrativeGender-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
@@ -284,7 +284,7 @@
                             <core:name>13856</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
@@ -403,7 +403,7 @@
                             <core:name>14785</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="HIDDEN">
@@ -502,7 +502,7 @@
                             <core:name>20083</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/2012-11-21">ActClass-2012-11-21</core:version>
+                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
                             <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
