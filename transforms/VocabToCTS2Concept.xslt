@@ -99,8 +99,9 @@
                         </alternateEntityID>
                     </xsl:for-each>
                     <describingCodeSystemVersion>
-                        <core:version uri="{$codeSystem/@baseUri}/{$releaseDate}">
-                            <xsl:value-of select="concat($codeSystem/@name,'-',$releaseDate)"/>
+                        <xsl:variable name="vers" select="cts2f:getversion($codeSystem/@date, $codeSystem/@version)"/>
+                        <core:version uri="{$codeSystem/@baseUri}/version/{encode-for-uri($vers)}">
+                            <xsl:value-of select="concat($codeSystem/@name,'-',$vers)"/>
                         </core:version>
                         <core:codeSystem uri="{$codeSystem/@baseUri}">
                             <xsl:value-of select="$codeSystem/@name"/>
