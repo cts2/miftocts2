@@ -6,7 +6,10 @@
 <xsl:stylesheet version="2.0" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:hl7="urn:hl7-org:xslt:functions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
     xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pkg="http://expath.org/ns/pkg" xmlns:impl="urn:x-xspec:compile:xslt:impl"
-    exclude-result-prefixes="xs hl7 cts2f pkg impl">
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl"
+    exclude-result-prefixes="xs hl7 cts2f pkg impl xd">
+
+    
 
     <xsl:import href="../../hl7owl/transforms/VocabToOWL.xslt"/>
 
@@ -28,6 +31,15 @@
     
     <xsl:import href="VocabToCTS2CodeSystemVersion.xslt"/>
     
+    <xd:doc>
+        <xd:desc>This package converts the HL7 MIF vocabulary into the Common Terminology Services 2 (CTS2) equivalent.  It transforms the
+            following elements:
+            <xd:ul>
+                <xd:li>ConceptDomain is mapped to </xd:li>
+            </xd:ul>
+        </xd:desc>
+    </xd:doc>
+    
     
     <!-- Embed comments in output.  Have to switch off for unit tests -->
     <xsl:param name="comments" as="xs:boolean" select="true()"/>
@@ -40,13 +52,13 @@
         <!-- owl - generate OWL output, CTS2 - generate CTS2 -->
     </xsl:param>
 
-    <xsl:param name="doCTS2CodeSystem" as="xs:boolean" select="true()"/>
-    <xsl:param name="doCTS2CodeSystemVersion" as="xs:boolean" select="true()"/>
+    <xsl:param name="doCTS2CodeSystem" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2CodeSystemVersion" as="xs:boolean" select="false()"/>
     <xsl:param name="doCTS2ConceptDomain" as="xs:boolean" select="false()"/>
     <xsl:param name="doCTS2ConceptDomainBinding" as="xs:boolean" select="false()"/>
-    <xsl:param name="doCTS2Concept" as="xs:boolean" select="true()"/>
-    <xsl:param name="doCTS2Association" as="xs:boolean" select="true()"/>
-    <xsl:param name="doCTS2ValueSet" as="xs:boolean" select="true()"/>
+    <xsl:param name="doCTS2Concept" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2Association" as="xs:boolean" select="false()"/>
+    <xsl:param name="doCTS2ValueSet" as="xs:boolean" select="false()"/>
     <xsl:param name="doCTS2ValueSetDefinition" as="xs:boolean" select="true()"/>
 
     <xsl:param name="debugging" as="xs:boolean" select="false()"/>
