@@ -98,7 +98,7 @@
                 xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#F">
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#F">
                         <entityID>
                             <core:namespace>AdministrativeGender</core:namespace>
                             <core:name>F</core:name>
@@ -108,8 +108,8 @@
                             <core:name>10174</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76">AdministrativeGender-76</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
                             <core:value>Female</core:value>
@@ -133,7 +133,7 @@
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
                     xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#M">
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#M">
                         <entityID>
                             <core:namespace>AdministrativeGender</core:namespace>
                             <core:name>M</core:name>
@@ -143,8 +143,8 @@
                             <core:name>10173</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76">AdministrativeGender-76</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
                             <core:value>Male</core:value>
@@ -167,7 +167,7 @@
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" 
                 xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/Concept#UN">
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#UN">
                         <entityID>
                             <core:namespace>AdministrativeGender</core:namespace>
                             <core:name>UN</core:name>
@@ -177,8 +177,8 @@
                             <core:name>17718</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender/76">AdministrativeGender-76</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76">AdministrativeGender-76</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender">AdministrativeGender</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
                             <core:value>Undifferentiated</core:value>
@@ -274,7 +274,7 @@
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
                     xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#ACT">
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#ACT">
                         <entityID>
                             <core:namespace>ActClass</core:namespace>
                             <core:name>ACT</core:name>
@@ -284,8 +284,8 @@
                             <core:name>13856</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145">ActClass-145</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
                             <core:value>act</core:value>
@@ -316,7 +316,7 @@
                             </core:value>
                         </note>
                         <entity:property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-                            <predicate uri="http://hl7.org/ontology/vocab/uv/pr/Name%3AClass">
+                            <predicate uri="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass">
                                 <namespace>pr</namespace>
                                 <name>Name:Class</name>
                             </predicate>
@@ -392,7 +392,7 @@
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
                     xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#DOCCNTNT"
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#DOCCNTNT"
                         entryState="INACTIVE">
                         <entityID>
                             <core:namespace>ActClass</core:namespace>
@@ -403,8 +403,8 @@
                             <core:name>14785</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145">ActClass-145</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="HIDDEN">
                             <core:value>DOCCNTNT</core:value>
@@ -492,7 +492,7 @@
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
                 <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"
                     xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity">
-                    <namedEntity about="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#COMPOSITION">
+                    <namedEntity about="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#COMPOSITION">
                         <entityID>
                             <core:namespace>ActClass</core:namespace>
                             <core:name>COMPOSITION</core:name>
@@ -502,8 +502,8 @@
                             <core:name>20083</core:name>
                         </alternateEntityID>
                         <describingCodeSystemVersion>
-                            <core:version uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/145">ActClass-145</core:version>
-                            <core:codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ActClass">ActClass</core:codeSystem>
+                            <core:version uri="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145">ActClass-145</core:version>
+                            <core:codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/ActClass">ActClass</core:codeSystem>
                         </describingCodeSystemVersion>
                         <designation designationRole="PREFERRED">
                             <core:value>composition</core:value>
@@ -522,7 +522,7 @@
                             </core:value>
                         </definition>
                         <entity:property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-                            <predicate uri="http://hl7.org/ontology/vocab/uv/pr/Name%3AClass">
+                            <predicate uri="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass">
                                 <namespace>pr</namespace>
                                 <name>Name:Class</name>
                             </predicate>
@@ -532,7 +532,7 @@
                                 </literal>
                             </value>
                         </entity:property>
-                        <parent uri="http://hl7.org/ontology/vocab/uv/cs/ActClass/Concept#_ActClassRecordOrganizer">
+                        <parent uri="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#_ActClassRecordOrganizer">
                             <core:namespace>ActClass</core:namespace>
                             <core:name>_ActClassRecordOrganizer</core:name>
                             <core:designation>record organizer</core:designation>

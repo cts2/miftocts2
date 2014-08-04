@@ -29,7 +29,7 @@
             <xsl:message>Unexpected attribute or parameter in concept domain:<xsl:copy-of select="."/></xsl:message>
         </xsl:if>
         
-        <xsl:if test="$comments">
+        <xsl:if test="$useComments">
             <xsl:text>&#x0a;  </xsl:text>
             <xsl:comment select="concat('Concept Domain: ', @name)"/>
             <xsl:text>&#x0a;  </xsl:text>

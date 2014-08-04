@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <!--
-  - Converts MIF 2.1.6 VocabularyModeluriSubstitutions files to a CTS2 rendering
-  - (c) 2013, Mayo Clinic
-  -->
-<xsl:stylesheet version="2.0" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:hl7="urn:hl7-org:xslt:functions" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
-    xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions" xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="mif xs hl7 cts2f">
-
+<xsl:stylesheet version="2.0" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:hl7="urn:hl7-org:xslt:functions"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core" xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+    xmlns:xd="http://www.oxygenxml.com/ns/doc/xsl" xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="mif xs hl7 cts2f xd">
     <xsl:import href="CTS2Functions.xslt"/>
-    
-    <xsl:variable name="knownRelations" as="xs:string+" 
-        select="('ClassifiesClassCode', 'ComponentOf', 'MayBeQualifiedBy', 'OwningSubSection', 
-        'OwningSection', 'OwningAffiliate', 'SmallerThan')"/>
 
+    <xd:doc scope="stylesheet">
+        <xd:desc>
+            <xd:p><xd:b>Converts MIF 2.1.6 files to a CTS2 rendering</xd:b> (c) 2013, Mayo Clinic</xd:p>
+            <xd:p><xd:b>Created on:</xd:b> Oct 30, 2013</xd:p>
+            <xd:p><xd:b>Author:</xd:b> Harold Solbrig, Mayo Clinic</xd:p>
+            <xd:p> This module generates a CTS2 <xd:i>EnitityDescription</xd:i> for each mif <xd:b>concept</xd:b> entry
+                in a code system version.</xd:p>
+        </xd:desc>
+    </xd:doc>
 
+    <xd:doc>
+        <xd:desc>
+            <xd:p>Entry point for processing concepts. In the MIF, they are contained in code
+                    <xd:b>codeSystem/releasedVersion</xd:b> containers. </xd:p>
+        </xd:desc>
+    </xd:doc>
     <xsl:template match="mif:codeSystem" mode="cts2concept">
         <xsl:variable name="codeSystem" select="cts2f:oidToCodeSystem(@codeSystemId)"/>
         <xsl:for-each select="mif:releasedVersion">
@@ -23,31 +31,51 @@
             </xsl:apply-templates>
         </xsl:for-each>
     </xsl:template>
-
-    <xsl:template match="mif:supportedConceptRelationship" mode="cts2concept"/>
-
-    <xsl:template match="mif:supportedLanguage|mif:supportedConceptProperty" mode="cts2concept">
-        <!-- TODO: decide what to do with these -->
+    <!-- Note error in mif "Name: Act:inboundRelationship:ActRelationship" -->
+    <xsl:variable name="knownProperties" as="xs:string+"
+        select="('Name:Act:inboundRelationship:ActRelationship', 'Name:Act:outboundRelationship:ActRelationship', 
+             'Name:Act:participation:Participation', 'Name:ActRelationship:source:Act', 'Name:ActRelationship:target:Act',
+             'Name:Class', 'Name:Class', 'Name:Entity:playedRole:Role', 'Name:Entity:scopedRole:Role', 
+             'Name:Participation:act:Act', 'Name:Participation:role:Role', 'Name:Role:inboundLink:RoleLink', 
+             'Name:Role:outboundLink:RoleLink', 'Name:Role:participation:Participation', 'Name:Role:player:Entity', 
+             'Name:Role:scoper:Entity', 'Name:RoleLink:source:Role', 'Name:RoleLink:target:Role', 'OID', 
+             'Sort:Act:inboundRelationship:ActRelationship', 'Sort:Act:outboundRelationship:ActRelationship', 
+             'Sort:Act:participation:Participation', 'Sort:Entity:playedRole:Role', 'Sort:Entity:scopedRole:Role', 
+             'Sort:Role:inboundLink:RoleLink', 'Sort:Role:outboundLink:RoleLink', 'Sort:Role:participation:Participation', 
+             'appliesTo', 'conceptStatusQualifier', 'conductible', 'howApplies', 'internalId', 'inverseRelationship', 
+             'isDocumentCharacteristic', 'status')"/>
+    <!-- supportedRelationships are handled by the association section, although we do pay attention to Specializes and Generalizes 
+        to add the parents/ancestors/children/descendants branches -->
+    <xsl:template match="mif:supportedConceptRelationship" mode="cts2association"/>
+    <xsl:template match="mif:supportedConceptProperty" mode="cts2concept">
+        <!-- TODO: Need to gather these into the service description -->
+        <xsl:if test="not(@propertyName = $knownProperties)">
+            <xsl:message select="concat('Unknown property name: ',@name)"/>
+        </xsl:if>
     </xsl:template>
-
+    <xsl:template match="mif:supportedLanguage" mode="cts2concept">
+        <!-- All languages are ok for the time being -->
+    </xsl:template>
+    <xd:doc>
+        <xd:desc>
+            <xd:p>Generate an <xd:i>EntityDescription></xd:i> for the supplied concept.</xd:p>
+        </xd:desc>
+    </xd:doc>
     <xsl:template match="mif:concept" xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" mode="cts2concept">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
         <xsl:param name="releaseDate"/>
-
-        
         <xsl:variable name="doc" select="cts2f:parseDocumentation(mif:annotations)"/>
-        <xsl:variable name="codeMapEntry" select="cts2f:codeMapEntry($codeSystem/@oid,../@releaseDate,mif:code[1]/@code)"/>
+        <xsl:variable name="codeMapEntry"
+            select="cts2f:codeMapEntry($codeSystem/@oid,../@releaseDate,mif:code[1]/@code)"/>
         <xsl:variable name="uri" select="cts2f:uri($codeSystem/@oid, $codeMapEntry/@prefcode)"/>
         <member>
             <upd:entityDescription xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
-
                 <namedEntity about="{$uri}">
                     <xsl:for-each select="mif:conceptProperty[@name='status']">
                         <xsl:if test="@value='retired'">
                             <xsl:attribute name="entryState">INACTIVE</xsl:attribute>
                         </xsl:if>
                     </xsl:for-each>
-
                     <entityID>
                         <core:namespace>
                             <xsl:value-of select="$codeSystem/@name"/>
@@ -122,17 +150,14 @@
                         </xsl:otherwise>
                     </xsl:choose>
                     <xsl:for-each select="$doc/entity:definition">
-                        <xsl:copy-of select="."  xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"/>
+                        <xsl:copy-of select="." xmlns="http://www.omg.org/spec/CTS2/1.1/Entity"/>
                     </xsl:for-each>
                     <xsl:for-each select="$doc/entity:example">
                         <xsl:copy-of select="."/>
                     </xsl:for-each>
-
                     <xsl:for-each select="$doc/entity:note">
                         <xsl:copy-of select="."/>
                     </xsl:for-each>
-
-
                     <xsl:for-each select="mif:conceptProperty">
                         <xsl:choose>
                             <xsl:when test="@name='internalId'"/>
@@ -156,12 +181,10 @@
                             </xsl:otherwise>
                         </xsl:choose>
                     </xsl:for-each>
-
                     <xsl:apply-templates select="mif:conceptRelationship" mode="cts2concept">
                         <xsl:with-param name="codeSystem" select="$codeSystem"/>
-                        <xsl:with-param name="relDate" select="../@releaseDate"></xsl:with-param>
+                        <xsl:with-param name="relDate" select="../@releaseDate"/>
                     </xsl:apply-templates>
-
                     <entityType uri="http://www.w3.org/2004/02/skos/core#Concept">
                         <core:namespace>skos</core:namespace>
                         <core:name>Concept</core:name>
@@ -170,18 +193,13 @@
             </upd:entityDescription>
         </member>
     </xsl:template>
-
     <xsl:template match="mif:conceptRelationship" mode="cts2concept" xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
         <xsl:param name="relDate"/>
-        <xsl:variable name="codeMapEntry" select="cts2f:codeMapEntry($codeSystem/@oid, $relDate, mif:targetConcept/@code)"/>
+        <xsl:variable name="codeMapEntry"
+            select="cts2f:codeMapEntry($codeSystem/@oid, $relDate, mif:targetConcept/@code)"/>
         <xsl:choose>
-            <xsl:when test="@relationshipName != 'Specializes'">
-                <!-- So far the MIF only has one relationship -->
-                <xsl:if test="not(@relationshipName = $knownRelations)">
-                    <xsl:message select="concat('Unknown relationship name: ',@relationshipName)"/>
-                </xsl:if>
-            </xsl:when>
+            <xsl:when test="@relationshipName != 'Specializes'"/>
             <!-- If this IS the preferred code, spit it out -->
             <xsl:when test="mif:targetConcept/@code = $codeMapEntry/@prefcode">
                 <xsl:call-template name="outputParent">
@@ -193,11 +211,11 @@
             <xsl:when test="../mif:conceptRelationship[mif:targetConcept/@code = $codeMapEntry/@prefcode]"/>
             <!-- Otherwise, whine -->
             <xsl:otherwise>
-                <xsl:message select="concat('Only alternate parent has been named in relationship: ', mif:targetConcept/@code)"/>
+                <xsl:message
+                    select="concat('Only alternate parent has been named in relationship: ', mif:targetConcept/@code)"/>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
-    
     <xsl:template name="outputParent" xmlns="http://www.omg.org/spec/CTS2/1.1/Entity">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
         <xsl:param name="targetConcept" as="xs:string"/>

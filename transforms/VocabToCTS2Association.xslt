@@ -23,8 +23,18 @@
         </xsl:for-each>
     </xsl:template>
 
+
+    <xsl:variable name="knownRelations" as="xs:string+" 
+        select="('Specializes', 'Generalizes', 'ClassifiesClassCode', 'ComponentOf', 'MayBeQualifiedBy', 'OwningSubSection', 
+        'OwningSection', 'OwningAffiliate', 'SmallerThan')"/>
+    
+    <!-- Properties are handled in the concept (EntityDescription) section -->
     <xsl:template match="mif:supportedLanguage|mif:supportedConceptProperty" mode="cts2association"/>
-    <xsl:template match="mif:supportedConceptRelationship" mode="cts2association"/>
+    <xsl:template match="mif:supportedConceptRelationship" mode="cts2association">
+         <xsl:if test="not(@name = $knownRelations)">
+             <xsl:message select="concat('Unknown relationship name: ',@name)"/>
+         </xsl:if>
+    </xsl:template>
 
     <xsl:template match="mif:concept" xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" mode="cts2association">
         <xsl:param name="codeSystem" as="element(hl7:uriSubstitution)"/>
@@ -48,55 +58,68 @@
                 </xsl:variable>
                 <xsl:choose>
                     <xsl:when test="mif:targetConcept/@code=$targetMapEntry/cts2f:concept/@prefcode">
-                        <member>
-                            <upd:association associationID="{$uri}/A{count(preceding-sibling::node())}" xmlns="http://www.omg.org/spec/CTS2/1.1/Association">
-                                <subject uri="{$uri}">
-                                    <core:namespace>
-                                        <xsl:value-of select="$codeSystem/@name"/>
-                                    </core:namespace>
-                                    <core:name>
-                                        <xsl:value-of select="$codeMapEntry/@prefcode"/>
-                                    </core:name>
-                                </subject>
-                                <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
-                                    <core:namespace>skos</core:namespace>
-                                    <core:name>broaderTransitive</core:name>
-                                </predicate>
-                                <target>
+                        <!-- TMP -->
+                        <xsl:if test="@relationshipName != 'Specializes'">
+                            <member>
+                                <upd:association associationID="{$uri}/A{count(preceding-sibling::node())}" xmlns="http://www.omg.org/spec/CTS2/1.1/Association">
+                                    <subject uri="{$uri}">
+                                        <core:namespace>
+                                            <xsl:value-of select="$codeSystem/@name"/>
+                                        </core:namespace>
+                                        <core:name>
+                                            <xsl:value-of select="$codeMapEntry/@prefcode"/>
+                                        </core:name>
+                                    </subject>
                                     <xsl:choose>
-                                        <xsl:when test="mif:targetConcept/@codeSystem">
-                                            <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{cts2f:uri(mif:targetConcept/@codeSystem, mif:targetConcept/@code)}">
-                                                <core:namespace>
-                                                    <xsl:value-of select="cts2f:oidToCodeSystem(mif:targetConcept/@codeSystem)/@name"/>
-                                                </core:namespace>
-                                                <core:name>
-                                                    <xsl:value-of select="mif:targetConcept/@code"/>
-                                                </core:name>
-                                            </entity>
+                                        <xsl:when test="@relationshipName='Specializes'">
+                                            <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
+                                                <core:namespace>skos</core:namespace>
+                                                <core:name>broaderTransitive</core:name>
+                                            </predicate>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{cts2f:uri($codeSystem/@oid, mif:targetConcept/@code)}">
-                                                <core:namespace>
-                                                    <xsl:value-of select="$codeSystem/@name"/>
-                                                </core:namespace>
-                                                <core:name>
-                                                    <xsl:value-of select="mif:targetConcept/@code"/>
-                                                </core:name>
-                                            </entity>
+                                            <predicate uri="http://hl7.org/owl/vocab/uv/cs/CR#{@relationshipName}">
+                                                <core:namespace>CR</core:namespace>
+                                                <core:name><xsl:value-of select="@relationshipName"/></core:name>
+                                            </predicate>
                                         </xsl:otherwise>
                                     </xsl:choose>
-                                </target>
-                                <xsl:variable name="vers" select="cts2f:getversion($releaseDate, $publisherVersionId)"/>
-                                <assertedBy xmlns="http://www.omg.org/spec/CTS2/1.1/Association">
-                                    <core:version uri="{$codeSystem/@baseUri}/version/{$vers}">
-                                        <xsl:value-of select="concat($codeSystem/@name,'-',$vers)"/>
-                                    </core:version>
-                                    <core:codeSystem uri="{$codeSystem/@baseUri}">
-                                        <xsl:value-of select="$codeSystem/@name"/>
-                                    </core:codeSystem>
-                                </assertedBy>
-                            </upd:association>
-                        </member>
+                                    <target>
+                                        <xsl:choose>
+                                            <xsl:when test="mif:targetConcept/@codeSystem">
+                                                <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{cts2f:uri(mif:targetConcept/@codeSystem, mif:targetConcept/@code)}">
+                                                    <core:namespace>
+                                                        <xsl:value-of select="cts2f:oidToCodeSystem(mif:targetConcept/@codeSystem)/@name"/>
+                                                    </core:namespace>
+                                                    <core:name>
+                                                        <xsl:value-of select="mif:targetConcept/@code"/>
+                                                    </core:name>
+                                                </entity>
+                                            </xsl:when>
+                                            <xsl:otherwise>
+                                                <entity xmlns="http://www.omg.org/spec/CTS2/1.1/Core" uri="{cts2f:uri($codeSystem/@oid, mif:targetConcept/@code)}">
+                                                    <core:namespace>
+                                                        <xsl:value-of select="$codeSystem/@name"/>
+                                                    </core:namespace>
+                                                    <core:name>
+                                                        <xsl:value-of select="mif:targetConcept/@code"/>
+                                                    </core:name>
+                                                </entity>
+                                            </xsl:otherwise>
+                                        </xsl:choose>
+                                    </target>
+                                    <xsl:variable name="vers" select="cts2f:getversion($releaseDate, $publisherVersionId)"/>
+                                    <assertedBy xmlns="http://www.omg.org/spec/CTS2/1.1/Association">
+                                        <core:version uri="{$codeSystem/@baseUri}/version/{$vers}">
+                                            <xsl:value-of select="concat($codeSystem/@name,'-',$vers)"/>
+                                        </core:version>
+                                        <core:codeSystem uri="{$codeSystem/@baseUri}">
+                                            <xsl:value-of select="$codeSystem/@name"/>
+                                        </core:codeSystem>
+                                    </assertedBy>
+                                </upd:association>
+                            </member>
+                        </xsl:if>
                     </xsl:when>
                     <!-- If this isn't the preferred code, but one exists, just drop it -->
                     <xsl:when test="../mif:conceptRelationship[mif:targetConcept/@code = $targetMapEntry/cts2f:concept/@prefcode]"/>

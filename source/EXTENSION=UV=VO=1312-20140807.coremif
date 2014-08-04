@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1240-20130806" title="HL7 Vocabulary"
+                 packageKind="version"
+                 definitionKind="partial-publishing"
+                 schemaVersion="2.1.7">
+   <packageLocation combinedId="DEFN=UV=VO=1240-20130806" root="DEFN" artifact="VO"
+                    realmNamespace="UV"
+                    version="1240-20130806"/>
+   <header>
+      <renderingInformation renderingTime="2013-03-11T18:45:00" application="RoseTree 4.2.45"/>
+      <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2013"/>
+   </header>
+   <!-- START VALUE SETS from March 2010 Harmonization.--><!-- START VALUE SETS for Material from Decision Support - Harmonization item 540001.--><valueSet id="2.16.840.1.113883.11.76" name="KnowledgeSubjectObservationValue">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Observation values used to indicate a knowledge subject of interest for which knowledge content is requested (e.g., a medication, a laboratory test, a medical condition).</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-16"><!-- Rule  #1 - Proponents must provide the long name, short name and OID for each CS referenced and must assure that the CS is listed as an External
+				code system in the HL7 Vocabulary data base. --><supportedCodeSystem>2.16.840.1.113883.6.96</supportedCodeSystem>
+         <!-- snomed-CT --><supportedCodeSystem>2.16.840.1.113883.6.177</supportedCodeSystem>
+         <!-- MeSH--><supportedCodeSystem>2.16.840.1.113883.6.2</supportedCodeSystem>
+         <!-- ICD-9CM --><supportedCodeSystem>2.16.840.1.113883.6.3</supportedCodeSystem>
+         <!-- ICD-10 --><supportedCodeSystem>2.16.840.1.113883.6.88</supportedCodeSystem>
+         <!-- RxNorm --><supportedCodeSystem>2.16.840.1.113883.6.69</supportedCodeSystem>
+         <!-- NDC --><supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <!-- LOINC --><content>
+            <combinedContent>
+               <unionWithContent codeSystem="2.16.840.1.113883.6.96"/>
+               <!-- snomed-CT --><unionWithContent codeSystem="2.16.840.1.113883.6.177"/>
+               <!-- MeSH--><unionWithContent codeSystem="2.16.840.1.113883.6.2"/>
+               <!-- ICD-9CM --><unionWithContent codeSystem="2.16.840.1.113883.6.3"/>
+               <!-- ICD-10 --><unionWithContent codeSystem="2.16.840.1.113883.6.88"/>
+               <!-- RxNorm --><unionWithContent codeSystem="2.16.840.1.113883.6.69"/>
+               <!-- NDC --><unionWithContent codeSystem="2.16.840.1.113883.6.1"/>
+               <!-- LOINC --></combinedContent>
+         </content>
+      </version>
+   </valueSet>
+   <valueSet id="2.16.840.1.113883.11.77" name="KnowledgeSubtopicObservationValue">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Observation values used to indicate a knowledge subtopic of interest for which knowledge content is requested (e.g., treatment, etiology, prognosis).</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-16">
+         <supportedCodeSystem>2.16.840.1.113883.6.96</supportedCodeSystem>
+         <!-- snomed-CT --><supportedCodeSystem>2.16.840.1.113883.6.177</supportedCodeSystem>
+         <!-- MeSH--><content>
+            <combinedContent>
+               <unionWithContent codeSystem="2.16.840.1.113883.6.177"><!-- MeSH--><codeBasedContent code="Q000008" codeLabel="administration &amp; dosage"/>
+                  <codeBasedContent code="Q000744" codeLabel="contraindications aspect"/>
+                  <codeBasedContent code="Q000009" codeLabel="aspects of adverse effects"/>
+                  <codeBasedContent code="D004347" codeLabel="Drug Interactions"/>
+                  <codeBasedContent code="Q000145" codeLabel="classificaiton"/>
+                  <codeBasedContent code="Q000209" codeLabel="etiology"/>
+                  <codeBasedContent code="Q000175" codeLabel="diagnosis"/>
+                  <codeBasedContent code="Q000628" codeLabel="therapy"/>
+                  <codeBasedContent code="D011379" codeLabel="prognosis"/>
+                  <codeBasedContent code="Q000627" codeLabel="therapeutic use"/>
+                  <codeBasedContent code="Q000493" codeLabel="pharmacokinetics"/>
+                  <codeBasedContent code="Q000494" codeLabel="pharmacology"/>
+                  <codeBasedContent code="Q000633" codeLabel="toxicity"/>
+                  <codeBasedContent code="Q000506" codeLabel="poisoning"/>
+               </unionWithContent>
+               <unionWithContent codeSystem="2.16.840.1.113883.6.96"><!-- SNOMED CT--><codeBasedContent code="79899007" codeLabel="Drug interaction"/>
+                  <codeBasedContent code="47965005" codeLabel="Differential diagnosis"/>
+                  <codeBasedContent code="404204005" codeLabel="Drug interaction with drug"/>
+                  <codeBasedContent code="95907004" codeLabel="Drug interaction with food"/>
+                  <codeBasedContent code="95906008" codeLabel="Drug interaction with alcohol"/>
+               </unionWithContent>
+            </combinedContent>
+         </content>
+      </version>
+   </valueSet>
+   <valueSet id="2.16.840.1.113883.11.75" name="AgeGroupObservationValue">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Observation values used to indicate the age group of a person in terms of age group concept codes.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-16">
+         <supportedCodeSystem>2.16.840.1.113883.6.177</supportedCodeSystem>
+         <!-- MeSH--><content codeSystem="2.16.840.1.113883.6.177"><!-- MeSH--><codeBasedContent code="D009273" codeLabel="age groups"/>
+            <codeBasedContent code="D000293" codeLabel="adolescent; 13-18 years"/>
+            <codeBasedContent code="D000368" codeLabel="aged; 56-79 years"/>
+            <codeBasedContent code="D000369"
+                              codeLabel="aged, 80 and older; a person 80 years of age and older"/>
+            <codeBasedContent code="D008875" codeLabel="middle aged; 45-64 years"/>
+            <codeBasedContent code="D055815" codeLabel="young adult; 19-24 years"/>
+            <codeBasedContent code="D002648" codeLabel="child; 6 to 12 years"/>
+            <codeBasedContent code="D002675" codeLabel="child, preschool; 2 to 5 years"/>
+            <codeBasedContent code="D000328" codeLabel="adult; 19-44 years"/>
+            <codeBasedContent code="D007223" codeLabel="infant; 1 to 23 months"/>
+            <codeBasedContent code="D007231" codeLabel="infant, newborn; birth to 1 month"/>
+         </content>
+      </version>
+   </valueSet>
+   <valueSet id="2.16.840.1.113883.11.79" name="LOINCObservationActContextAgeDefinitionCode">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Identifies a type of observation that captures the age of an entity involved in an act with no implied method of determination.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-16">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <!-- LOINC --><content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="30525-0" codeLabel="Age"/>
+         </content>
+      </version>
+   </valueSet>
+   <valueSet id="2.16.840.1.113883.11.80" name="ObservationActContextAgeGroupType">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Identifies a type of observation that captures the age of a person in terms of age group concept codes.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-16">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <!-- LOINC --><content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="46251-5" codeLabel="Age group"/>
+         </content>
+      </version>
+   </valueSet>
+   <!-- END VALUE SETS for Material from Decision Support - Harmonization item 540001.--><!-- START VALUE SETS for Material from PHER - Harmonization item 2300121.--><valueSet id="2.16.840.1.113883.11.81" name="immunizationForecastStatusObservationValue">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Represents the patient's status with respect to their immunization guideline as of an evaluation date.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-22">
+         <supportedCodeSystem>2.16.840.1.113883.6.96</supportedCodeSystem>
+         <!-- SNOMED-CT --><content codeSystem="2.16.840.1.113883.6.96">
+            <codeBasedContent code="171258008" codeLabel="Up-to-date with immunizations"/>
+            <codeBasedContent code="171279008" codeLabel="Immunization due"/>
+            <codeBasedContent code="171259000" codeLabel="Not up-to-date with immunizations"/>
+         </content>
+      </version>
+   </valueSet>
+   <!-- END VALUE SETS for Material from PHER - Harmonization item 2300121 March 2010 cycle.--><!-- START VALUE SETS for PHER Harmonization March 2013 --><valueSet id="2.16.840.1.113883.11.82" name="immunizationForecastDate">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>Set of LOINC codes that identify the type of date that is specified within an immunization forecast step.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2013-03-11">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <!-- LOINC --><content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="30981-5" codeLabel="Earliest date to give"/>
+            <codeBasedContent code="30980-7" codeLabel="Date vaccine due"/>
+            <codeBasedContent code="59777-3" codeLabel="Lastest date to give immunization"/>
+            <codeBasedContent code="59778-1" codeLabel="Date when overdue for immunization"/>
+         </content>
+      </version>
+   </valueSet>
+   <!-- END VALUE SETS for PHER Harmonization March 2013  --><!-- START VALUE SETS for HQMF Harmonization item 020021 July 2013 --><valueSet id="2.16.840.1.113883.11.83" name="ObservationMeasureCountableItems">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>A collection of items that can be counted by a quality measure (e.g., patients, encounters, procedures, etc.) for Observation.value used in the HQMF R2 MeasureAttribute class.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2010-03-22">
+         <supportedCodeSystem>2.16.840.1.113883.6.96</supportedCodeSystem>
+         <!-- SNOMED-CT --><content codeSystem="2.16.840.1.113883.6.96">
+            <codeBasedContent code="71388002" codeLabel="Procedure"/>
+            <codeBasedContent code="49062001" codeLabel="Device"/>
+            <codeBasedContent code="125676002" codeLabel="Person"/>
+            <codeBasedContent code="389109008" codeLabel="Group"/>
+            <codeBasedContent code="272379006" codeLabel="Event"/>
+            <codeBasedContent code="258700003" codeLabel="Non-SI unit of time"/>
+         </content>
+      </version>
+   </valueSet>
+   <!-- END VALUE SETS for HQMF Harmonization July 2013 --><!--START VALUE SETS for SDWG-RO-001a on 2014-03-10--><valueSet id="2.16.840.1.113883.1.11.20507" name="LoincDocumentOntologyInternational">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>The LOINC Document Ontology constrained for usage in the Universal Realm by removal of "regional" Document Types such as the "VA Compensation and Pension" codes.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2014-03-14">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="11488-4" codeLabel="Consult note"/>
+            <codeBasedContent code="11492-6" codeLabel="Hosp H&amp;P note"/>
+            <codeBasedContent code="11504-8" codeLabel="Operative note"/>
+            <codeBasedContent code="11506-3" codeLabel="Progress note"/>
+            <codeBasedContent code="11507-1" codeLabel="OT Progress note"/>
+            <codeBasedContent code="11508-9" codeLabel="PT Progress note"/>
+            <codeBasedContent code="11509-7" codeLabel="Podiatry Progress note"/>
+            <codeBasedContent code="11510-5" codeLabel="Psych Progress note"/>
+            <codeBasedContent code="11512-1" codeLabel="Speech-lang path Progress note"/>
+            <codeBasedContent code="15507-7" codeLabel="ED Progress note"/>
+            <codeBasedContent code="18733-6" codeLabel="MD Progress note"/>
+            <codeBasedContent code="18740-1" codeLabel="Speech-lang path Initial eval note"/>
+            <codeBasedContent code="18761-7" codeLabel="Transfer sum note"/>
+            <codeBasedContent code="18842-5" codeLabel="Discharge sum"/>
+            <codeBasedContent code="28569-2" codeLabel="Consulting Md Progress note"/>
+            <codeBasedContent code="28571-8" codeLabel="Speech-lang path Note"/>
+            <codeBasedContent code="28575-9" codeLabel="Nurse pract Progress note"/>
+            <codeBasedContent code="28578-3" codeLabel="OT Note"/>
+            <codeBasedContent code="28579-1" codeLabel="PT Note"/>
+            <codeBasedContent code="28580-9" codeLabel="Chiropractid med Progress note"/>
+            <codeBasedContent code="28581-7" codeLabel="Chiropractid med Initial eval note"/>
+            <codeBasedContent code="28617-9" codeLabel="Dentistry Progress note"/>
+            <codeBasedContent code="28618-7" codeLabel="Dentistry Note"/>
+            <codeBasedContent code="28623-7" codeLabel="Progress note"/>
+            <codeBasedContent code="28624-5" codeLabel="Podiatry Operative note"/>
+            <codeBasedContent code="28626-0" codeLabel="Physician H&amp;P note"/>
+            <codeBasedContent code="28627-8" codeLabel="Psychiatric Progress note"/>
+            <codeBasedContent code="28628-6" codeLabel="Psychiatric Note"/>
+            <codeBasedContent code="28636-9" codeLabel="Initial eval note"/>
+            <codeBasedContent code="28653-4" codeLabel="Social work Note"/>
+            <codeBasedContent code="28656-7" codeLabel="Social work Progress note"/>
+            <codeBasedContent code="34094-3" codeLabel="Cardiology Hosp Admit H&amp;P note"/>
+            <codeBasedContent code="34095-0" codeLabel="Comp H&amp;P note"/>
+            <codeBasedContent code="34096-8" codeLabel="Nursing facility Comp H&amp;P note"/>
+            <codeBasedContent code="34097-6" codeLabel="Nursing facility Conf eval note"/>
+            <codeBasedContent code="34098-4" codeLabel="Conf eval note"/>
+            <codeBasedContent code="34099-2" codeLabel="Cardiology Consult note"/>
+            <codeBasedContent code="34100-8" codeLabel="ICU Consult note"/>
+            <codeBasedContent code="34101-6" codeLabel="General medicine OP Consult note"/>
+            <codeBasedContent code="34102-4" codeLabel="Psychiatric Hosp Consult note"/>
+            <codeBasedContent code="34103-2" codeLabel="Pulmonary disease Consult note"/>
+            <codeBasedContent code="34104-0" codeLabel="Hosp Consult note"/>
+            <codeBasedContent code="34105-7" codeLabel="Hosp Discharge sum"/>
+            <codeBasedContent code="34106-5" codeLabel="Physician Hosp Discharge sum"/>
+            <codeBasedContent code="34107-3" codeLabel="Pt's home Educ note"/>
+            <codeBasedContent code="34108-1" codeLabel="OP Note"/>
+            <codeBasedContent code="34109-9" codeLabel="Note"/>
+            <codeBasedContent code="34110-7" codeLabel="Diabetology OP Note"/>
+            <codeBasedContent code="34111-5" codeLabel="ED Note"/>
+            <codeBasedContent code="34112-3" codeLabel="Hosp Note"/>
+            <codeBasedContent code="34113-1" codeLabel="Nursing facility Note"/>
+            <codeBasedContent code="34114-9" codeLabel="Hosp Group counseling note"/>
+            <codeBasedContent code="34115-6" codeLabel="MS Hosp H&amp;P note"/>
+            <codeBasedContent code="34116-4" codeLabel="Physician Nursing facility H&amp;P note"/>
+            <codeBasedContent code="34117-2" codeLabel="H&amp;P note"/>
+            <codeBasedContent code="34118-0" codeLabel="Pt's home Initial eval note"/>
+            <codeBasedContent code="34119-8" codeLabel="Nursing facility Initial eval note"/>
+            <codeBasedContent code="34120-6" codeLabel="OP Initial eval note"/>
+            <codeBasedContent code="34121-4" codeLabel="Interv proced note"/>
+            <codeBasedContent code="34123-0" codeLabel="Anesthesiology Hosp Pre-op note"/>
+            <codeBasedContent code="34124-8" codeLabel="Cardiology OP Progress note"/>
+            <codeBasedContent code="34125-5" codeLabel="Case Manager Pt's home Progress note"/>
+            <codeBasedContent code="34126-3" codeLabel="ICU Progress note"/>
+            <codeBasedContent code="34127-1" codeLabel="Dentistry.hygienist OP Progress note"/>
+            <codeBasedContent code="34128-9" codeLabel="Dentistry OP Progress note"/>
+            <codeBasedContent code="34129-7" codeLabel="Pt's home Progress note"/>
+            <codeBasedContent code="34130-5" codeLabel="Hosp Progress note"/>
+            <codeBasedContent code="34131-3" codeLabel="OP Progress note"/>
+            <codeBasedContent code="34132-1" codeLabel="Pharmacy OP Progress note"/>
+            <codeBasedContent code="34133-9" codeLabel="Summary of episode note"/>
+            <codeBasedContent code="34134-7" codeLabel="MD OP Supervisory note"/>
+            <codeBasedContent code="34135-4" codeLabel="Cardiology.MD OP Supervisory note"/>
+            <codeBasedContent code="34136-2" codeLabel="Gastroenterology.MD OP Supervisory note"/>
+            <codeBasedContent code="34137-0" codeLabel="OP Operative note"/>
+            <codeBasedContent code="34138-8" codeLabel="Targeted H&amp;P note"/>
+            <codeBasedContent code="34139-6" codeLabel="Phone encounter Note"/>
+            <codeBasedContent code="34744-3" codeLabel="Admit eval note"/>
+            <codeBasedContent code="34745-0" codeLabel="Discharge sum"/>
+            <codeBasedContent code="34746-8" codeLabel="Note"/>
+            <codeBasedContent code="34747-6" codeLabel="Pre-op note"/>
+            <codeBasedContent code="34748-4" codeLabel="Phone encounter Note"/>
+            <codeBasedContent code="34749-2" codeLabel="Anesthesiology OP Consult note"/>
+            <codeBasedContent code="34750-0" codeLabel="Anesthesiology Note"/>
+            <codeBasedContent code="34751-8" codeLabel="Anesthesiology Pre-op note"/>
+            <codeBasedContent code="34752-6" codeLabel="Cardiology Note"/>
+            <codeBasedContent code="34753-4" codeLabel="Cardiology OP Note"/>
+            <codeBasedContent code="34754-2" codeLabel="CCM Note"/>
+            <codeBasedContent code="34755-9" codeLabel="CCM Transfer sum note"/>
+            <codeBasedContent code="34756-7" codeLabel="Dentistry Consult note"/>
+            <codeBasedContent code="34758-3" codeLabel="Dermatology Consult note"/>
+            <codeBasedContent code="34759-1" codeLabel="Dermatology Note"/>
+            <codeBasedContent code="34760-9" codeLabel="Diabetology Consult note"/>
+            <codeBasedContent code="34761-7" codeLabel="Gastroenterology Consult note"/>
+            <codeBasedContent code="34762-5" codeLabel="Gastroenterology Note"/>
+            <codeBasedContent code="34763-3" codeLabel="General medicine Admit H&amp;P note"/>
+            <codeBasedContent code="34764-1" codeLabel="General medicine Consult note"/>
+            <codeBasedContent code="34765-8" codeLabel="General medicine Note"/>
+            <codeBasedContent code="34766-6" codeLabel="General medicine OP Note"/>
+            <codeBasedContent code="34767-4" codeLabel="MS.gen med Note"/>
+            <codeBasedContent code="34768-2" codeLabel="Gen med.nurse Note"/>
+            <codeBasedContent code="34769-0" codeLabel="Gen med.MD Note"/>
+            <codeBasedContent code="34770-8" codeLabel="General medicine Transfer sum note"/>
+            <codeBasedContent code="34773-2" codeLabel="Surg.MD attend Note"/>
+            <codeBasedContent code="34774-0" codeLabel="Surgery H&amp;P note"/>
+            <codeBasedContent code="34776-5" codeLabel="Geri med Consult note"/>
+            <codeBasedContent code="34777-3" codeLabel="OBGYN Consult note"/>
+            <codeBasedContent code="34778-1" codeLabel="OBGYN Note"/>
+            <codeBasedContent code="34779-9" codeLabel="HemOnc Consult note"/>
+            <codeBasedContent code="34780-7" codeLabel="HemOnc Note"/>
+            <codeBasedContent code="34781-5" codeLabel="Infectious disease Consult note"/>
+            <codeBasedContent code="34782-3" codeLabel="Infectious disease Note"/>
+            <codeBasedContent code="34783-1" codeLabel="Kinesiotherapy Consult note"/>
+            <codeBasedContent code="34784-9" codeLabel="Kinesiotherapy Note"/>
+            <codeBasedContent code="34785-6" codeLabel="Mental health Consult note"/>
+            <codeBasedContent code="34786-4" codeLabel="Mental health Note"/>
+            <codeBasedContent code="34787-2" codeLabel="Mental health Group counseling note"/>
+            <codeBasedContent code="34788-0" codeLabel="Psychiatric Consult note"/>
+            <codeBasedContent code="34790-6" codeLabel="Psychiatric Group counseling note"/>
+            <codeBasedContent code="34791-4" codeLabel="Psych Consult note"/>
+            <codeBasedContent code="34792-2" codeLabel="Psych Note"/>
+            <codeBasedContent code="34793-0" codeLabel="Psych Group counseling note"/>
+            <codeBasedContent code="34794-8" codeLabel="Interdisciplinary Note"/>
+            <codeBasedContent code="34795-5" codeLabel="Nephrology Consult note"/>
+            <codeBasedContent code="34796-3" codeLabel="Nephrology Note"/>
+            <codeBasedContent code="34797-1" codeLabel="Neurology Consult note"/>
+            <codeBasedContent code="34798-9" codeLabel="Neuro surgery Consult note"/>
+            <codeBasedContent code="34799-7" codeLabel="Neuro surgery Note"/>
+            <codeBasedContent code="34800-3" codeLabel="Nutrition and dietetics Consult note"/>
+            <codeBasedContent code="34801-1" codeLabel="Nutrition and dietetics Note"/>
+            <codeBasedContent code="34802-9" codeLabel="Occupational medicine Note"/>
+            <codeBasedContent code="34803-7" codeLabel="Occupational medicine Consult note"/>
+            <codeBasedContent code="34805-2" codeLabel="Oncology Consult note"/>
+            <codeBasedContent code="34806-0" codeLabel="Oncology Note"/>
+            <codeBasedContent code="34807-8" codeLabel="Ophthalmol Consult note"/>
+            <codeBasedContent code="34808-6" codeLabel="Ophthalmol Note"/>
+            <codeBasedContent code="34809-4" codeLabel="Ophthalmol Pre-op note"/>
+            <codeBasedContent code="34810-2" codeLabel="Optometry Consult note"/>
+            <codeBasedContent code="34811-0" codeLabel="Optometry Note"/>
+            <codeBasedContent code="34812-8" codeLabel="Oral maxillofacial surgery Consult note"/>
+            <codeBasedContent code="34813-6" codeLabel="Oral maxillofacial surgery Note"/>
+            <codeBasedContent code="34814-4" codeLabel="Orthopaedic surgery Consult note"/>
+            <codeBasedContent code="34815-1" codeLabel="Orthopaedic surgery Note"/>
+            <codeBasedContent code="34816-9" codeLabel="Otolaryngology Consult note"/>
+            <codeBasedContent code="34817-7" codeLabel="Otolaryngology Note"/>
+            <codeBasedContent code="34818-5" codeLabel="Otolaryngology Operative note"/>
+            <codeBasedContent code="34820-1" codeLabel="Pharmacy Consult note"/>
+            <codeBasedContent code="34821-9" codeLabel="Pharmacy Note"/>
+            <codeBasedContent code="34822-7" codeLabel="Physical med+rehab Consult note"/>
+            <codeBasedContent code="34823-5" codeLabel="Physical med+rehab Note"/>
+            <codeBasedContent code="34824-3" codeLabel="PT Consult note"/>
+            <codeBasedContent code="34826-8" codeLabel="Plastic surgery Consult note"/>
+            <codeBasedContent code="34827-6" codeLabel="Plastic surgery Note"/>
+            <codeBasedContent code="34828-4" codeLabel="Podiatry Consult note"/>
+            <codeBasedContent code="34829-2" codeLabel="Podiatry Note"/>
+            <codeBasedContent code="34830-0" codeLabel="Pulmonary disease Note"/>
+            <codeBasedContent code="34831-8" codeLabel="Radiation oncology Consult note"/>
+            <codeBasedContent code="34832-6" codeLabel="Radiation oncology Note"/>
+            <codeBasedContent code="34833-4" codeLabel="Rec therapy Consult note"/>
+            <codeBasedContent code="34834-2" codeLabel="Rec therapy Note"/>
+            <codeBasedContent code="34837-5" codeLabel="Resp therapy Consult note"/>
+            <codeBasedContent code="34838-3" codeLabel="Resp therapy Note"/>
+            <codeBasedContent code="34839-1" codeLabel="Rheumatology Consult note"/>
+            <codeBasedContent code="34840-9" codeLabel="Rheumatology Note"/>
+            <codeBasedContent code="34841-7" codeLabel="Social work Consult note"/>
+            <codeBasedContent code="34843-3" codeLabel="Social work Group counseling note"/>
+            <codeBasedContent code="34844-1" codeLabel="Social work Phone encounter Note"/>
+            <codeBasedContent code="34845-8" codeLabel="Speech-lang path+Audiology Consult note"/>
+            <codeBasedContent code="34846-6" codeLabel="Speech-lang path+Audiology Note"/>
+            <codeBasedContent code="34847-4" codeLabel="Surgery Consult note"/>
+            <codeBasedContent code="34848-2" codeLabel="Surgery Note"/>
+            <codeBasedContent code="34849-0" codeLabel="Thoracic surgery Consult note"/>
+            <codeBasedContent code="34850-8" codeLabel="Thoracic surgery OP Note"/>
+            <codeBasedContent code="34851-6" codeLabel="Urology Consult note"/>
+            <codeBasedContent code="34852-4" codeLabel="Urology Note"/>
+            <codeBasedContent code="34853-2" codeLabel="Vascular surgery Consult note"/>
+            <codeBasedContent code="34854-0" codeLabel="Vascular surgery OP Note"/>
+            <codeBasedContent code="34855-7" codeLabel="OT Consult note"/>
+            <codeBasedContent code="34856-5" codeLabel="E/M coag note"/>
+            <codeBasedContent code="34857-3" codeLabel="E+M substance abuse nte"/>
+            <codeBasedContent code="34858-1" codeLabel="Pain medicine Note"/>
+            <codeBasedContent code="34859-9" codeLabel="E/M of hyperlipidemia"/>
+            <codeBasedContent code="34860-7" codeLabel="E/M of hypertension"/>
+            <codeBasedContent code="34861-5" codeLabel="Diabetology Note"/>
+            <codeBasedContent code="34862-3" codeLabel="Gen med.MD Hosp Admit eval note"/>
+            <codeBasedContent code="34864-9" codeLabel="Mental health Counseling note"/>
+            <codeBasedContent code="34865-6" codeLabel="Psychiatric Counseling note"/>
+            <codeBasedContent code="34866-4" codeLabel="Psych Counseling note"/>
+            <codeBasedContent code="34867-2" codeLabel="Ophthalmol OP Post-op E/M note"/>
+            <codeBasedContent code="34868-0" codeLabel="Orthopaedic surgery Operative note"/>
+            <codeBasedContent code="34869-8" codeLabel="Pharmacy Counseling note"/>
+            <codeBasedContent code="34870-6" codeLabel="Plastic surgery Operative note"/>
+            <codeBasedContent code="34872-2" codeLabel="Social work Counseling note"/>
+            <codeBasedContent code="34873-0" codeLabel="Surgery Admit eval note"/>
+            <codeBasedContent code="34874-8" codeLabel="Surgery Operative note"/>
+            <codeBasedContent code="34875-5" codeLabel="Surgery Post-op E/M note"/>
+            <codeBasedContent code="34876-3" codeLabel="Surgery Pre-op note"/>
+            <codeBasedContent code="34877-1" codeLabel="Urology Operative note"/>
+            <codeBasedContent code="34878-9" codeLabel="Emergency med Note"/>
+            <codeBasedContent code="34879-7" codeLabel="Endocrinology Consult note"/>
+            <codeBasedContent code="34880-5" codeLabel="Surgery.nurse Post-op E/M note"/>
+            <codeBasedContent code="34881-3" codeLabel="Surgery.nurse Pre-op note"/>
+            <codeBasedContent code="34895-3" codeLabel="Educ note"/>
+            <codeBasedContent code="34896-1" codeLabel="Cardiology Interv proced note"/>
+            <codeBasedContent code="34897-9" codeLabel="Diabetology Educ note"/>
+            <codeBasedContent code="34898-7" codeLabel="Endocrinology Note"/>
+            <codeBasedContent code="34899-5" codeLabel="Gastroenterology Interv proced note"/>
+            <codeBasedContent code="34900-1" codeLabel="General medicine Progress note"/>
+            <codeBasedContent code="34901-9" codeLabel="General medicine OP Progress note"/>
+            <codeBasedContent code="34902-7" codeLabel="Geri med OP Educ note"/>
+            <codeBasedContent code="34904-3" codeLabel="Mental health Progress note"/>
+            <codeBasedContent code="34905-0" codeLabel="Neurology Note"/>
+            <codeBasedContent code="34906-8" codeLabel="Pastoral Care Note"/>
+            <codeBasedContent code="47039-3" codeLabel="Hosp Admit H&amp;P note"/>
+            <codeBasedContent code="47040-1" codeLabel="Confirm consult note"/>
+            <codeBasedContent code="47041-9" codeLabel="Hosp Confirm consult note"/>
+            <codeBasedContent code="47042-7" codeLabel="Counseling note"/>
+            <codeBasedContent code="47043-5" codeLabel="Group counseling note"/>
+            <codeBasedContent code="47044-3" codeLabel="Hosp Initial eval note"/>
+            <codeBasedContent code="47046-8" codeLabel="Summary of death"/>
+            <codeBasedContent code="47047-6" codeLabel="Supervisory note"/>
+            <codeBasedContent code="47420-5" codeLabel="Functional status note"/>
+            <codeBasedContent code="51845-6" codeLabel="OP Consult note"/>
+            <codeBasedContent code="51846-4" codeLabel="ED Consult note"/>
+            <codeBasedContent code="51847-2" codeLabel="Assessment+Plan note"/>
+            <codeBasedContent code="51848-0" codeLabel="Assess note"/>
+            <codeBasedContent code="51849-8" codeLabel="Admit H&amp;P note"/>
+            <codeBasedContent code="51851-4" codeLabel="Administrative note"/>
+            <codeBasedContent code="51852-2" codeLabel="Letter"/>
+            <codeBasedContent code="51854-8" codeLabel="LTC facility Consult note"/>
+            <codeBasedContent code="51855-5" codeLabel="Patient Note"/>
+            <codeBasedContent code="51900-9" codeLabel="Pop summary report"/>
+            <codeBasedContent code="54094-8" codeLabel="ED Triage note"/>
+            <codeBasedContent code="56447-6" codeLabel="Plan of care note"/>
+            <codeBasedContent code="57053-1" codeLabel="ED Note"/>
+            <codeBasedContent code="57054-9" codeLabel="ED Triage+care note"/>
+            <codeBasedContent code="57055-6" codeLabel="Antepartum note"/>
+            <codeBasedContent code="57056-4" codeLabel="L&amp;D admin H&amp;P note"/>
+            <codeBasedContent code="57057-2" codeLabel="L&amp;D summary note"/>
+            <codeBasedContent code="57058-0" codeLabel="Maternal discharge summary"/>
+            <codeBasedContent code="57133-1" codeLabel="Referral note"/>
+            <codeBasedContent code="57134-9" codeLabel="Dentistry Referral note"/>
+            <codeBasedContent code="57135-6" codeLabel="Dermatology Referral note"/>
+            <codeBasedContent code="57136-4" codeLabel="Diabetology Referral note"/>
+            <codeBasedContent code="57137-2" codeLabel="Endocrinology Referral note"/>
+            <codeBasedContent code="57138-0" codeLabel="Gastroenterology Referral note"/>
+            <codeBasedContent code="57139-8" codeLabel="General medicine Referral note"/>
+            <codeBasedContent code="57141-4" codeLabel="Infectious disease Referral note"/>
+            <codeBasedContent code="57142-2" codeLabel="Kinesiotherapy Referral note"/>
+            <codeBasedContent code="57143-0" codeLabel="Mental health Referral note"/>
+            <codeBasedContent code="57144-8" codeLabel="Nephrology Referral note"/>
+            <codeBasedContent code="57145-5" codeLabel="Neurology Referral note"/>
+            <codeBasedContent code="57146-3" codeLabel="Neuro surgery Referral note"/>
+            <codeBasedContent code="57147-1" codeLabel="Occupational medicine Referral note"/>
+            <codeBasedContent code="57148-9" codeLabel="OT Referral note"/>
+            <codeBasedContent code="57149-7" codeLabel="Oncology Referral note"/>
+            <codeBasedContent code="57150-5" codeLabel="Ophthalmol Referral note"/>
+            <codeBasedContent code="57151-3" codeLabel="Optometry Referral note"/>
+            <codeBasedContent code="57152-1" codeLabel="Pharmacy Referral note"/>
+            <codeBasedContent code="57153-9" codeLabel="Physical med+rehab Referral note"/>
+            <codeBasedContent code="57154-7" codeLabel="PT Referral note"/>
+            <codeBasedContent code="57155-4" codeLabel="Plastic surgery Referral note"/>
+            <codeBasedContent code="57156-2" codeLabel="Podiatry Referral note"/>
+            <codeBasedContent code="57157-0" codeLabel="Psychiatric Referral note"/>
+            <codeBasedContent code="57158-8" codeLabel="Psych Referral note"/>
+            <codeBasedContent code="57159-6" codeLabel="Radiation oncology Referral note"/>
+            <codeBasedContent code="57160-4" codeLabel="Rec therapy Referral note"/>
+            <codeBasedContent code="57162-0" codeLabel="Resp therapy Referral note"/>
+            <codeBasedContent code="57163-8" codeLabel="Rheumatology Referral note"/>
+            <codeBasedContent code="57164-6" codeLabel="Social work Referral note"/>
+            <codeBasedContent code="57165-3" codeLabel="Speech-lang path Referral note"/>
+            <codeBasedContent code="57166-1" codeLabel="Surgery Referral note"/>
+            <codeBasedContent code="57167-9" codeLabel="Thoracic surgery Referral note"/>
+            <codeBasedContent code="57168-7" codeLabel="Urology Referral note"/>
+            <codeBasedContent code="57169-5" codeLabel="Vascular surgery Referral note"/>
+            <codeBasedContent code="57170-3" codeLabel="Cardiology Referral note"/>
+            <codeBasedContent code="57171-1" codeLabel="Geri med Referral note"/>
+            <codeBasedContent code="57172-9" codeLabel="HemOnc Referral note"/>
+            <codeBasedContent code="57173-7" codeLabel="Nutrition and dietetics Referral note"/>
+            <codeBasedContent code="57174-5" codeLabel="Oral maxillofacial surgery Referral note"/>
+            <codeBasedContent code="57175-2" codeLabel="Orthopaedic surgery Referral note"/>
+            <codeBasedContent code="57176-0" codeLabel="Otolaryngology Referral note"/>
+            <codeBasedContent code="57177-8" codeLabel="Pulmonary disease Referral note"/>
+            <codeBasedContent code="57178-6" codeLabel="CCM Referral note"/>
+            <codeBasedContent code="57179-4" codeLabel="OBGYN Referral note"/>
+            <codeBasedContent code="59258-4" codeLabel="ED Discharge sum"/>
+            <codeBasedContent code="59259-2" codeLabel="Psychiatric Discharge sum"/>
+            <codeBasedContent code="59283-2" codeLabel="Well child visit note"/>
+            <codeBasedContent code="59284-0" codeLabel="Patient Consent"/>
+            <codeBasedContent code="60280-5" codeLabel="ED Discharge instructions"/>
+            <codeBasedContent code="61143-4" codeLabel="Summary note"/>
+            <codeBasedContent code="61358-8" codeLabel="Patient Operative consent"/>
+            <codeBasedContent code="61359-6" codeLabel="Patient Anesthesia consent"/>
+            <codeBasedContent code="64053-2" codeLabel="General medicine Hosp Admit eval note"/>
+            <codeBasedContent code="64054-0" codeLabel="MS.gen med Hosp Admit eval note"/>
+            <codeBasedContent code="64055-7" codeLabel="MS.gen med Hosp Progress note"/>
+            <codeBasedContent code="64056-5" codeLabel="MS.gen med Hosp Consult note"/>
+            <codeBasedContent code="64057-3" codeLabel="Surgery Hosp Progress note"/>
+            <codeBasedContent code="64058-1" codeLabel="CCM Hosp Admit eval note"/>
+            <codeBasedContent code="64059-9" codeLabel="CCM Hosp Progress note"/>
+            <codeBasedContent code="64060-7" codeLabel="Thoracic surgery Hosp Admit eval note"/>
+            <codeBasedContent code="64061-5" codeLabel="Thoracic surgery Hosp Progress note"/>
+            <codeBasedContent code="64062-3" codeLabel="Pulmonary disease Hosp Admit eval note"/>
+            <codeBasedContent code="64063-1" codeLabel="Pulmonary disease Hosp Progress note"/>
+            <codeBasedContent code="64064-9" codeLabel="Pastoral Care Hosp Assess note"/>
+            <codeBasedContent code="64065-6" codeLabel="Case Manager Hosp Initial eval note"/>
+            <codeBasedContent code="64066-4" codeLabel="Surg.med stdnt Hosp Admit eval note"/>
+            <codeBasedContent code="64067-2" codeLabel="Surg.med stdnt Hosp Progress note"/>
+            <codeBasedContent code="64068-0" codeLabel="Surg.med stdnt Hosp Consult note"/>
+            <codeBasedContent code="64069-8" codeLabel="Critical care.MD Hosp Note"/>
+            <codeBasedContent code="64070-6" codeLabel="CCM.MS Hosp Admit eval note"/>
+            <codeBasedContent code="64071-4" codeLabel="CCM.MS Hosp Progress note"/>
+            <codeBasedContent code="64072-2" codeLabel="CCM.MS Hosp Consult note"/>
+            <codeBasedContent code="64073-0" codeLabel="Thoracic surg.MD Hosp Note"/>
+            <codeBasedContent code="64074-8" codeLabel="Thoracic surg.MS Hosp Admit eval note"/>
+            <codeBasedContent code="64075-5" codeLabel="Thoracic surg.MS Hosp Progress note"/>
+            <codeBasedContent code="64076-3" codeLabel="Thoracic surg.MS Hosp Consult note"/>
+            <codeBasedContent code="64077-1" codeLabel="Pulmonary disease.MD Hosp Note"/>
+            <codeBasedContent code="64078-9" codeLabel="Pulm disease.MS Hosp Admit eval note"/>
+            <codeBasedContent code="64079-7" codeLabel="Pulm disease.MS Hosp Progress note"/>
+            <codeBasedContent code="64080-5" codeLabel="Pulm disease.MS Hosp Consult note"/>
+            <codeBasedContent code="64142-3" codeLabel="Hosp E/M of smoking cessation"/>
+            <codeBasedContent code="64284-3" codeLabel="Readiness for duty assessment"/>
+            <codeBasedContent code="64288-4" codeLabel="Prescription for eyewear"/>
+            <codeBasedContent code="64290-0" codeLabel="Health insurance card"/>
+            <codeBasedContent code="64291-8" codeLabel="Health insurance-related form"/>
+            <codeBasedContent code="64292-6" codeLabel="Release of information consent"/>
+            <codeBasedContent code="64293-4" codeLabel="Procedure consent"/>
+            <codeBasedContent code="64294-2" codeLabel="Readiness for duty letter"/>
+            <codeBasedContent code="64295-9" codeLabel="Plan of care note"/>
+            <codeBasedContent code="67851-6" codeLabel="Admit eval note"/>
+            <codeBasedContent code="67852-4" codeLabel="Hosp Admit eval note"/>
+            <codeBasedContent code="67854-0" codeLabel="Geri med Educ note"/>
+            <codeBasedContent code="67855-7" codeLabel="OP Educ note"/>
+            <codeBasedContent code="67856-5" codeLabel="Nursing facility H&amp;P note"/>
+            <codeBasedContent code="67860-7" codeLabel="Post-op E/M note"/>
+            <codeBasedContent code="67861-5" codeLabel="Ophthalmol Post-op E/M note"/>
+            <codeBasedContent code="67862-3" codeLabel="Pre-op note"/>
+            <codeBasedContent code="67865-6" codeLabel="OP Supervisory note"/>
+            <codeBasedContent code="68469-6" codeLabel="Pastoral Care Hosp Consult note"/>
+            <codeBasedContent code="68470-4" codeLabel="Resp therapy Hosp Initial eval note"/>
+            <codeBasedContent code="68471-2" codeLabel="Cardiology Hosp Admit eval note"/>
+            <codeBasedContent code="68472-0" codeLabel="Cardiology Hosp Progress note"/>
+            <codeBasedContent code="68473-8" codeLabel="Critical care.MD Hosp Progress note"/>
+            <codeBasedContent code="68474-6" codeLabel="Physician Hosp Restraint note"/>
+            <codeBasedContent code="68475-3" codeLabel="Gen med.MD Hosp Progress note"/>
+            <codeBasedContent code="68476-1" codeLabel="Hosp Restraint note"/>
+            <codeBasedContent code="68477-9" codeLabel="Hosp Educ note"/>
+            <codeBasedContent code="68478-7" codeLabel="Pulmonary disease.MD Hosp Progress note"/>
+            <codeBasedContent code="68479-5" codeLabel="Resp therapy Hosp Progress note"/>
+            <codeBasedContent code="68480-3" codeLabel="Surg.MD attend Hosp Progress note"/>
+            <codeBasedContent code="68481-1" codeLabel="Thoracic surg.MD Hosp Progress note"/>
+            <codeBasedContent code="68482-9" codeLabel="Hosp Transfer sum note"/>
+            <codeBasedContent code="68483-7" codeLabel="Cardio.med student Hosp Admit eval note"/>
+            <codeBasedContent code="68484-5" codeLabel="Cardiology.MD Hosp Progress note"/>
+            <codeBasedContent code="68485-2" codeLabel="Cardio.med student Hosp Progress note"/>
+            <codeBasedContent code="68486-0" codeLabel="Cardio.med student Hosp Consult note"/>
+            <codeBasedContent code="68550-3" codeLabel="Dermatology Pre-op note"/>
+            <codeBasedContent code="68551-1" codeLabel="Dermatology Hosp Consult note"/>
+            <codeBasedContent code="68552-9" codeLabel="Emergency med ED Admit eval note"/>
+            <codeBasedContent code="68553-7" codeLabel="HemOnc Initial eval note"/>
+            <codeBasedContent code="68554-5" codeLabel="HemOnc Progress note"/>
+            <codeBasedContent code="68555-2" codeLabel="HemOnc Hosp Letter"/>
+            <codeBasedContent code="68556-0" codeLabel="Neurology Diag study note"/>
+            <codeBasedContent code="68557-8" codeLabel="OBGYN Diag study note"/>
+            <codeBasedContent code="68558-6" codeLabel="OBGYN Discharge sum"/>
+            <codeBasedContent code="68560-2" codeLabel="OBGYN H&amp;P note"/>
+            <codeBasedContent code="68562-8" codeLabel="OBGYN Pre-op note"/>
+            <codeBasedContent code="68563-6" codeLabel="OBGYN Procedure note"/>
+            <codeBasedContent code="68564-4" codeLabel="OBGYN Progress note"/>
+            <codeBasedContent code="68565-1" codeLabel="OBGYN Transfer sum note"/>
+            <codeBasedContent code="68566-9" codeLabel="OBGYN Hosp Consult note"/>
+            <codeBasedContent code="68567-7" codeLabel="OBGYN Hosp Letter"/>
+            <codeBasedContent code="68569-3" codeLabel="OT Transfer sum note"/>
+            <codeBasedContent code="68570-1" codeLabel="OT Hosp Consult note"/>
+            <codeBasedContent code="68571-9" codeLabel="OT Hosp Letter"/>
+            <codeBasedContent code="68572-7" codeLabel="Ophthalmol Discharge sum"/>
+            <codeBasedContent code="68573-5" codeLabel="Ophthalmol H&amp;P note"/>
+            <codeBasedContent code="68574-3" codeLabel="Ophthalmol Progress note"/>
+            <codeBasedContent code="68575-0" codeLabel="Ophthalmol Hosp Consult note"/>
+            <codeBasedContent code="68576-8" codeLabel="Ophthalmol Hosp Letter"/>
+            <codeBasedContent code="68577-6" codeLabel="Orthopaedic surgery Diag study note"/>
+            <codeBasedContent code="68578-4" codeLabel="Orthopaedic surgery Discharge sum"/>
+            <codeBasedContent code="68580-0" codeLabel="Orthopaedic surgery H&amp;P note"/>
+            <codeBasedContent code="68581-8" codeLabel="Orthopaedic surgery Pre-op note"/>
+            <codeBasedContent code="68582-6" codeLabel="Orthopaedic surgery Progress note"/>
+            <codeBasedContent code="68583-4" codeLabel="Orthopaedic surgery Transfer sum note"/>
+            <codeBasedContent code="68585-9" codeLabel="Orthopaedic surgery Hosp Letter"/>
+            <codeBasedContent code="68586-7" codeLabel="Pharmacy Hosp Consult note"/>
+            <codeBasedContent code="68587-5" codeLabel="Pharmacy Hosp Med mgmt note"/>
+            <codeBasedContent code="68590-9" codeLabel="PT Hosp Consult note"/>
+            <codeBasedContent code="68591-7" codeLabel="Plastic surgery Discharge sum"/>
+            <codeBasedContent code="68592-5" codeLabel="Plastic surgery H&amp;P note"/>
+            <codeBasedContent code="68593-3" codeLabel="Plastic surgery Letter"/>
+            <codeBasedContent code="68594-1" codeLabel="Plastic surgery Pre-op note"/>
+            <codeBasedContent code="68595-8" codeLabel="Plastic surgery Progress note"/>
+            <codeBasedContent code="68596-6" codeLabel="Plastic surgery Transfer sum note"/>
+            <codeBasedContent code="68597-4" codeLabel="Plastic surgery Hosp Consult note"/>
+            <codeBasedContent code="68598-2" codeLabel="Plastic surgery Hosp Letter"/>
+            <codeBasedContent code="68599-0" codeLabel="Psychiatric H&amp;P note"/>
+            <codeBasedContent code="68601-4" codeLabel="Psychiatric OP Note"/>
+            <codeBasedContent code="68602-2" codeLabel="Radiation oncology Summary note"/>
+            <codeBasedContent code="68603-0" codeLabel="Radiation oncology Hosp Summary note"/>
+            <codeBasedContent code="68604-8" codeLabel="Radiology Diag study note"/>
+            <codeBasedContent code="68605-5" codeLabel="Rec therapy Hosp Educ note"/>
+            <codeBasedContent code="68606-3" codeLabel="Surgery Hosp Post-op E/M note"/>
+            <codeBasedContent code="68607-1" codeLabel="Progress letter"/>
+            <codeBasedContent code="68608-9" codeLabel="Summary note"/>
+            <codeBasedContent code="68609-7" codeLabel="Hosp Letter"/>
+            <codeBasedContent code="68610-5" codeLabel="Hosp Post-op E/M note"/>
+            <codeBasedContent code="68611-3" codeLabel="Adolescent med Diag study note"/>
+            <codeBasedContent code="68612-1" codeLabel="Adolescent med Discharge sum"/>
+            <codeBasedContent code="68614-7" codeLabel="Adolescent med H&amp;P note"/>
+            <codeBasedContent code="68615-4" codeLabel="Adolescent med Note"/>
+            <codeBasedContent code="68616-2" codeLabel="Adolescent med Pre-op note"/>
+            <codeBasedContent code="68617-0" codeLabel="Adolescent med Progress note"/>
+            <codeBasedContent code="68618-8" codeLabel="Adolescent med Transfer sum note"/>
+            <codeBasedContent code="68619-6" codeLabel="Adolescent med Hosp Consult note"/>
+            <codeBasedContent code="68620-4" codeLabel="Adolescent med Hosp Letter"/>
+            <codeBasedContent code="68621-2" codeLabel="AHFTCd Note"/>
+            <codeBasedContent code="68622-0" codeLabel="AHFTCd H&amp;P note"/>
+            <codeBasedContent code="68623-8" codeLabel="AHFTCd Pre-op note"/>
+            <codeBasedContent code="68624-6" codeLabel="AHFTCd Hosp Letter"/>
+            <codeBasedContent code="68625-3" codeLabel="Allergy+immunology Diag study note"/>
+            <codeBasedContent code="68626-1" codeLabel="Allergy+immunology Discharge sum"/>
+            <codeBasedContent code="68628-7" codeLabel="Allergy+immunology H&amp;P note"/>
+            <codeBasedContent code="68629-5" codeLabel="Allergy+immunology Note"/>
+            <codeBasedContent code="68630-3" codeLabel="Allergy+immunology Procedure note"/>
+            <codeBasedContent code="68631-1" codeLabel="Allergy+immunology Progress note"/>
+            <codeBasedContent code="68632-9" codeLabel="Allergy+immunology Transfer sum note"/>
+            <codeBasedContent code="68633-7" codeLabel="Allergy+immunology Hosp Consult note"/>
+            <codeBasedContent code="68634-5" codeLabel="Allergy+immunology Hosp Letter"/>
+            <codeBasedContent code="68635-2" codeLabel="Audiology Diag study note"/>
+            <codeBasedContent code="68636-0" codeLabel="Audiology Note"/>
+            <codeBasedContent code="68637-8" codeLabel="Audiology H&amp;P note"/>
+            <codeBasedContent code="68638-6" codeLabel="Audiology Pre-op note"/>
+            <codeBasedContent code="68639-4" codeLabel="Audiology Hosp Consult note"/>
+            <codeBasedContent code="68640-2" codeLabel="Audiology Hosp Diag study note"/>
+            <codeBasedContent code="68641-0" codeLabel="Child+teen psych Diag study note"/>
+            <codeBasedContent code="68642-8" codeLabel="Child+teen psych Discharge sum"/>
+            <codeBasedContent code="68644-4" codeLabel="Child+teen psych H&amp;P note"/>
+            <codeBasedContent code="68645-1" codeLabel="Child+teen psych Note"/>
+            <codeBasedContent code="68646-9" codeLabel="Child+teen psych Progress note"/>
+            <codeBasedContent code="68647-7" codeLabel="Child+teen psych Transfer sum note"/>
+            <codeBasedContent code="68648-5" codeLabel="Child+teen psych Hosp Consult note"/>
+            <codeBasedContent code="68649-3" codeLabel="Child+teen psych Hosp Letter"/>
+            <codeBasedContent code="68650-1" codeLabel="Clinic biochem gen Note"/>
+            <codeBasedContent code="68651-9" codeLabel="Clinic biochem gen Hosp Consult note"/>
+            <codeBasedContent code="68652-7" codeLabel="Clinical genetics Diag study note"/>
+            <codeBasedContent code="68653-5" codeLabel="Clinical genetics Discharge sum"/>
+            <codeBasedContent code="68655-0" codeLabel="Clinical genetics H&amp;P note"/>
+            <codeBasedContent code="68656-8" codeLabel="Clinical genetics Note"/>
+            <codeBasedContent code="68657-6" codeLabel="Clinical genetics Pre-op note"/>
+            <codeBasedContent code="68658-4" codeLabel="Clinical genetics Procedure note"/>
+            <codeBasedContent code="68659-2" codeLabel="Clinical genetics Progress note"/>
+            <codeBasedContent code="68660-0" codeLabel="Clinical genetics Transfer sum note"/>
+            <codeBasedContent code="68661-8" codeLabel="Clinical genetics Hosp Consult note"/>
+            <codeBasedContent code="68662-6" codeLabel="Clinical genetics Hosp Letter"/>
+            <codeBasedContent code="68663-4" codeLabel="Develop-behav peds Discharge sum"/>
+            <codeBasedContent code="68665-9" codeLabel="Develop-behav peds H&amp;P note"/>
+            <codeBasedContent code="68666-7" codeLabel="Develop-behav peds Note"/>
+            <codeBasedContent code="68667-5" codeLabel="Develop-behav peds Procedure note"/>
+            <codeBasedContent code="68668-3" codeLabel="Develop-behav peds Progress note"/>
+            <codeBasedContent code="68669-1" codeLabel="Develop-behav peds Transfer sum note"/>
+            <codeBasedContent code="68670-9" codeLabel="Develop-behav peds Hosp Consult note"/>
+            <codeBasedContent code="68671-7" codeLabel="Develop-behav peds Hosp Letter"/>
+            <codeBasedContent code="68672-5" codeLabel="Geri med Skilled nurse facility Note"/>
+            <codeBasedContent code="68673-3" codeLabel="Multi-special prog Diag study note"/>
+            <codeBasedContent code="68674-1" codeLabel="Multi-special prog Discharge sum"/>
+            <codeBasedContent code="68676-6" codeLabel="Multi-special prog H&amp;P note"/>
+            <codeBasedContent code="68677-4" codeLabel="Multi-special prog Note"/>
+            <codeBasedContent code="68678-2" codeLabel="Multi-special prog Pre-op note"/>
+            <codeBasedContent code="68679-0" codeLabel="Multi-special prog Progress note"/>
+            <codeBasedContent code="68680-8" codeLabel="Multi-special prog Transfer sum note"/>
+            <codeBasedContent code="68681-6" codeLabel="Multi-special prog Hosp Consult note"/>
+            <codeBasedContent code="68682-4" codeLabel="Multi-special prog Hosp Letter"/>
+            <codeBasedContent code="68683-2" codeLabel="Neo peri med H&amp;P note"/>
+            <codeBasedContent code="68684-0" codeLabel="Neo peri med Letter"/>
+            <codeBasedContent code="68685-7" codeLabel="Neo peri med Hosp Consult note"/>
+            <codeBasedContent code="68686-5" codeLabel="Neo peri med Hosp Letter"/>
+            <codeBasedContent code="68687-3" codeLabel="Neuro surgery Diag study note"/>
+            <codeBasedContent code="68688-1" codeLabel="Neuro surgery Discharge sum"/>
+            <codeBasedContent code="68690-7" codeLabel="Neuro surgery H&amp;P note"/>
+            <codeBasedContent code="68691-5" codeLabel="Neuro surgery Pre-op note"/>
+            <codeBasedContent code="68692-3" codeLabel="Neuro surgery Procedure note"/>
+            <codeBasedContent code="68693-1" codeLabel="Neuro surgery Progress note"/>
+            <codeBasedContent code="68694-9" codeLabel="Neuro surgery Hosp Consult note"/>
+            <codeBasedContent code="68695-6" codeLabel="Neuro surgery Hosp Letter"/>
+            <codeBasedContent code="68696-4" codeLabel="Child neuro Diag study note"/>
+            <codeBasedContent code="68697-2" codeLabel="Child neuro Discharge sum"/>
+            <codeBasedContent code="68699-8" codeLabel="Child neuro H&amp;P note"/>
+            <codeBasedContent code="68700-4" codeLabel="Child neuro Note"/>
+            <codeBasedContent code="68701-2" codeLabel="Child neuro Pre-op note"/>
+            <codeBasedContent code="68702-0" codeLabel="Child neuro Procedure note"/>
+            <codeBasedContent code="68703-8" codeLabel="Child neuro Progress note"/>
+            <codeBasedContent code="68704-6" codeLabel="Child neuro Transfer sum note"/>
+            <codeBasedContent code="68705-3" codeLabel="Child neuro Hosp Consult note"/>
+            <codeBasedContent code="68706-1" codeLabel="Child neuro Hosp Diag study note"/>
+            <codeBasedContent code="68707-9" codeLabel="Child neuro Hosp Letter"/>
+            <codeBasedContent code="68708-7" codeLabel="Pain medicine Diag study note"/>
+            <codeBasedContent code="68709-5" codeLabel="Pain medicine Discharge sum"/>
+            <codeBasedContent code="68711-1" codeLabel="Pain medicine H&amp;P note"/>
+            <codeBasedContent code="68713-7" codeLabel="Pain medicine Pre-op note"/>
+            <codeBasedContent code="68714-5" codeLabel="Pain medicine Procedure note"/>
+            <codeBasedContent code="68715-2" codeLabel="Pain medicine Transfer sum note"/>
+            <codeBasedContent code="68716-0" codeLabel="Pain medicine Hosp Consult note"/>
+            <codeBasedContent code="68717-8" codeLabel="Pain medicine Hosp Letter"/>
+            <codeBasedContent code="68718-6" codeLabel="Peds cardiology Diag study note"/>
+            <codeBasedContent code="68719-4" codeLabel="Peds cardiology Discharge sum"/>
+            <codeBasedContent code="68721-0" codeLabel="Peds cardiology H&amp;P note"/>
+            <codeBasedContent code="68722-8" codeLabel="Peds cardiology Note"/>
+            <codeBasedContent code="68723-6" codeLabel="Peds cardiology Pre-op note"/>
+            <codeBasedContent code="68724-4" codeLabel="Peds cardiology Procedure note"/>
+            <codeBasedContent code="68725-1" codeLabel="Peds cardiology Progress note"/>
+            <codeBasedContent code="68726-9" codeLabel="Peds cardiology Transfer sum note"/>
+            <codeBasedContent code="68727-7" codeLabel="Peds cardiology Hosp Consult note"/>
+            <codeBasedContent code="68728-5" codeLabel="Peds cardiology Hosp Letter"/>
+            <codeBasedContent code="68729-3" codeLabel="Peds crit care med Hosp Procedure note"/>
+            <codeBasedContent code="68731-9" codeLabel="Peds dermatology H&amp;P note"/>
+            <codeBasedContent code="68732-7" codeLabel="Peds dermatology Pre-op note"/>
+            <codeBasedContent code="68733-5" codeLabel="Peds endocrinology Discharge sum"/>
+            <codeBasedContent code="68735-0" codeLabel="Peds endocrinology H&amp;P note"/>
+            <codeBasedContent code="68736-8" codeLabel="Peds endocrinology Pre-op note"/>
+            <codeBasedContent code="68737-6" codeLabel="Peds endocrinology Transfer sum note"/>
+            <codeBasedContent code="68738-4" codeLabel="Peds gastroenterology Discharge sum"/>
+            <codeBasedContent code="68740-0" codeLabel="Peds gastroenterology H&amp;P note"/>
+            <codeBasedContent code="68741-8" codeLabel="Peds gastroenterology Note"/>
+            <codeBasedContent code="68742-6" codeLabel="Peds gastroenterology Pre-op note"/>
+            <codeBasedContent code="68743-4" codeLabel="Peds gastroenterology Procedure note"/>
+            <codeBasedContent code="68744-2" codeLabel="Peds gastroenterology Progress note"/>
+            <codeBasedContent code="68745-9" codeLabel="Peds gastroenterology Transfer sum note"/>
+            <codeBasedContent code="68746-7" codeLabel="Peds gastroenterology Hosp Consult note"/>
+            <codeBasedContent code="68747-5" codeLabel="Peds gastroenterology Hosp Letter"/>
+            <codeBasedContent code="68748-3" codeLabel="Peds hem-onc Diag study note"/>
+            <codeBasedContent code="68749-1" codeLabel="Peds hem-onc Discharge sum"/>
+            <codeBasedContent code="68751-7" codeLabel="Peds hem-onc H&amp;P note"/>
+            <codeBasedContent code="68752-5" codeLabel="Peds hem-onc Note"/>
+            <codeBasedContent code="68753-3" codeLabel="Peds hem-onc Pre-op note"/>
+            <codeBasedContent code="68754-1" codeLabel="Peds hem-onc Procedure note"/>
+            <codeBasedContent code="68755-8" codeLabel="Peds hem-onc Progress note"/>
+            <codeBasedContent code="68756-6" codeLabel="Peds hem-onc Transfer sum note"/>
+            <codeBasedContent code="68757-4" codeLabel="Peds hem-onc Hosp Consult note"/>
+            <codeBasedContent code="68758-2" codeLabel="Peds hem-onc Hosp Letter"/>
+            <codeBasedContent code="68760-8" codeLabel="Peds infect disease H&amp;P note"/>
+            <codeBasedContent code="68761-6" codeLabel="Peds infect disease Note"/>
+            <codeBasedContent code="68762-4" codeLabel="Peds infect disease Pre-op note"/>
+            <codeBasedContent code="68763-2" codeLabel="Peds infect disease Progress note"/>
+            <codeBasedContent code="68764-0" codeLabel="Peds infect disease Transfer sum note"/>
+            <codeBasedContent code="68765-7" codeLabel="Peds infect disease Hosp Consult note"/>
+            <codeBasedContent code="68766-5" codeLabel="Peds infect disease Hosp Letter"/>
+            <codeBasedContent code="68767-3" codeLabel="Peds nephrology Diag study note"/>
+            <codeBasedContent code="68768-1" codeLabel="Peds nephrology Discharge sum"/>
+            <codeBasedContent code="68770-7" codeLabel="Peds nephrology H&amp;P note"/>
+            <codeBasedContent code="68771-5" codeLabel="Peds nephrology Pre-op note"/>
+            <codeBasedContent code="68772-3" codeLabel="Peds nephrology Transfer sum note"/>
+            <codeBasedContent code="68773-1" codeLabel="Peds otolaryngology Discharge sum"/>
+            <codeBasedContent code="68775-6" codeLabel="Peds otolaryngology H&amp;P note"/>
+            <codeBasedContent code="68776-4" codeLabel="Peds otolaryngology Pre-op note"/>
+            <codeBasedContent code="68777-2" codeLabel="Peds otolaryngology Transfer sum note"/>
+            <codeBasedContent code="68778-0" codeLabel="Peds pulmonology Diag study note"/>
+            <codeBasedContent code="68779-8" codeLabel="Peds pulmonology Discharge sum"/>
+            <codeBasedContent code="68781-4" codeLabel="Peds pulmonology H&amp;P note"/>
+            <codeBasedContent code="68782-2" codeLabel="Peds pulmonology Note"/>
+            <codeBasedContent code="68783-0" codeLabel="Peds pulmonology Pre-op note"/>
+            <codeBasedContent code="68784-8" codeLabel="Peds pulmonology Procedure note"/>
+            <codeBasedContent code="68785-5" codeLabel="Peds pulmonology Progress note"/>
+            <codeBasedContent code="68786-3" codeLabel="Peds pulmonology Transfer sum note"/>
+            <codeBasedContent code="68787-1" codeLabel="Peds pulmonology Hosp Consult note"/>
+            <codeBasedContent code="68788-9" codeLabel="Peds pulmonology Hosp Diag study note"/>
+            <codeBasedContent code="68789-7" codeLabel="Peds pulmonology Hosp Letter"/>
+            <codeBasedContent code="68791-3" codeLabel="Peds rheumatology H&amp;P note"/>
+            <codeBasedContent code="68792-1" codeLabel="Peds rheumatology Pre-op note"/>
+            <codeBasedContent code="68793-9" codeLabel="Peds rheumatology Transfer sum note"/>
+            <codeBasedContent code="68794-7" codeLabel="Peds surgery Diag study note"/>
+            <codeBasedContent code="68795-4" codeLabel="Peds surgery Discharge sum"/>
+            <codeBasedContent code="68797-0" codeLabel="Peds surgery H&amp;P note"/>
+            <codeBasedContent code="68798-8" codeLabel="Peds surgery Pre-op note"/>
+            <codeBasedContent code="68799-6" codeLabel="Peds surgery Procedure note"/>
+            <codeBasedContent code="68800-2" codeLabel="Peds surgery Progress note"/>
+            <codeBasedContent code="68801-0" codeLabel="Peds surgery Transfer sum note"/>
+            <codeBasedContent code="68802-8" codeLabel="Peds surgery Hosp Consult note"/>
+            <codeBasedContent code="68803-6" codeLabel="Peds surgery Hosp Letter"/>
+            <codeBasedContent code="68804-4" codeLabel="Peds urology Diag study note"/>
+            <codeBasedContent code="68805-1" codeLabel="Peds urology Discharge sum"/>
+            <codeBasedContent code="68807-7" codeLabel="Peds urology H&amp;P note"/>
+            <codeBasedContent code="68808-5" codeLabel="Peds urology Pre-op note"/>
+            <codeBasedContent code="68809-3" codeLabel="Peds urology Procedure note"/>
+            <codeBasedContent code="68810-1" codeLabel="Peds urology Progress note"/>
+            <codeBasedContent code="68811-9" codeLabel="Peds urology Transfer sum note"/>
+            <codeBasedContent code="68812-7" codeLabel="Peds urology Hosp Consult note"/>
+            <codeBasedContent code="68813-5" codeLabel="Peds urology Hosp Letter"/>
+            <codeBasedContent code="68814-3" codeLabel="Peds Assess note"/>
+            <codeBasedContent code="68815-0" codeLabel="Peds Discharge sum"/>
+            <codeBasedContent code="68817-6" codeLabel="Peds H&amp;P note"/>
+            <codeBasedContent code="68818-4" codeLabel="Peds Note"/>
+            <codeBasedContent code="68819-2" codeLabel="Peds Pre-op note"/>
+            <codeBasedContent code="68820-0" codeLabel="Peds Procedure note"/>
+            <codeBasedContent code="68821-8" codeLabel="Peds Hosp Consult note"/>
+            <codeBasedContent code="68822-6" codeLabel="Peds Hosp Diag study note"/>
+            <codeBasedContent code="68823-4" codeLabel="Peds Hosp Discharge sum"/>
+            <codeBasedContent code="68825-9" codeLabel="Peds Hosp H&amp;P note"/>
+            <codeBasedContent code="68826-7" codeLabel="Peds Hosp Letter"/>
+            <codeBasedContent code="68827-5" codeLabel="Peds Hosp Note"/>
+            <codeBasedContent code="68828-3" codeLabel="Peds Hosp Pre-op note"/>
+            <codeBasedContent code="68829-1" codeLabel="Peds Hosp Procedure note"/>
+            <codeBasedContent code="68830-9" codeLabel="Peds Hosp Progress note"/>
+            <codeBasedContent code="68831-7" codeLabel="Primary care Discharge sum"/>
+            <codeBasedContent code="68833-3" codeLabel="Primary care H&amp;P note"/>
+            <codeBasedContent code="68834-1" codeLabel="Primary care Note"/>
+            <codeBasedContent code="68835-8" codeLabel="Primary care Pre-op note"/>
+            <codeBasedContent code="68836-6" codeLabel="Primary care Procedure note"/>
+            <codeBasedContent code="68837-4" codeLabel="Primary care Hosp Consult note"/>
+            <codeBasedContent code="68838-2" codeLabel="Primary care Hosp Letter"/>
+            <codeBasedContent code="68839-0" codeLabel="Research Note"/>
+            <codeBasedContent code="68840-8" codeLabel="Research Progress note"/>
+            <codeBasedContent code="68841-6" codeLabel="Speech-lang path Discharge sum"/>
+            <codeBasedContent code="68843-2" codeLabel="Speech-lang path H&amp;P note"/>
+            <codeBasedContent code="68844-0" codeLabel="Speech-lang path Pre-op note"/>
+            <codeBasedContent code="68846-5" codeLabel="Speech-lang path Hosp Consult note"/>
+            <codeBasedContent code="68847-3" codeLabel="Speech-lang path Hosp Letter"/>
+            <codeBasedContent code="68848-1" codeLabel="Transplant surgery Note"/>
+            <codeBasedContent code="68849-9" codeLabel="Transplant surgery H&amp;P note"/>
+            <codeBasedContent code="68850-7" codeLabel="Transplant surgery Pre-op note"/>
+            <codeBasedContent code="68851-5" codeLabel="Transplant surgery Procedure note"/>
+            <codeBasedContent code="68852-3" codeLabel="Transplant surgery Hosp Consult note"/>
+            <codeBasedContent code="68853-1" codeLabel="Transplant surgery Hosp Letter"/>
+            <codeBasedContent code="68854-9" codeLabel="Peds rehab medicine Note"/>
+            <codeBasedContent code="68855-6" codeLabel="Peds transplant hepato Diag study note"/>
+            <codeBasedContent code="68856-4" codeLabel="Peds transplant hepato Discharge sum"/>
+            <codeBasedContent code="68858-0" codeLabel="Peds transplant hepato H&amp;P note"/>
+            <codeBasedContent code="68859-8" codeLabel="Peds transplant hepato Note"/>
+            <codeBasedContent code="68860-6" codeLabel="Peds transplant hepato Pre-op note"/>
+            <codeBasedContent code="68861-4" codeLabel="Peds transplant hepato Procedure note"/>
+            <codeBasedContent code="68862-2" codeLabel="Peds transplant hepato Progress note"/>
+            <codeBasedContent code="68863-0" codeLabel="Peds transplant hepato Transfer sum note"/>
+            <codeBasedContent code="68864-8" codeLabel="Peds transplant hepato Hosp Consult note"/>
+            <codeBasedContent code="68865-5" codeLabel="Peds transplant hepato Hosp Letter"/>
+            <codeBasedContent code="68866-3" codeLabel="Peds nephrology Letter"/>
+            <codeBasedContent code="68867-1" codeLabel="Peds nephrology Note"/>
+            <codeBasedContent code="68868-9" codeLabel="Peds nephrology Procedure note"/>
+            <codeBasedContent code="68869-7" codeLabel="Peds nephrology Hosp Consult note"/>
+            <codeBasedContent code="68870-5" codeLabel="Peds nephrology Hosp Letter"/>
+            <codeBasedContent code="68871-3" codeLabel="Peds otolaryngology Note"/>
+            <codeBasedContent code="68872-1" codeLabel="Peds otolaryngology Procedure note"/>
+            <codeBasedContent code="68873-9" codeLabel="Peds otolaryngology Progress note"/>
+            <codeBasedContent code="68874-7" codeLabel="Peds otolaryngology Hosp Consult note"/>
+            <codeBasedContent code="68875-4" codeLabel="Peds otolaryngology Hosp Letter"/>
+            <codeBasedContent code="68876-2" codeLabel="Peds rheumatology Note"/>
+            <codeBasedContent code="68877-0" codeLabel="Peds rheumatology Procedure note"/>
+            <codeBasedContent code="68878-8" codeLabel="Peds rheumatology Progress note"/>
+            <codeBasedContent code="68879-6" codeLabel="Peds rheumatology Hosp Consult note"/>
+            <codeBasedContent code="68880-4" codeLabel="Peds rheumatology Hosp Letter"/>
+            <codeBasedContent code="68881-2" codeLabel="Peds surgery Note"/>
+            <codeBasedContent code="68882-0" codeLabel="Peds urology Note"/>
+            <codeBasedContent code="68883-8" codeLabel="Peds Transfer sum note"/>
+            <codeBasedContent code="68884-6" codeLabel="Peds Hosp Transfer sum note"/>
+            <codeBasedContent code="68887-9" codeLabel="Ophthalmol Transfer sum note"/>
+            <codeBasedContent code="68889-5" codeLabel="Peds dermatology Note"/>
+            <codeBasedContent code="68890-3" codeLabel="Peds dermatology Procedure note"/>
+            <codeBasedContent code="68891-1" codeLabel="Peds dermatology Progress note"/>
+            <codeBasedContent code="68892-9" codeLabel="Peds dermatology Hosp Consult note"/>
+            <codeBasedContent code="68893-7" codeLabel="Peds dermatology Hosp Letter"/>
+            <codeBasedContent code="68894-5" codeLabel="Peds endocrinology Note"/>
+            <codeBasedContent code="68895-2" codeLabel="Peds endocrinology Procedure note"/>
+            <codeBasedContent code="68896-0" codeLabel="Peds endocrinology Progress note"/>
+            <codeBasedContent code="68897-8" codeLabel="Peds endocrinology Hosp Consult note"/>
+            <codeBasedContent code="68898-6" codeLabel="Peds endocrinology Hosp Letter"/>
+            <codeBasedContent code="69981-9" codeLabel="Asthma action plan"/>
+            <codeBasedContent code="70004-7" codeLabel="Diag study note"/>
+            <codeBasedContent code="70005-4" codeLabel="E/M of smoking cessation"/>
+            <codeBasedContent code="70006-2" codeLabel="Med mgmt note"/>
+            <codeBasedContent code="70007-0" codeLabel="Restraint note"/>
+            <codeBasedContent code="70238-1" codeLabel="Transplant surgery Hosp Progress note"/>
+            <codeBasedContent code="72555-6" codeLabel="IR Consult note"/>
+            <codeBasedContent code="72556-4" codeLabel="IR Progress note"/>
+            <codeBasedContent code="73575-3" codeLabel="Radiology Consult note"/>
+            <codeBasedContent code="73709-8" codeLabel="PharmD Pharm Prescrip rqst"/>
+            <codeBasedContent code="74144-7" codeLabel="Cmplx med cond action plan"/>
+            <codeBasedContent code="74145-4" codeLabel="MS action plan"/>
+            <codeBasedContent code="74146-2" codeLabel="Heart disease action plan"/>
+            <codeBasedContent code="74147-0" codeLabel="MD action plan"/>
+            <codeBasedContent code="74148-8" codeLabel="CF action plan"/>
+            <codeBasedContent code="74149-6" codeLabel="IBD action plan"/>
+            <codeBasedContent code="74150-4" codeLabel="Diabetes type I action plan"/>
+            <codeBasedContent code="74151-2" codeLabel="Diabetes type II action plan"/>
+            <codeBasedContent code="74152-0" codeLabel="Anaphylaxis action plan"/>
+            <codeBasedContent code="74153-8" codeLabel="Seizure disorder action plan"/>
+            <codeBasedContent code="74154-6" codeLabel="Autism action plan"/>
+            <codeBasedContent code="74155-3" codeLabel="ADHD action plan"/>
+            <codeBasedContent code="74213-0" codeLabel="Discharge instructions"/>
+            <codeBasedContent code="74282-5" codeLabel="Indiv counsel note"/>
+            <codeBasedContent code="8653-8" codeLabel="Hosp Discharge instructions"/>
+         </content>
+      </version>
+   </valueSet>
+   <!--END VALUE SETS for SDWG/Rob Hausam on 2014-03-10--><!--START VALUE SETS for Voc-Te4ch-Cor02 on 2014-03-13--><valueSet id="2.16.840.1.113883.1.11.20365" name="HealthQualityMeasureDocument">
+      <version versionDate="2014-03-14">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="57024-2" codeLabel="Health Quality Measure Document"/>
+         </content>
+      </version>
+   </valueSet>
+   <valueSet id="2.16.840.1.113883.1.11.20364" name="QualityMeasureSectionType">
+      <annotations>
+         <documentation>
+            <description>
+               <text>
+                  <p>A type of document section within a health quality measure (aka eMeasure), used to cluster the various parts of the eMeasure into a more human navigable format.</p>
+               </text>
+            </description>
+         </documentation>
+      </annotations>
+      <version versionDate="2014-03-14">
+         <supportedCodeSystem>2.16.840.1.113883.6.1</supportedCodeSystem>
+         <content codeSystem="2.16.840.1.113883.6.1">
+            <codeBasedContent code="57025-9" codeLabel="Data Criteria section"/>
+            <codeBasedContent code="57026-7" codeLabel="Population Criteria section"/>
+            <codeBasedContent code="57027-5" codeLabel="Measure Observations section"/>
+         </content>
+      </version>
+   </valueSet>
+   <!--END VALUE SETS for C22/Ted Klein on 2014-03-13--><!-- START CONTEXT BINDINGS - see effectiveDate for release date --><contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.11.76" codingStrength="CWE"
+                   conceptDomain="KnowledgeSubjectObservationValue"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.11.77" codingStrength="CWE"
+                   conceptDomain="KnowledgeSubTopicObservationValue"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.11.79" codingStrength="CWE"
+                   conceptDomain="AgeObservationType"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.11.80" codingStrength="CWE"
+                   conceptDomain="ObservationActAgeGroupType"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.11.75" codingStrength="CWE"
+                   conceptDomain="AgeGroupObservationValue"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.1.11.19465"
+                   codingStrength="CWE"
+                   conceptDomain="HealthcareProviderRoleType"
+                   effectiveDate="2010-03-16"/>
+   <contextBinding effectiveDate="2010-03-22" valueSet="2.16.840.1.113883.11.81"
+                   codingStrength="CWE"
+                   bindingRealmName="R1"
+                   conceptDomain="ImmunizationForecastStatus"/>
+   <contextBinding bindingRealmName="R1" valueSet="2.16.840.1.113883.1.11.82" codingStrength="CWE"
+                   conceptDomain="ImmunizationForecastDate"
+                   effectiveDate="2010-03-16"/>
+   <!-- END CONTEXT BINDINGS --></vocabularyModel>

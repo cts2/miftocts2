@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><html xmlns:test="http://www.jenitennison.com/xslt/unit-test" xmlns="http://www.w3.org/1999/xhtml">
    <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <title>Test Report for Users/mrf7578/Documents/workspace/miftocts2/transforms/VocabToCTS2Concept.xslt (passed:4 / pending:0 / failed:0 / total:4)</title>
+      <title>Test Report for Users/mrf7578/Documents/workspace/miftocts2/transforms/VocabToCTS2Concept.xslt (passed:0 / pending:0 / failed:4 / total:4)</title>
       <link rel="stylesheet" type="text/css" href="file:/Applications/Development/oxygen/frameworks/xspec/src/reporter/test-report.css" />
    </head>
    <body>
       <h1>Test Report</h1>
       <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Stylesheet: <a href="file:/Users/mrf7578/Documents/workspace/miftocts2/transforms/VocabToCTS2Concept.xslt">Users/mrf7578/Documents/workspace/miftocts2/transforms/VocabToCTS2Concept.xslt</a></p>
-      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Tested: 19 September 2013 at 12:57</p>
+      <p xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Tested: 30 October 2013 at 16:28</p>
       <h2 xmlns:oxy="http://www.oxygenxml.com/xslt/xspec">Contents</h2>
       <table xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" class="xspec">
          <col width="80%" />
@@ -18,107 +18,695 @@
          <thead>
             <tr>
                <th></th>
-               <th class="result">passed:4</th>
+               <th class="result">passed:0</th>
                <th class="result">pending:0</th>
-               <th class="result">failed:0</th>
+               <th class="result">failed:4</th>
                <th class="result">total:4</th>
             </tr>
          </thead>
          <tbody>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d4e4">Basic MIF concept test</a></th>
+               <th class="result">0</th>
+               <th class="result">0</th>
                <th class="result">1</th>
-               <th class="result">0</th>
-               <th class="result">0</th>
                <th class="result">1</th>
             </tr>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d4e555">Entity with fancy annotations</a></th>
+               <th class="result">0</th>
+               <th class="result">0</th>
                <th class="result">1</th>
-               <th class="result">0</th>
-               <th class="result">0</th>
                <th class="result">1</th>
             </tr>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d4e966">Retired Entity</a></th>
+               <th class="result">0</th>
+               <th class="result">0</th>
                <th class="result">1</th>
-               <th class="result">0</th>
-               <th class="result">0</th>
                <th class="result">1</th>
             </tr>
-            <tr class="successful">
+            <tr class="failed">
                <th><a href="#d4e1175">Name:Class property</a></th>
+               <th class="result">0</th>
+               <th class="result">0</th>
                <th class="result">1</th>
-               <th class="result">0</th>
-               <th class="result">0</th>
                <th class="result">1</th>
             </tr>
          </tbody>
       </table>
       <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e4">
-         <h2 class="successful">Basic MIF concept test<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <h2 class="failed">Basic MIF concept test<span class="scenario-totals">passed:0 / pending:0 / failed:1 / total:1</span></h2>
          <table class="xspec" id="t-d4e4">
             <col width="80%" />
             <col width="20%" />
             <tbody>
-               <tr class="successful">
+               <tr class="failed">
                   <th>Basic MIF concept test</th>
-                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+                  <th>passed:0 / pending:0 / failed:1 / total:1</th>
                </tr>
-               <tr class="successful">
-                  <td>AdminstrativeGender</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#d4e353">AdminstrativeGender</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d4e4">Basic MIF concept test</h3>
+         <h4 id="d4e353">AdminstrativeGender</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <p>XPath <code>/node()</code> from:
+                     </p><pre><span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.Inverse of Specializes.  Only included as a derived relationship.</span>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#F"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">F</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">10174</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender-76</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">designationRole</span>="PREFERRED"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Female</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Female</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/definition&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#M"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">M</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">10173</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender-76</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">designationRole</span>="PREFERRED"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Male</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Male</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/definition&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#UN"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">UN</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">17718</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender-76</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Undifferentiated</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The gender of a person could not be uniquely defined as male or female, such as hermaphrodite.</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/definition&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;</pre></td>
+                  <td><pre>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#F"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">F</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">10174</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender-76</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Female</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:definition</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Female</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/entity:definition&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#M"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">M</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">10173</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender-76</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">designationRole</span>="PREFERRED"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Male</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:definition</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Male</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/entity:definition&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/Concept#UN"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">UN</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">17718</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender/version/76"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender-76</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">AdministrativeGender</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">designationRole</span>="PREFERRED"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Undifferentiated</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:definition</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The gender of a person could not be uniquely defined as male or female, such as hermaphrodite.</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/entity:definition&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="same">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;</pre></td>
                </tr>
             </tbody>
          </table>
       </div>
       <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e555">
-         <h2 class="successful">Entity with fancy annotations<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <h2 class="failed">Entity with fancy annotations<span class="scenario-totals">passed:0 / pending:0 / failed:1 / total:1</span></h2>
          <table class="xspec" id="t-d4e555">
             <col width="80%" />
             <col width="20%" />
             <tbody>
-               <tr class="successful">
+               <tr class="failed">
                   <th>Entity with fancy annotations</th>
-                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+                  <th>passed:0 / pending:0 / failed:1 / total:1</th>
                </tr>
-               <tr class="successful">
-                  <td>ActClass_ACT</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#d4e828">ActClass_ACT</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d4e555">Entity with fancy annotations</h3>
+         <h4 id="d4e828">ActClass_ACT</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <p>XPath <code>/node()</code> from:
+                     </p><pre><span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.Inverse of Specializes.  Only included as a derived relationship.</span>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#ACT"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ACT</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">13856</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">act</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A record of something that is being done, has been done, can be done, or is intended or requested to be done.</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/definition&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">example</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;
+                           &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">i</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Examples:</span>&lt;/i&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The kinds of acts that are common in health care are (1) a clinical observation, (2) an assessment of health condition (such as problems and diagnoses), (3) healthcare goals, (4) treatment services (such as medication, surgery, physical and psychological therapy), (5) assisting, monitoring or attending, (6) training and education services to patients and their next of kin, (7) and notary services (such as advanced directives or living will), (8)  editing and maintaining documents, and many others.</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/example&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">note</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"
+                     <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">type</span>="ScopeNote"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;
+                           &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">i</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Discussion and Rationale:</span>&lt;/i&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff"> Acts are the pivot of the RIM; all domain information and processes are represented primarily in Acts. Any profession or business, including healthcare, is primarily constituted of intentional and occasionally non-intentional actions, performed and recorded by responsible actors. An Act-instance is a record of such an action.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Acts connect to Entities in their Roles through Participations and connect to other Acts through ActRelationships. Participations are the authors, performers and other responsible parties as well as subjects and beneficiaries (which includes tools and material used in the performance of the act, which are also subjects). The moodCode distinguishes between Acts that are meant as factual records, vs. records of intended or ordered services, and the other modalities in which act can appear.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">One of the Participations that all acts have (at least implicitly) is a primary author, who is responsible of the Act and who "owns" the act. Responsibility for the act means responsibility for what is being stated in the Act and as what it is stated. Ownership of the act is assumed in the sense of who may operationally modify the same act. Ownership and responsibility of the Act is not the same as ownership or responsibility of what the Act-object refers to in the real world. The same real world activity can be described by two people, each being the author of their Act, describing the same real world activity. Yet one can be a witness while the other can be a principal performer. The performer has responsibilities for the physical actions; the witness only has responsibility for making a true statement to the best of his or her ability. The two Act-instances may even disagree, but because each is properly attributed to its author, such disagreements can exist side by side and left to arbitration by a recipient of these Act-instances.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">In this sense, an Act-instance represents a "statement" according to Rector and Nowlan (1991) [Foundations for an electronic medical record. Methods Inf Med. 30.]  Rector and Nowlan have emphasized the importance of understanding the medical record not as a collection of facts, but "a faithful record of what clinicians have heard, seen, thought, and done." Rector and Nowlan go on saying that "the other requirements for a medical record, e.g., that it be attributable and permanent, follow naturally from this view." Indeed the Act class is this attributable statement, and the rules of updating acts (discussed in the state-transition model, see Act.statusCode) versus generating new Act-instances are designed according to this principle of permanent attributable statements.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Rector and Nolan focus on the electronic medical record as a collection of statements, while attributed statements, these are still mostly factual statements. However, the Act class goes beyond this limitation to attributed factual statements, representing what is known as "speech-acts" in linguistics and philosophy.  The notion of speech-act includes that there is pragmatic meaning in language utterances, aside from just factual statements; and that these utterances interact with the real world to change the state of affairs, even directly cause physical activities to happen. For example, an order is a speech act that (provided it is issued adequately) will cause the ordered action to be physically performed. The speech act theory has culminated in the seminal work by Austin (1962) [How to do things with words. Oxford University Press].</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">An activity in the real world may progress from defined, through planned and ordered to executed, which is represented as the mood of the Act. Even though one might think of a single activity as progressing from planned to executed, this progression is reflected by multiple Act-instances, each having one and only one mood that will not change along the Act-instance life cycle.  This is because the attribution and content of speech acts along this progression of an activity may be different, and it is often critical that a permanent and faithful record be maintained of this progression. The specification of orders or promises or plans must not be overwritten by the specification of what was actually done, so as to allow comparing actions with their earlier specifications. Act-instances that describe this progression of the same real world activity are linked through the ActRelationships (of the relationship category "sequel").</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Act as statements or speech-acts are the only representation of real world facts or processes in the HL7 RIM. The truth about the real world is constructed through a combination (and arbitration) of such attributed statements only, and there is no class in the RIM whose objects represent "objective state of affairs" or "real processes" independent from attributed statements. As such, there is no distinction between an activity and its documentation. Every Act includes both to varying degrees. For example, a factual statement made about recent (but past) activities, authored (and signed) by the performer of such activities, is commonly known as a procedure report or original documentation (e.g., surgical procedure report, clinic note etc.). Conversely, a status update on an activity that is presently in progress, authored by the performer (or a close observer) is considered to capture that activity (and is later superceded by a full procedure report). However, both status update and procedure report are acts of the same kind, only distinguished by mood and state (see statusCode) and completeness of the information.</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/note&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:property</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">predicate</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass"&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">pr</span>&lt;/namespace&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Name:Class</span>&lt;/name&gt;
+                     &lt;/predicate&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">literal</span>&gt;
+                           &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Act</span>&lt;/value&gt;
+                        &lt;/literal&gt;
+                     &lt;/value&gt;
+                  &lt;/entity:property&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;</pre></td>
+                  <td><pre>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#ACT"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ACT</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">13856</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">act</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A record of something that is being done, has been done, can be done, or is intended or requested to be done.</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/definition&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">example</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">i</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Examples:</span>&lt;/i&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The kinds of acts that are common in health care are (1) a clinical observation, (2) an assessment of health condition (such as problems and diagnoses), (3) healthcare goals, (4) treatment services (such as medication, surgery, physical and psychological therapy), (5) assisting, monitoring or attending, (6) training and education services to patients and their next of kin, (7) and notary services (such as advanced directives or living will), (8)  editing and maintaining documents, and many others.</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/example&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">note</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"
+                     <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">type</span>="ScopeNote"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">i</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Discussion and Rationale:</span>&lt;/i&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff"> Acts are the pivot of the RIM; all domain information and processes are represented primarily in Acts. Any profession or business, including healthcare, is primarily constituted of intentional and occasionally non-intentional actions, performed and recorded by responsible actors. An Act-instance is a record of such an action.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Acts connect to Entities in their Roles through Participations and connect to other Acts through ActRelationships. Participations are the authors, performers and other responsible parties as well as subjects and beneficiaries (which includes tools and material used in the performance of the act, which are also subjects). The moodCode distinguishes between Acts that are meant as factual records, vs. records of intended or ordered services, and the other modalities in which act can appear.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">One of the Participations that all acts have (at least implicitly) is a primary author, who is responsible of the Act and who "owns" the act. Responsibility for the act means responsibility for what is being stated in the Act and as what it is stated. Ownership of the act is assumed in the sense of who may operationally modify the same act. Ownership and responsibility of the Act is not the same as ownership or responsibility of what the Act-object refers to in the real world. The same real world activity can be described by two people, each being the author of their Act, describing the same real world activity. Yet one can be a witness while the other can be a principal performer. The performer has responsibilities for the physical actions; the witness only has responsibility for making a true statement to the best of his or her ability. The two Act-instances may even disagree, but because each is properly attributed to its author, such disagreements can exist side by side and left to arbitration by a recipient of these Act-instances.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">In this sense, an Act-instance represents a "statement" according to Rector and Nowlan (1991) [Foundations for an electronic medical record. Methods Inf Med. 30.]  Rector and Nowlan have emphasized the importance of understanding the medical record not as a collection of facts, but "a faithful record of what clinicians have heard, seen, thought, and done." Rector and Nowlan go on saying that "the other requirements for a medical record, e.g., that it be attributable and permanent, follow naturally from this view." Indeed the Act class is this attributable statement, and the rules of updating acts (discussed in the state-transition model, see Act.statusCode) versus generating new Act-instances are designed according to this principle of permanent attributable statements.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Rector and Nolan focus on the electronic medical record as a collection of statements, while attributed statements, these are still mostly factual statements. However, the Act class goes beyond this limitation to attributed factual statements, representing what is known as "speech-acts" in linguistics and philosophy.  The notion of speech-act includes that there is pragmatic meaning in language utterances, aside from just factual statements; and that these utterances interact with the real world to change the state of affairs, even directly cause physical activities to happen. For example, an order is a speech act that (provided it is issued adequately) will cause the ordered action to be physically performed. The speech act theory has culminated in the seminal work by Austin (1962) [How to do things with words. Oxford University Press].</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">An activity in the real world may progress from defined, through planned and ordered to executed, which is represented as the mood of the Act. Even though one might think of a single activity as progressing from planned to executed, this progression is reflected by multiple Act-instances, each having one and only one mood that will not change along the Act-instance life cycle.  This is because the attribution and content of speech acts along this progression of an activity may be different, and it is often critical that a permanent and faithful record be maintained of this progression. The specification of orders or promises or plans must not be overwritten by the specification of what was actually done, so as to allow comparing actions with their earlier specifications. Act-instances that describe this progression of the same real world activity are linked through the ActRelationships (of the relationship category "sequel").</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Act as statements or speech-acts are the only representation of real world facts or processes in the HL7 RIM. The truth about the real world is constructed through a combination (and arbitration) of such attributed statements only, and there is no class in the RIM whose objects represent "objective state of affairs" or "real processes" independent from attributed statements. As such, there is no distinction between an activity and its documentation. Every Act includes both to varying degrees. For example, a factual statement made about recent (but past) activities, authored (and signed) by the performer of such activities, is commonly known as a procedure report or original documentation (e.g., surgical procedure report, clinic note etc.). Conversely, a status update on an activity that is presently in progress, authored by the performer (or a close observer) is considered to capture that activity (and is later superceded by a full procedure report). However, both status update and procedure report are acts of the same kind, only distinguished by mood and state (see statusCode) and completeness of the information.</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/note&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:property</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">predicate</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass"&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">pr</span>&lt;/namespace&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Name:Class</span>&lt;/name&gt;
+            &lt;/predicate&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">literal</span>&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Act</span>&lt;/value&gt;
+               &lt;/literal&gt;
+            &lt;/value&gt;
+         &lt;/entity:property&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;</pre></td>
                </tr>
             </tbody>
          </table>
       </div>
       <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e966">
-         <h2 class="successful">Retired Entity<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <h2 class="failed">Retired Entity<span class="scenario-totals">passed:0 / pending:0 / failed:1 / total:1</span></h2>
          <table class="xspec" id="t-d4e966">
             <col width="80%" />
             <col width="20%" />
             <tbody>
-               <tr class="successful">
+               <tr class="failed">
                   <th>Retired Entity</th>
-                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+                  <th>passed:0 / pending:0 / failed:1 / total:1</th>
                </tr>
-               <tr class="successful">
-                  <td>ActClass_DOCCNTNT</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#d4e1114">ActClass_DOCCNTNT</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d4e966">Retired Entity</h3>
+         <h4 id="d4e1114">ActClass_DOCCNTNT</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <p>XPath <code>/node()</code> from:
+                     </p><pre><span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.Inverse of Specializes.  Only included as a derived relationship.</span>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#DOCCNTNT"
+                            <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entryState</span>="INACTIVE"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">DOCCNTNT</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">14785</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="HIDDEN"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">DOCCNTNT</span>&lt;/core:value&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;</pre></td>
+                  <td><pre>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#DOCCNTNT"
+                            <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entryState</span>="INACTIVE"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">DOCCNTNT</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">14785</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="HIDDEN"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">DOCCNTNT</span>&lt;/core:value&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;</pre></td>
                </tr>
             </tbody>
          </table>
       </div>
       <div xmlns:oxy="http://www.oxygenxml.com/xslt/xspec" id="d4e1175">
-         <h2 class="successful">Name:Class property<span class="scenario-totals">passed:1 / pending:0 / failed:0 / total:1</span></h2>
+         <h2 class="failed">Name:Class property<span class="scenario-totals">passed:0 / pending:0 / failed:1 / total:1</span></h2>
          <table class="xspec" id="t-d4e1175">
             <col width="80%" />
             <col width="20%" />
             <tbody>
-               <tr class="successful">
+               <tr class="failed">
                   <th>Name:Class property</th>
-                  <th>passed:1 / pending:0 / failed:0 / total:1</th>
+                  <th>passed:0 / pending:0 / failed:1 / total:1</th>
                </tr>
-               <tr class="successful">
-                  <td>ActClass_DOCCNTNT</td>
-                  <td>Success</td>
+               <tr class="failed">
+                  <td><a href="#d4e1421">ActClass_DOCCNTNT</a></td>
+                  <td>Failure</td>
+               </tr>
+            </tbody>
+         </table>
+         <h3 id="d4e1175">Name:Class property</h3>
+         <h4 id="d4e1421">ActClass_DOCCNTNT</h4>
+         <table class="xspecResult">
+            <thead>
+               <tr>
+                  <th>Result</th>
+                  <th>Expected Result</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr>
+                  <td>
+                     <p>XPath <code>/node()</code> from:
+                     </p><pre><span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">The child code is a more narrow version of the concept represented by the parent code.  I.e. Every child concept is also a valid parent concept.  Used to allow determination of subsumption.  Must be transitive, irreflexive, antisymmetric.Inverse of Specializes.  Only included as a derived relationship.</span>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#COMPOSITION"&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">COMPOSITION</span>&lt;/core:name&gt;
+                  &lt;/entityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">20083</span>&lt;/core:name&gt;
+                  &lt;/alternateEntityID&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+                  &lt;/describingCodeSystemVersion&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">composition</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="ALTERNATIVE"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Attestable unit</span>&lt;/core:value&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+                  &lt;/designation&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A context representing a grouped commitment of information to the EHR. It is considered the unit of modification of the record, the unit of transmission in record extracts, and the unit of attestation by authorizing clinicians.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A composition represents part of a patient record originating from a single interaction between an authenticator and the record.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Unless otherwise stated all statements within a composition have the same authenticator, apply to the same patient and were recorded in a single session of use of a single application.</span>&lt;/p&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A composition contains organizers and entries.</span>&lt;/p&gt;
+                     &lt;/core:value&gt;
+                  &lt;/definition&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:property</span>&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">predicate</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass"&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">pr</span>&lt;/namespace&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Name:Class</span>&lt;/name&gt;
+                     &lt;/predicate&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;
+                        &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">literal</span>&gt;
+                           &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Composition</span>&lt;/value&gt;
+                        &lt;/literal&gt;
+                     &lt;/value&gt;
+                  &lt;/entity:property&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">parent</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#_ActClassRecordOrganizer"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">_ActClassRecordOrganizer</span>&lt;/core:name&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:designation</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">record organizer</span>&lt;/core:designation&gt;
+                  &lt;/parent&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+                     &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+                  &lt;/entityType&gt;
+               &lt;/namedEntity&gt;
+            &lt;/upd:entityDescription&gt;
+         &lt;/member&gt;</pre></td>
+                  <td><pre>&lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">member</span> xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
+         xmlns:entity="http://www.omg.org/spec/CTS2/1.1/Entity"
+         xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"
+         xmlns:pkg="http://expath.org/ns/pkg"
+         xmlns:impl="urn:x-xspec:compile:xslt:impl"
+         xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"&gt;
+   &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">upd:entityDescription</span>&gt;
+      &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namedEntity</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">about</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#COMPOSITION"&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">COMPOSITION</span>&lt;/core:name&gt;
+         &lt;/entityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">alternateEntityID</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">internalId</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">20083</span>&lt;/core:name&gt;
+         &lt;/alternateEntityID&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">describingCodeSystemVersion</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:version</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/version/145"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass-145</span>&lt;/core:version&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:codeSystem</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:codeSystem&gt;
+         &lt;/describingCodeSystemVersion&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="PREFERRED"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">composition</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designation</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">designationRole</span>="ALTERNATIVE"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Attestable unit</span>&lt;/core:value&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:language</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.omg.org/spec/LNG#en"&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">en</span>&lt;/core:language&gt;
+         &lt;/designation&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">definition</span> xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A context representing a grouped commitment of information to the EHR. It is considered the unit of modification of the record, the unit of transmission in record extracts, and the unit of attestation by authorizing clinicians.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A composition represents part of a patient record originating from a single interaction between an authenticator and the record.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Unless otherwise stated all statements within a composition have the same authenticator, apply to the same patient and were recorded in a single session of use of a single application.</span>&lt;/p&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">p</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">A composition contains organizers and entries.</span>&lt;/p&gt;
+            &lt;/core:value&gt;
+         &lt;/definition&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entity:property</span>&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">predicate</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/pr/Name%3AClass"&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">pr</span>&lt;/namespace&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Name:Class</span>&lt;/name&gt;
+            &lt;/predicate&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;
+               &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">literal</span>&gt;
+                  &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">value</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Composition</span>&lt;/value&gt;
+               &lt;/literal&gt;
+            &lt;/value&gt;
+         &lt;/entity:property&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">parent</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://hl7.org/ontology/uv/vocab/cs/ActClass/Concept#_ActClassRecordOrganizer"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">ActClass</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">_ActClassRecordOrganizer</span>&lt;/core:name&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:designation</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">record organizer</span>&lt;/core:designation&gt;
+         &lt;/parent&gt;
+         &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">entityType</span> <span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">uri</span>="http://www.w3.org/2004/02/skos/core#Concept"&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:namespace</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">skos</span>&lt;/core:namespace&gt;
+            &lt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">core:name</span>&gt;<span xmlns:x="http://www.jenitennison.com/xslt/xspec" xmlns:pkg="http://expath.org/ns/pkg" class="diff">Concept</span>&lt;/core:name&gt;
+         &lt;/entityType&gt;
+      &lt;/namedEntity&gt;
+   &lt;/upd:entityDescription&gt;
+&lt;/member&gt;</pre></td>
                </tr>
             </tbody>
          </table>

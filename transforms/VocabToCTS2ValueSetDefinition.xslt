@@ -27,7 +27,7 @@
      -->
     <xsl:template match="mif:valueSet" mode="cts2valuesetdefinition" xmlns="http://www.omg.org/spec/CTS2/1.1/Updates">
 
-        <xsl:variable name="maxVersion" as="xs:string" select="$uriSubstitutions[@type='vs' and @oid=current()/@id]/@date">
+        <xsl:variable name="maxVersion" as="xs:string" select="distinct-values($uriSubstitutions[@type='vs' and @oid=current()/@id]/@date)">
             <!-- Grab the date of the most recent version -->
         </xsl:variable>
 
@@ -55,7 +55,7 @@
                 <xsl:message terminate="yes">Unexpected elements in value set definition <xsl:value-of select="$vs"/></xsl:message>
             </xsl:if>
             <xsl:variable name="definitionId" select="cts2f:definitionId(@versionDate, @versionTime)"/>
-            <xsl:if test="$comments">
+            <xsl:if test="$useComments">
                 <xsl:text>&#x0a;  </xsl:text>
                 <xsl:comment select="concat('Value Set Version: ', $vs,'-',$definitionId)"/>
                 <xsl:text>&#x0a;  </xsl:text>
@@ -108,11 +108,11 @@
         <xsl:param name="depth" as="xs:integer" select="0"/>
 
         <member>
-            <upd:valueSetDefinition about="{concat($vocabIri,'/vs/',$hier_vs,'/',$definitionId)}" formalName="{$hier_vs}-{$definitionId}" xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition">
+            <upd:valueSetDefinition about="{concat($substitutionVocabIri,'/vs/',$hier_vs,'/',$definitionId)}" formalName="{$hier_vs}-{$definitionId}" xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition">
                 <xsl:if test="$deprecated and substring-before($definitionId,'T') = $maxVersion">
                     <xsl:attribute name="entryState">INACTIVE</xsl:attribute>
                 </xsl:if>
-                <definedValueSet uri="{concat($vocabIri,'/vs/',$hier_vs)}">
+                <definedValueSet uri="{concat($substitutionVocabIri,'/vs/',$hier_vs)}">
                     <xsl:value-of select="$hier_vs"/>
                 </definedValueSet>
                 <xsl:apply-templates mode="cts2valuesetdefinitioncontent">
@@ -284,7 +284,7 @@
         <xsl:variable name="name" select="concat('_',$vs,'_',$depth+1,'_', $count)"/>
         <entry operator="{$op}" entryOrder="0">
             <completeValueSet>
-                <valueSet uri="{$vocabIri}/vs/{encode-for-uri($name)}">
+                <valueSet uri="{$substitutionVocabIri}/vs/{encode-for-uri($name)}">
                     <xsl:value-of select="$name"/>
                 </valueSet>
             </completeValueSet>
@@ -457,7 +457,7 @@
         <!-- TODO: do we count on name or should we dereference the id? -->
         <entry operator="{$op}" entryOrder="0">
             <completeValueSet>
-                <valueSet uri="{$vocabIri}/vs/{encode-for-uri(@name)}">
+                <valueSet uri="{$substitutionVocabIri}/vs/{encode-for-uri(@name)}">
                     <xsl:value-of select="@name"/>
                 </valueSet>
             </completeValueSet>

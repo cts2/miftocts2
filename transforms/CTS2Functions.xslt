@@ -2,12 +2,14 @@
     xmlns:cts2f="http://informatics.mayo.edu/cts2/xslt/functions" xmlns:urimap="http://informatics.mayo.edu/cts2/urimap" xmlns:hl7="urn:hl7-org:xslt:functions" xmlns:mif="urn:hl7-org:v3/mif2"
     xpath-default-namespace="http://informatics.mayo.edu/cts2/xslt/functions" exclude-result-prefixes="urimap cts2f xsl mif xs hl7">
 
-    <xsl:import href="../../hl7owl/transforms/VocabToOWL.xslt"/>
+    <xsl:import href="../../hl7owl/transforms/SharedHL7ToOWL.xslt"/>
+
     <xsl:param name="comments" as="xs:boolean"/>
 
     <!-- codeMap - a table indexed by code system and version that maps codes to preferred codes -->
     <xsl:variable name="codeMap" as="node()+">
-        <xsl:apply-templates mode="codeMap" select="$vocabModel/*[self::mif:codeSystem]"/>
+        <xsl:message select="concat('CODEMAP:', $vocabModelName)"/>
+        <xsl:apply-templates mode="codeMap" select="document($vocabModelName)/mif:vocabularyModel/*[self::mif:codeSystem]"/>
     </xsl:variable>
     <xsl:template mode="codeMap" match="mif:codeSystem">
         <xsl:if test=".//mif:code">
@@ -132,9 +134,9 @@
     <xsl:function name="cts2f:releasedVersionFor" as="element(mif:releasedVersion)?">
         <xsl:param name="csoid" as="xs:string"/>
         <xsl:choose>
-            <xsl:when test="document($baseDoc)/mif:vocabularyModel/mif:codeSystem[@codeSystemId=$csoid]">
+            <xsl:when test="document($vocabModelName)/mif:vocabularyModel/mif:codeSystem[@codeSystemId=$csoid]">
                 <xsl:variable name="maxVersion" as="xs:string" select="$uriSubstitutions[@type='cs' and @oid=$csoid]/@date"/>
-                <xsl:copy-of select="document($baseDoc)/mif:vocabularyModel/mif:codeSystem[@codeSystemId=$csoid]/mif:releasedVersion[@releaseDate=$maxVersion]"/>
+                <xsl:copy-of select="document($vocabModelName)/mif:vocabularyModel/mif:codeSystem[@codeSystemId=$csoid]/mif:releasedVersion[@releaseDate=$maxVersion]"/>
             </xsl:when>
             <xsl:otherwise>
                 <xsl:message terminate="yes">Can't locate code system <xsl:value-of select="$csoid"/></xsl:message>

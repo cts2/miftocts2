@@ -1,46 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" 
-    stylesheet="../transforms/VocabToCTS2ValueSetDefinition.xslt">
+    stylesheet="../transforms/VocabToCTS2.xslt">
 
     <x:import href="basedoc.xspec"/>
     
     <x:param name="comments" select="false()"/>
     
     <x:scenario label="MIF Value Set Definition complete code system">
-        <x:context mode="cts2valuesetdefinition">
-            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
-                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
-                <header>
-                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
-                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
-                </header>
-                <valueSet id="2.16.840.1.113883.1.11.1" name="AdministrativeGender">
-                    <annotations>
-                        <documentation>
-                            <description>
-                                <text>
-                                    <p>The gender of a person used for adminstrative purposes (as opposed to clinical gender)</p>
-                                </text>
-                            </description>
-                        </documentation>
-                    </annotations>
-                    <version versionDate="2012-11-21">
-                        <supportedCodeSystem>2.16.840.1.113883.5.1</supportedCodeSystem>
-                        <supportedLanguage>en</supportedLanguage>
-                        <content codeSystem="2.16.840.1.113883.5.1"/>
-                    </version>
-                </valueSet>
-            </vocabularyModel>
-        </x:context>
+        <x:context mode="cts2valuesetdefinition" href="source/vsd1.xml"/>
+
         <x:expect label="AdministrativeGender">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/AdministrativeGender/2012-11-21"
                     formalName="AdministrativeGender-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender">AdministrativeGender</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/AdministrativeGender">AdministrativeGender</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <completeCodeSystem>
-                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/AdministrativeGender">AdministrativeGender</codeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/AdministrativeGender">AdministrativeGender</codeSystem>
                         </completeCodeSystem>
                     </entry>
                 </upd:valueSetDefinition>
@@ -48,39 +25,20 @@
         </x:expect>
     </x:scenario>
     <x:scenario label="MIF Value Set Definition includeRelatedCodes">
-        <x:context mode="cts2valuesetdefinition">
-            <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
-                <packageLocation combinedId="DEFN=UV=VO=1189-20121121" root="DEFN" artifact="VO" realmNamespace="UV" version="1189-20121121"/>
-                <header>
-                    <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
-                    <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
-                </header>
-                <valueSet id="2.16.840.1.113883.1.11.10186" name="MobilityImpaired">
-                    <version versionDate="2012-11-21">
-                        <supportedCodeSystem>2.16.840.1.113883.5.93</supportedCodeSystem>
-                        <supportedLanguage>en</supportedLanguage>
-                        <content codeSystem="2.16.840.1.113883.5.93">
-                            <codeBasedContent code="5">
-                                <includeRelatedCodes relationshipName="Generalizes" relationshipTraversal="TransitiveClosure"/>
-                            </codeBasedContent>
-                        </content>
-                    </version>
-                </valueSet>
-            </vocabularyModel>
-        </x:context>
+        <x:context mode="cts2valuesetdefinition" href="source/vsd2.xml"/>
         <x:expect label="MobilityImpaired">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/MobilityImpaired/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/MobilityImpaired/2012-11-21"
                     formalName="MobilityImpaired-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/MobilityImpaired">MobilityImpaired</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/MobilityImpaired">MobilityImpaired</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/Concept#5">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/PersonDisabilityType/Concept#5">
                                 <core:namespace>PersonDisabilityType</core:namespace>
                                 <core:name>5</core:name>
                             </referencedEntity>
-                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType">PersonDisabilityType</codeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/PersonDisabilityType">PersonDisabilityType</codeSystem>
                             <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
                                 <core:namespace>skos</core:namespace>
                                 <core:name>broaderTransitive</core:name>
@@ -89,7 +47,7 @@
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/PersonDisabilityType/Concept#5">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/PersonDisabilityType/Concept#5">
                                 <core:namespace>PersonDisabilityType</core:namespace>
                                 <core:name>5</core:name>
                             </referencedEntity>
@@ -132,16 +90,16 @@
         <x:expect label="ObservationInterpretationNormality2">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/ObservationInterpretationNormality/2012-11-21"
                     formalName="ObservationInterpretationNormality-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="ALL_INTERMEDIATE_NODES">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
                                 <core:namespace>ObservationInterpretation</core:namespace>
                                 <core:name>_ObservationInterpretationNormality</core:name>
                             </referencedEntity>
-                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
                             <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
                                 <core:namespace>skos</core:namespace>
                                 <core:name>broaderTransitive</core:name>
@@ -186,16 +144,16 @@
         <x:expect label="ObservationInterpretationNormality">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/ObservationInterpretationNormality/2012-11-21"
                     formalName="ObservationInterpretationNormality-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/ObservationInterpretationNormality">ObservationInterpretationNormality</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="TRANSITIVE_CLOSURE" leafOnly="LEAF_ONLY">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ObservationInterpretation/Concept#_ObservationInterpretationNormality">
                                 <core:namespace>ObservationInterpretation</core:namespace>
                                 <core:name>_ObservationInterpretationNormality</core:name>
                             </referencedEntity>
-                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/ObservationInterpretation">ObservationInterpretation</codeSystem>
                             <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
                                 <core:namespace>skos</core:namespace>
                                 <core:name>broaderTransitive</core:name>
@@ -240,15 +198,15 @@
         <x:expect label="FontStyle">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/FontStyle/2012-11-21" formalName="FontStyle-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/FontStyle">FontStyle</definedValueSet>
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/FontStyle/2012-11-21" formalName="FontStyle-2012-11-21">
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/FontStyle">FontStyle</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <associatedEntities direction="TARGET_TO_SOURCE" transitivity="DIRECTLY_ASSOCIATED">
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_FontStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/styleType/Concept#_FontStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_FontStyle</core:name>
                             </referencedEntity>
-                            <codeSystem uri="http://hl7.org/ontology/vocab/uv/cs/styleType">styleType</codeSystem>
+                            <codeSystem uri="http://hl7.org/ontology/uv/vocab/cs/styleType">styleType</codeSystem>
                             <predicate uri="http://www.w3.org/2004/02/skos/core#broaderTransitive">
                                 <core:namespace>skos</core:namespace>
                                 <core:name>broaderTransitive</core:name>
@@ -257,7 +215,7 @@
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_FontStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/styleType/Concept#_FontStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_FontStyle</core:name>
                             </referencedEntity>
@@ -306,40 +264,40 @@
         <x:expect label="x_DocumentActMood">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_DocumentActMood/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/x_DocumentActMood/2012-11-21"
                     formalName="x_DocumentActMood-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_DocumentActMood">x_DocumentActMood</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/x_DocumentActMood">x_DocumentActMood</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#APT">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#APT">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>APT</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#ARQ">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#ARQ">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>ARQ</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#DEF">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#DEF">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>DEF</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#EVN">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#EVN">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>EVN</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#INT">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#INT">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>INT</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRMS">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#PRMS">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>PRMS</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#PRP">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#PRP">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>PRP</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActMood/Concept#RQO">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActMood/Concept#RQO">
                                 <core:namespace>ActMood</core:namespace>
                                 <core:name>RQO</core:name>
                             </referencedEntity>
@@ -380,12 +338,12 @@
         <x:expect label="x_EntityClassPersonOrOrgReceiving">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_EntityClassPersonOrOrgReceiving/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/x_EntityClassPersonOrOrgReceiving/2012-11-21"
                     formalName="x_EntityClassPersonOrOrgReceiving-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_EntityClassPersonOrOrgReceiving">x_EntityClassPersonOrOrgReceiving</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/x_EntityClassPersonOrOrgReceiving">x_EntityClassPersonOrOrgReceiving</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/EntityClass/Concept#PSN">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/EntityClass/Concept#PSN">
                                 <core:namespace>EntityClass</core:namespace>
                                 <core:name>PSN</core:name>
                             </referencedEntity>
@@ -393,7 +351,7 @@
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EntityClassOrganization">EntityClassOrganization</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/EntityClassOrganization">EntityClassOrganization</valueSet>
                         </completeValueSet>
                     </entry>
                 </upd:valueSetDefinition>
@@ -535,150 +493,150 @@
         <x:expect label="NUCCProviderCodes">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/NUCCProviderCodes/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/NUCCProviderCodes/2012-11-21"
                     formalName="NUCCProviderCodes-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/NUCCProviderCodes">NUCCProviderCodes</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/NUCCProviderCodes">NUCCProviderCodes</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingServiceProvidersProviderCodes">NursingServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/NursingServiceProvidersProviderCodes">NursingServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes"
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes"
                                 >RespiratoryRehabilitativeandRestorativeServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingServiceRelatedProvidersProviderCodes">NursingServiceRelatedProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/NursingServiceRelatedProvidersProviderCodes">NursingServiceRelatedProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PharmacyServiceProvidersProviderCodes">PharmacyServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/PharmacyServiceProvidersProviderCodes">PharmacyServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes"
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes"
                                 >TechnologistTechnicianandOtherTechnicalServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/BehavioralHealthandSocialServiceProvidersProviderCodes">BehavioralHealthandSocialServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/BehavioralHealthandSocialServiceProvidersProviderCodes">BehavioralHealthandSocialServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes"
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes"
                                 >PhysicianAssistantsandAdvancedPracticeNursingProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AmbulatoryHealthCareFacilitiesProviderCodes">AmbulatoryHealthCareFacilitiesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/AmbulatoryHealthCareFacilitiesProviderCodes">AmbulatoryHealthCareFacilitiesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/DietaryandNutritionalServiceProvidersProviderCodes">DietaryandNutritionalServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/DietaryandNutritionalServiceProvidersProviderCodes">DietaryandNutritionalServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalUnitsProviderCodes">HospitalUnitsProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/HospitalUnitsProviderCodes">HospitalUnitsProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/RespiteCareFacilityProviderCodes">RespiteCareFacilityProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/RespiteCareFacilityProviderCodes">RespiteCareFacilityProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SuppliersProviderCodes">SuppliersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/SuppliersProviderCodes">SuppliersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalsProviderCodes">HospitalsProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/HospitalsProviderCodes">HospitalsProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/LaboratoriesProviderCodes">LaboratoriesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/LaboratoriesProviderCodes">LaboratoriesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ResidentialTreatmentFacilitiesProviderCodes">ResidentialTreatmentFacilitiesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/ResidentialTreatmentFacilitiesProviderCodes">ResidentialTreatmentFacilitiesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AllopathicandOsteopathicPhysiciansProviderCodes">AllopathicandOsteopathicPhysiciansProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/AllopathicandOsteopathicPhysiciansProviderCodes">AllopathicandOsteopathicPhysiciansProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/DentalProvidersProviderCodes">DentalProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/DentalProvidersProviderCodes">DentalProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ManagedCareOrganizationsProviderCodes">ManagedCareOrganizationsProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/ManagedCareOrganizationsProviderCodes">ManagedCareOrganizationsProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/PodiatricMedicineandSurgeryProvidersProviderCodes">PodiatricMedicineandSurgeryProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/PodiatricMedicineandSurgeryProvidersProviderCodes">PodiatricMedicineandSurgeryProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EmergencyMedicalServiceProvidersProviderCodes">EmergencyMedicalServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/EmergencyMedicalServiceProvidersProviderCodes">EmergencyMedicalServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingandCustodialCareFacilitiesProviderCodes">NursingandCustodialCareFacilitiesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/NursingandCustodialCareFacilitiesProviderCodes">NursingandCustodialCareFacilitiesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/OtherServiceProvidersProviderCodes">OtherServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/OtherServiceProvidersProviderCodes">OtherServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TransportationServicesProviderCodes">TransportationServicesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/TransportationServicesProviderCodes">TransportationServicesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AgenciesProviderCodes">AgenciesProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/AgenciesProviderCodes">AgenciesProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SpeechLanguageandHearingProvidersProviderCodes">SpeechLanguageandHearingProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/SpeechLanguageandHearingProvidersProviderCodes">SpeechLanguageandHearingProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/EyeandVisionServiceProvidersProviderCodes">EyeandVisionServiceProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/EyeandVisionServiceProvidersProviderCodes">EyeandVisionServiceProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ChiropracticProvidersProviderCodes">ChiropracticProvidersProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/ChiropracticProvidersProviderCodes">ChiropracticProvidersProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/GroupProviderCodes">GroupProviderCodes</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/GroupProviderCodes">GroupProviderCodes</valueSet>
                         </completeValueSet>
                     </entry>
                 </upd:valueSetDefinition>
@@ -724,17 +682,17 @@
         <x:expect label="StyleType_modified">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/StyleType_modified/2012-11-21"
                     formalName="StyleType_modified-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified">StyleType_modified</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/StyleType_modified">StyleType_modified</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TableRuleStyle">TableRuleStyle</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/TableRuleStyle">TableRuleStyle</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_TableRuleStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/styleType/Concept#_TableRuleStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_TableRuleStyle</core:name>
                             </referencedEntity>
@@ -782,17 +740,17 @@
         <x:expect label="StyleType_modified">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/StyleType_modified/2012-11-21"
                     formalName="StyleType_modified-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/StyleType_modified">StyleType_modified</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/StyleType_modified">StyleType_modified</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TableRuleStyle">TableRuleStyle</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/TableRuleStyle">TableRuleStyle</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="INTERSECT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/styleType/Concept#_TableRuleStyle">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/styleType/Concept#_TableRuleStyle">
                                 <core:namespace>styleType</core:namespace>
                                 <core:name>_TableRuleStyle</core:name>
                             </referencedEntity>
@@ -839,21 +797,21 @@
         <x:expect label="StyleType_modified">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/x_ActRelationshipDocument/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/x_ActRelationshipDocument/2012-11-21"
                     formalName="x_ActRelationshipDocument-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/x_ActRelationshipDocument">x_ActRelationshipDocument</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/x_ActRelationshipDocument">x_ActRelationshipDocument</definedValueSet>
                     <note>Need associatedConceptProperty</note>
                     <entry operator="UNION" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#APND">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActRelationshipType/Concept#APND">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>APND</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#RPLC">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActRelationshipType/Concept#RPLC">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>RPLC</core:name>
                             </referencedEntity>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/ActRelationshipType/Concept#XFRM">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/ActRelationshipType/Concept#XFRM">
                                 <core:namespace>ActRelationshipType</core:namespace>
                                 <core:name>XFRM</core:name>
                             </referencedEntity>
@@ -935,62 +893,62 @@
         <x:expect label="NestingExample">
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/OrganizationalHealthcareProviderHIPAA/2012-11-21"
+                <upd:valueSetDefinition xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/OrganizationalHealthcareProviderHIPAA/2012-11-21"
                     formalName="OrganizationalHealthcareProviderHIPAA-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/OrganizationalHealthcareProviderHIPAA">OrganizationalHealthcareProviderHIPAA</definedValueSet>
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/OrganizationalHealthcareProviderHIPAA">OrganizationalHealthcareProviderHIPAA</definedValueSet>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalUnitPracticeSetting">HospitalUnitPracticeSetting</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/HospitalUnitPracticeSetting">HospitalUnitPracticeSetting</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/HospitalPracticeSetting">HospitalPracticeSetting</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/HospitalPracticeSetting">HospitalPracticeSetting</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AbstractHealthcareProviderAgencyHIPAA">AbstractHealthcareProviderAgencyHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/AbstractHealthcareProviderAgencyHIPAA">AbstractHealthcareProviderAgencyHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/AmbulatoryHealthCareFacilityHIPAA">AmbulatoryHealthCareFacilityHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/AmbulatoryHealthCareFacilityHIPAA">AmbulatoryHealthCareFacilityHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/LaboratoryHIPAA">LaboratoryHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/LaboratoryHIPAA">LaboratoryHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ManagedCareOrganizationHIPAA">ManagedCareOrganizationHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/ManagedCareOrganizationHIPAA">ManagedCareOrganizationHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/SupplierHIPAA">SupplierHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/SupplierHIPAA">SupplierHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/TransportationServiceHIPAA">TransportationServiceHIPAA</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/TransportationServiceHIPAA">TransportationServiceHIPAA</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#HU">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/RoleCode/Concept#HU">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>HU</core:name>
                             </referencedEntity>
@@ -1000,17 +958,17 @@
             </member>
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"> <upd:valueSetDefinition
-                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1/2012-11-21"
+                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_1/2012-11-21"
                     formalName="_OrganizationalHealthcareProviderHIPAA_1_1-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</definedValueSet> <entry
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_1">_OrganizationalHealthcareProviderHIPAA_1_1</definedValueSet> <entry
                         operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/NursingOrCustodialCarePracticeSetting">NursingOrCustodialCarePracticeSetting</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/NursingOrCustodialCarePracticeSetting">NursingOrCustodialCarePracticeSetting</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#NCCF">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/RoleCode/Concept#NCCF">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>NCCF</core:name>
                             </referencedEntity>
@@ -1020,17 +978,17 @@
             </member>
             <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
                 xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core"> <upd:valueSetDefinition
-                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2/2012-11-21"
+                    xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" about="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_2/2012-11-21"
                     formalName="_OrganizationalHealthcareProviderHIPAA_1_2-2012-11-21">
-                    <definedValueSet uri="http://hl7.org/ontology/vocab/uv/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</definedValueSet> <entry
+                    <definedValueSet uri="http://hl7.org/ontology/uv/vocab/vs/_OrganizationalHealthcareProviderHIPAA_1_2">_OrganizationalHealthcareProviderHIPAA_1_2</definedValueSet> <entry
                         operator="UNION" entryOrder="0">
                         <completeValueSet>
-                            <valueSet uri="http://hl7.org/ontology/vocab/uv/vs/ResidentialTreatmentPracticeSetting">ResidentialTreatmentPracticeSetting</valueSet>
+                            <valueSet uri="http://hl7.org/ontology/uv/vocab/vs/ResidentialTreatmentPracticeSetting">ResidentialTreatmentPracticeSetting</valueSet>
                         </completeValueSet>
                     </entry>
                     <entry operator="SUBTRACT" entryOrder="0">
                         <entityList>
-                            <referencedEntity uri="http://hl7.org/ontology/vocab/uv/cs/RoleCode/Concept#RTF">
+                            <referencedEntity uri="http://hl7.org/ontology/uv/vocab/cs/RoleCode/Concept#RTF">
                                 <core:namespace>RoleCode</core:namespace>
                                 <core:name>RTF</core:name>
                             </referencedEntity>

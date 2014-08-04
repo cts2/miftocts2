@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
-    stylesheet="../transforms/VocabToCTS2ValueSet.xslt">
+    stylesheet="../transforms/VocabToCTS2.xslt">
    
     <x:import href="basedoc.xspec"/>
     
@@ -43,7 +43,7 @@
 
                 <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
                     valueSetName="AdministrativeGender"
-                    about="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender">
+                    about="http://hl7.org/ontology/uv/vocab/vs/AdministrativeGender">
                     <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
                         <value>
                             <description xmlns="urn:hl7-org:v3/mif2">
@@ -56,7 +56,7 @@
                     <core:alternateID>urn:oid:2.16.840.1.113883.1.11.1</core:alternateID>
                     <definitions>definitions</definitions>
                     <currentDefinition>
-                        <core:valueSetDefinition uri="http://hl7.org/ontology/vocab/uv/vs/AdministrativeGender/2012-11-21"
+                        <core:valueSetDefinition uri="http://hl7.org/ontology/uv/vocab/vs/AdministrativeGender/2012-11-21"
                             href="definition/2012-11-21">AdministrativeGender-2012-11-21</core:valueSetDefinition>
                     </currentDefinition>
                 </upd:valueSet>
@@ -106,7 +106,7 @@
                 
                 <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
                     valueSetName="ActMood"
-                    about="http://hl7.org/ontology/vocab/uv/vs/ActMood">
+                    about="http://hl7.org/ontology/uv/vocab/vs/ActMood">
                     <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
                         <value>
                             <description xmlns="urn:hl7-org:v3/mif2">
@@ -121,7 +121,7 @@
                         </value>
                     </resourceSynopsis>
                     <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-                        <predicate uri="http://hl7.org/ontology/vocab/uv/pr/isImmutable">
+                        <predicate uri="http://hl7.org/ontology/uv/vocab/pr/isImmutable">
                             <namespace>pr</namespace>
                             <name>isImmutable</name>
                         </predicate>
@@ -134,7 +134,7 @@
                     <core:alternateID>urn:oid:2.16.840.1.113883.1.11.10196</core:alternateID>
                     <definitions>definitions</definitions>
                     <currentDefinition>
-                        <core:valueSetDefinition uri="http://hl7.org/ontology/vocab/uv/vs/ActMood/2012-11-21"
+                        <core:valueSetDefinition uri="http://hl7.org/ontology/uv/vocab/vs/ActMood/2012-11-21"
                             href="definition/2012-11-21">ActMood-2012-11-21</core:valueSetDefinition>
                     </currentDefinition>
                 </upd:valueSet>
@@ -188,7 +188,7 @@
                 
                 <upd:valueSet xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet"
                     valueSetName="ActClassPublicHealthCase"
-                    about="http://hl7.org/ontology/vocab/uv/vs/ActClassPublicHealthCase"
+                    about="http://hl7.org/ontology/uv/vocab/vs/ActClassPublicHealthCase"
                     entryState="INACTIVE">
                     <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
                         <value>
@@ -207,7 +207,7 @@
                         </value>
                     </note>
                     <property xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-                        <predicate uri="http://hl7.org/ontology/vocab/uv/pr/isImmutable">
+                        <predicate uri="http://hl7.org/ontology/uv/vocab/pr/isImmutable">
                             <namespace>pr</namespace>
                             <name>isImmutable</name>
                         </predicate>

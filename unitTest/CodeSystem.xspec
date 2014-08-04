@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<x:description  xmlns:x = "http://www.jenitennison.com/xslt/xspec" 
-    stylesheet="../transforms/VocabToCTS2CodeSystem.xslt" 
-    xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" 
-    xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
+<x:description xmlns:x="http://www.jenitennison.com/xslt/xspec" stylesheet="../transforms/VocabToCTS2.xslt" xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
     <x:import href="basedoc.xspec"/>
-    
-    <x:param name="comments" select="false()"/>
-    
+
     <x:scenario label="Basic External code system">
         <x:context mode="cts2codeSystem">
             <vocabularyModel xmlns="urn:hl7-org:v3/mif2" name="1189-20121121" title="HL7 Vocabulary" packageKind="version" definitionKind="partial-publishing" schemaVersion="2.1.6">
@@ -15,86 +10,74 @@
                     <renderingInformation renderingTime="2012-11-21T09:32:35" application="RoseTree 5.0.19"/>
                     <legalese copyrightOwner="Health Level Seven, Inc." copyrightYears="2012"/>
                 </header>
-            <codeSystem name="abcCodes" title="ABCcodes" codeSystemId="2.16.840.1.113883.6.25">
-                <header>
-                    <legalese>
-                        <notation>Is NOT in UMLS.</notation>
-                        <licenseTerms>ASCII flat file = $59.95, coding manaul = $79.95.  Break even for development since 1995 if 20% market penetration by 2003.</licenseTerms>
-                        <versioningPolicy>Version 2001, release 1 = V2001R1
- Annual</versioningPolicy>
-                    </legalese>
-                    <responsibleGroup organizationName="Name Alternative Link Systems, Inc."/>
-                    <contributor>
-                        <role>Sponsor</role>
-                        <name name="(See notes)"/>
-                        <notes>Name Melinna Giannini, Alternative Link Systems, Inc.; Address 1065 S. Main, Building C, Las Cruces, NM 88005; Telephone 505-527-0636; Fax 505-523-4152; E-mail mg@alternativelink.com</notes>
-                    </contributor>
-                </header>
-                <annotations>
-                    <documentation>
-                        <description>
-                            <text>
-                                <p>Five character alphabetic codes fit into current claims processing software or onto standard paper claim forms. ABC Codes give business parity to licensed CAM and nurse providers who file claims to insurance companies. .</p>
-                            </text>
-                        </description>
-                    </documentation>
-                </annotations>
-                <releasedVersion releaseDate="2012-11-21" hl7MaintainedIndicator="false" completeCodesIndicator="false" hl7ApprovedIndicator="false">
-                    <supportedLanguage>en</supportedLanguage>
-                </releasedVersion>
-            </codeSystem>
+                <codeSystem name="abcCodes" title="ABCcodes" codeSystemId="2.16.840.1.113883.6.25">
+                    <header>
+                        <legalese>
+                            <notation>Is NOT in UMLS.</notation>
+                            <licenseTerms>ASCII flat file = $59.95, coding manaul = $79.95. Break even for development since 1995 if 20% market penetration by 2003.</licenseTerms>
+                            <versioningPolicy>Version 2001, release 1 = V2001R1 Annual</versioningPolicy>
+                        </legalese>
+                        <responsibleGroup organizationName="Name Alternative Link Systems, Inc."/>
+                        <contributor>
+                            <role>Sponsor</role>
+                            <name name="(See notes)"/>
+                            <notes>Name Melinna Giannini, Alternative Link Systems, Inc.; Address 1065 S. Main, Building C, Las Cruces, NM 88005; Telephone 505-527-0636; Fax 505-523-4152; E-mail mg@alternativelink.com</notes>
+                        </contributor>
+                    </header>
+                    <annotations>
+                        <documentation>
+                            <description>
+                                <text>
+                                    <p>Five character alphabetic codes fit into current claims processing software or onto standard paper claim forms. ABC Codes give business parity to licensed CAM and nurse providers who file claims to insurance companies. .</p>
+                                </text>
+                            </description>
+                        </documentation>
+                    </annotations>
+                    <releasedVersion releaseDate="2012-11-21" hl7MaintainedIndicator="false" completeCodesIndicator="false" hl7ApprovedIndicator="false">
+                        <supportedLanguage>en</supportedLanguage>
+                    </releasedVersion>
+                </codeSystem>
             </vocabularyModel>
         </x:context>
         <x:expect label="abcCodes">
-            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates"
-                xmlns:mif="urn:hl7-org:v3/mif2"
-                xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition"
-                xmlns:pkg="http://expath.org/ns/pkg"
-                xmlns:impl="urn:x-xspec:compile:xslt:impl"
-                xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
+            <member xmlns="http://www.omg.org/spec/CTS2/1.1/Updates" xmlns:mif="urn:hl7-org:v3/mif2" xmlns:vsd="http://www.omg.org/spec/CTS2/1.1/ValueSetDefinition" xmlns:pkg="http://expath.org/ns/pkg" xmlns:impl="urn:x-xspec:compile:xslt:impl" xmlns:upd="http://www.omg.org/spec/CTS2/1.1/Updates"
                 xmlns:core="http://www.omg.org/spec/CTS2/1.1/Core">
-            <upd:codeSystem xmlns="http://www.omg.org/spec/CTS2/1.1/CodeSystem"
-                codeSystemName="abcCodes"
-                about="http://hl7.org/ontology/vocab/uv/cs/abcCodes"
-                formalName="ABCcodes">
-                <core:keyword>HL7</core:keyword>
-                <core:keyword>abcCodes</core:keyword>
-                <core:resourceType uri="http://www.w3.org/2004/02/skos/core#ConceptScheme">
-                    <core:namespace>skos</core:namespace>
-                    <core:name>ConceptScheme</core:name>
-                </core:resourceType>
-                <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
-                    <value>
-                        <p xmlns="urn:hl7-org:v3/mif2">Five character alphabetic codes fit into current claims processing software or onto standard paper claim forms. ABC Codes give business parity to licensed CAM and nurse providers who file claims to insurance companies. .</p>
-                    </value>
-                </resourceSynopsis>
-                <core:sourceAndRole>
-                    <core:source>Name Alternative Link Systems, Inc.</core:source>
-                    <core:role uri="http://purl.org/dc/terms/1.1/publisher">publisher</core:role>
-                </core:sourceAndRole>
-                <core:sourceAndRole>
-                    <core:source>Name Melinna Giannini, Alternative Link Systems, Inc.; Address 1065 S. Main, Building C, Las Cruces, NM 88005; Telephone 505-527-0636; Fax 505-523-4152; E-mail mg@alternativelink.com</core:source>
-                    <core:role uri="http://hl7.org/ontology/vocab/uv/pr/Sponsor">Sponsor</core:role>
-                </core:sourceAndRole>
-                <core:rights>
-                    <core:value xmlns="urn:hl7-org:v3/mif2">ASCII flat file = $59.95, coding manaul = $79.95.  Break even for development since 1995 if 20% market penetration by 2003.</core:value>
-                </core:rights>
-                <core:alternateID>urn:oid:2.16.840.1.113883.6.25</core:alternateID>
-                <core:releaseDocumentation>
-                    <core:value xmlns="urn:hl7-org:v3/mif2">Version 2001, release 1 = V2001R1
- Annual</core:value>
-                </core:releaseDocumentation>
-                <core:releaseFormat>
-                    <core:sourceAndNotationDescription xmlns="urn:hl7-org:v3/mif2">Is NOT in UMLS.</core:sourceAndNotationDescription>
-                </core:releaseFormat>
-                <currentVersion>
-                    <core:version uri="http://hl7.org/ontology/vocab/uv/cs/abcCodes/version/2012-11-21">abcCodes-2012-11-21</core:version>
-                </currentVersion>
-            </upd:codeSystem>
+                <upd:codeSystem xmlns="http://www.omg.org/spec/CTS2/1.1/CodeSystem" codeSystemName="abcCodes" about="http://hl7.org/ontology/uv/vocab/cs/abcCodes" formalName="ABCcodes">
+                    <core:keyword>HL7</core:keyword>
+                    <core:keyword>abcCodes</core:keyword>
+                    <core:resourceType uri="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+                        <core:namespace>skos</core:namespace>
+                        <core:name>ConceptScheme</core:name>
+                    </core:resourceType>
+                    <resourceSynopsis xmlns="http://www.omg.org/spec/CTS2/1.1/Core">
+                        <value>
+                            <p xmlns="urn:hl7-org:v3/mif2">Five character alphabetic codes fit into current claims processing software or onto standard paper claim forms. ABC Codes give business parity to licensed CAM and nurse providers who file claims to insurance companies. .</p>
+                        </value>
+                    </resourceSynopsis>
+                    <core:sourceAndRole>
+                        <core:source>Name Alternative Link Systems, Inc.</core:source>
+                        <core:role uri="http://purl.org/dc/terms/1.1/publisher">publisher</core:role>
+                    </core:sourceAndRole>
+                    <core:sourceAndRole>
+                        <core:source>Name Melinna Giannini, Alternative Link Systems, Inc.; Address 1065 S. Main, Building C, Las Cruces, NM 88005; Telephone 505-527-0636; Fax 505-523-4152; E-mail mg@alternativelink.com</core:source>
+                        <core:role uri="http://hl7.org/ontology/uv/vocab/pr/Sponsor">Sponsor</core:role>
+                    </core:sourceAndRole>
+                    <core:rights>
+                        <core:value xmlns="urn:hl7-org:v3/mif2">ASCII flat file = $59.95, coding manaul = $79.95. Break even for development since 1995 if 20% market penetration by 2003.</core:value>
+                    </core:rights>
+                    <core:alternateID>urn:oid:2.16.840.1.113883.6.25</core:alternateID>
+                    <core:releaseDocumentation>
+                        <core:value xmlns="urn:hl7-org:v3/mif2">Version 2001, release 1 = V2001R1 Annual</core:value>
+                    </core:releaseDocumentation>
+                    <core:releaseFormat>
+                        <core:sourceAndNotationDescription xmlns="urn:hl7-org:v3/mif2">Is NOT in UMLS.</core:sourceAndNotationDescription>
+                    </core:releaseFormat>
+                    <currentVersion>
+                        <core:version uri="http://hl7.org/ontology/uv/vocab/cs/abcCodes/version/2012-11-21">abcCodes-2012-11-21</core:version>
+                    </currentVersion>
+                </upd:codeSystem>
             </member>
-            
-            
         </x:expect>
     </x:scenario>
-    
+
 </x:description>

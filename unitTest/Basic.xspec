@@ -7,9 +7,9 @@
     <!-- The following scenario verifies that document($basedoc)/ has been inserted into the VocabToOWL and Shared files -->
     <x:scenario label="Test that vocaburi is set correctly" >
         <x:call function="concat">
-            <x:param select="$vocabIri"/>
+            <x:param select="$substitutionVocabIri"/>
             <x:param select="''"/>
         </x:call>
-        <x:expect label="vocabIri Test" select="'http://hl7.org/ontology/vocab/uv'"/>
+        <x:expect label="vocabIri Test" select="'http://hl7.org/ontology/uv/vocab'"/>
     </x:scenario>
 </x:description>

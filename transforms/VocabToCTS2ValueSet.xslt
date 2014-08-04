@@ -34,7 +34,7 @@
         <xsl:if test="mif:statusInfo|mif:businessName|mif:annotations/*[name()!='documentation' and name()!='appInfo']|@isPostcoordinationProhibited|@use">
             <xsl:message>Unexpected value set parameter in: <xsl:value-of select="@name"></xsl:value-of></xsl:message>
         </xsl:if>
-        <xsl:variable name="maxVersion" as="xs:string" select="$uriSubstitutions[@type='vs' and @oid=current()/@id]/@date"> 
+        <xsl:variable name="maxVersion" as="xs:string" select="distinct-values($uriSubstitutions[@type='vs' and @oid=current()/@id]/@date)"> 
             <!-- Grab the date of the most recent version -->
         </xsl:variable>
 
@@ -43,13 +43,13 @@
 
  
         <member>
-            <xsl:if test="$comments">
+            <xsl:if test="$useComments">
                 <xsl:text>&#x0a;  </xsl:text>
                 <xsl:comment select="concat('Value Set: ', @name)"/>
                 <xsl:text>&#x0a;  </xsl:text>
             </xsl:if>
             
-            <upd:valueSet valueSetName="{encode-for-uri(@name)}" about="{$vocabIri}/vs/{$vs}"
+            <upd:valueSet valueSetName="{encode-for-uri(@name)}" about="{$substitutionVocabIri}/vs/{$vs}"
                 xmlns="http://www.omg.org/spec/CTS2/1.1/ValueSet">
                 <xsl:if test="$deprecated">
                     <xsl:attribute name="entryState">INACTIVE</xsl:attribute>
@@ -92,7 +92,7 @@
                 <definitions>definitions</definitions>
                 <xsl:if test="not($deprecated)">
                     <currentDefinition>
-                        <core:valueSetDefinition uri="{$vocabIri}/vs/{$vs}/{$maxVersion}"
+                        <core:valueSetDefinition uri="{$substitutionVocabIri}/vs/{$vs}/{$maxVersion}"
                             href="definition/{$maxVersion}">
                             <xsl:value-of select="concat($vs,'-',$maxVersion)"/>
                         </core:valueSetDefinition>

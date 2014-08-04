@@ -65,6 +65,6 @@
             <x:param name="csoid" select="'2.16.840.1.113883.5.4'"/>
             <x:param name="code" select="'CCGC'"/>
         </x:call>
-        <x:expect label="HL7 ActCode URI" select="'http://hl7.org/ontology/vocab/uv/cs/ActCode/Concept#CCGC'"/>
+        <x:expect label="HL7 ActCode URI" select="'http://hl7.org/ontology/uv/vocab/cs/ActCode/Concept#CCGC'"/>
     </x:scenario>
 </x:description>
